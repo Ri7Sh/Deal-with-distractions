@@ -1,0 +1,515 @@
+body{
+	font: 18px/32px "Lato",arial,verdana;
+	background: rgb(0,34,61);
+	color: #eee;
+	min-width: 950px;
+}
+
+/****
+=============
+clear-fix
+=============
+
+****/
+
+.group:before,
+.group:after {
+  content: "";
+  display: table;
+}
+.group:after {
+  clear: both;
+}
+.group {
+  *zoom: 1;
+}
+
+.container{
+	margin: 0 auto;
+	
+	width: 1100px;
+}
+
+
+header{
+	
+	padding-bottom: 10px;
+	height: 100%;
+
+}
+
+
+header h1{
+	vertical-align: top;
+	margin-left : 0;
+	margin-bottom:6px;
+	display: inline-block;
+	font-size: 30px;
+	
+	padding:6px;
+	width: 40%;
+	border-top: 1px solid #eee;
+	font-weight: 100;
+}
+
+.timer {
+	padding: 10px;
+	background: linear-gradient(top, #222, #444);
+	overflow: hidden;
+	display: inline-block;
+	
+	border-radius: 5px;
+	position: relative;
+	
+	box-shadow: 
+		inset 0 -2px 10px 1px rgba(0, 0, 0, 0.75), 
+		0 5px 20px -10px rgba(0, 0, 0, 1);
+	transform: scale(0.5);
+}
+
+
+header .points,
+header .menu,
+header .timer,
+header .submenu{
+	margin-top: 6px;
+	float: right;
+
+}
+
+header .menu,
+.submenu{
+	margin-right : 15%;
+	position: relative;
+}
+header .menu li,
+.submenu li{
+	display: block;
+	padding: 6px;
+	font-weight: 100;
+}
+
+header .menu li a,
+.submenu li a{
+	text-decoration: none;
+	cursor: pointer;
+	color : rgba(0,34,61,0.7);
+
+}
+header .points,
+header .timer{
+	color : rgba(255,255,255,0.5);
+	padding: 2px;
+	margin: 4px;
+	margin-top: 6px;
+	margin-left: 15px;
+	box-shadow: inset 0px 2px 3px rgba(0,0,0,0.5);
+	border-radius: 6px;
+	line-height: 40px;
+	height: 40px;
+
+}
+
+.submenu{
+	margin-right:1%;
+	margin-left: 2%;
+}
+.submenu input,
+.menu input{
+  display: none;
+}
+
+.submenu label,
+.submenu ul,
+.menu label,
+.menu ul {
+  border: 1px solid #cecfd5;
+  border-radius: 6px;
+}
+
+.submenu label,
+.menu label {
+  color : rgba(255,255,255,0.5);
+  cursor: pointer;
+  display: inline-block;
+  font-size: 18px;
+  padding: 5px 9px;
+  transition: all .15s ease;
+  border-width: 0;
+  box-shadow: 0px 2px 2px rgba(0,0,0,0.8);  
+
+}
+.menu label{
+	position: relative;
+	
+	width: 80px;
+	text-align: center;
+}
+.submenu label{
+	position: relative;
+	
+	left: -10px;
+}
+
+.submenu label:hover,
+.menu label:hover {
+  color : rgba(162,132,214,0.5);
+  background: #cfd8dc;
+  box-shadow: inset 0px 2px 2px #454545;  
+
+
+}
+.submenu input:checked + label,
+.menu input:checked + label {
+  box-shadow: inset 0 3px 3px rgba(0, 0, 0, 0.5);
+  color: #9799a7;
+  transform : translateY(1px);
+}
+.submenu nav ,
+.menu nav{
+	position: absolute;
+	z-index: 1;
+  max-height: 0;
+  overflow: hidden;
+  transition: all .3s ease;
+}
+.submenu input:checked ~ nav ,
+.menu input:checked ~ nav{
+  max-height: 500px;
+  
+
+}
+.submenu ul,
+.menu ul {
+	
+  list-style: none;
+  margin: 8px 0 0 0;
+  padding: 0;
+  width: 120px;
+}
+
+.submenu ul{
+
+}
+.submenu li,
+.menu li {
+  background: rgba(255,255,255,0.8);
+  border-bottom: 1px solid #cecfd5;
+
+}
+.submenu li:last-child,
+.menu li:last-child {
+  border-bottom: 0;
+}
+.submenu a,
+.menu a {
+  color: #000;
+  display: block;
+  padding: 6px 12px;
+  text-decoration: none;
+}
+.submenu a:hover,
+.menu a:hover {
+  color: #ff7b29;
+
+}
+
+
+.submenu .active{
+	color: #212121;
+	box-shadow: inset 0 -1px 2px rgba(0,34,61,.5);
+}
+
+
+.row{
+	background: rgba(255,255,255,0.85);
+	padding-bottom: 100px;
+	padding-top: 70px;
+	border: 10px solid #000;
+}
+.question{
+	border: 10px solid #000;
+	border-radius: 6px;
+	padding: 6px;
+	color: rgba(0,0,0,0.45);
+	background: transparent;
+	width: 45%;
+	
+	overflow: auto;
+	margin:0;
+	float:left;
+}
+
+.submenu{
+	display:inline-block;
+}
+
+.question h1{
+	display: inline-block;
+
+}
+.meta{
+	margin-top: 150px;
+	margin: 20px auto;
+	font-size: 30px;
+	text-align: center;
+	width: 200px;
+	padding-bottom: 3px;
+	font-weight: 300;
+	color:rgba(0,0,0,0.5);
+	text-align: center;
+	background: transparent;
+
+	
+	border-bottom: .5px solid rgba(0,0,0,0.5);
+}
+.data{
+	padding: 10px;
+}
+	
+aside{
+	
+
+	color: rgba(0,255,0,1);
+	float: right;
+	width:50%;
+	height:100%
+	background : rgba(255,255,255,0.75);
+	box-shadow: inset 0px 2px 3px rgba(0,0,0,0.5);
+	margin:0;
+	margin-top: 30px;
+	border-radius: 6px;
+	position: relative;
+	overflow:hidden;
+
+	position: relative;
+	top: 70px;
+}
+
+.editor{
+	width: 100%;
+	height: 94%;
+
+}
+.btn{
+	position: absolute;
+	font-weight: 100;
+	bottom: 0;
+	height: 6%;
+	width: 100%;
+	font-size: 20px;
+	color: #fff;
+	background: rgb(0,34,61);
+	box-shadow: 0px 2px 2px rgba(0,0,0,0.8);
+	transition: all .5s 0 ease-in-out;
+	border-bottom-right-radius: 6px;
+	border-bottom-left-radius: 6px;
+	border-width: 0;
+}
+.btn:active{
+	box-shadow: 0 0 0 #eee;
+}
+
+
+footer{
+	width: 100%;
+	height: 50px;
+
+	
+	
+}
+
+.foo-menu{
+
+	display : inline-block;
+
+}
+.foo-menu li{
+	padding: 6px;
+	display: inline-block;
+
+}
+
+.foo-menu a{
+	text-decoration: none;
+	color : rgba(255,255,255,0.5);
+	font-size: 16px;
+	font-weight: 100;
+}
+
+
+
+footer h6{
+	
+	margin: 0;
+
+	float: right;
+	font-size: 14px;
+	font-weight: 700;
+	width: 10%;
+
+}
+
+
+/****
+
+
+===========================
+
+timer
+
+=============================
+
+*****/
+
+
+
+
+
+
+
+.cell {
+	/*Should only display 1 digit. Hence height = line height of .numbers
+	and width = width of .numbers*/
+	width: 0.60em;
+	height: 40px;
+	font-size: 50px;
+	overflow: hidden;
+	position: relative;
+	float: left;
+}
+
+.numbers {
+	width: 0.6em;
+	line-height: 40px;
+	font-family: digital, arial, verdana;
+	text-align: center;
+		color : rgba(255,255,255,0.5);
+	
+	position: absolute;
+	top: 0;
+	left: 0;
+	
+	/*Glow to the text*/
+	text-shadow: 0 0 5px rgba(255, 255, 255, 1);
+}
+
+
+
+
+
+.moveten {
+	/*The digits move but dont look good. We will use steps now
+	10 digits = 10 steps. You can now see the digits swapping instead of 
+	moving pixel-by-pixel*/
+	animation: moveten 1s steps(10, end) infinite;
+	/*By default animation should be paused*/
+	animation-play-state: running;
+}
+.movesix {
+	animation: movesix 1s steps(6, end) infinite;
+	animation-play-state: running;
+}
+
+/*Now we need to sync the animation speed with time speed*/
+/*One second per digit. 10 digits. Hence 10s*/
+.second {animation-duration: 10s;}
+.tensecond {animation-duration: 60s;} /*60 times .second*/
+
+.milisecond {animation-duration: 1s;} /*1/10th of .second*/
+.tenmilisecond {animation-duration: 0.1s;}
+.hundredmilisecond {animation-duration: 0.01s;}
+
+.minute {animation-duration: 600s;} /*60 times .second*/
+.tenminute {animation-duration: 3600s;} /*60 times .minute*/
+
+.hour {animation-duration: 36000s;} /*60 times .minute*/
+.tenhour {animation-duration: 360000s;} /*10 times .hour*/
+
+/*The stopwatch looks good now. Lets add some styles*/
+
+/*Lets animate the digit now - the main part of this tutorial*/
+/*We are using prefixfree, so no need of vendor prefixes*/
+/*The logic of the animation is to alter the 'top' value of the absolutely
+positioned .numbers*/
+/*Minutes and Seconds should be limited to only '60' and not '100'
+Hence we need to create 2 animations. One with 10 steps and 10 digits and
+the other one with 6 steps and 6 digits*/
+@keyframes moveten {
+	0% {top: 0;}
+	100% {top: -400px;} 
+	/*height = 40. digits = 10. hence -400 to move it completely to the top*/
+}
+
+@keyframes movesix {
+	0% {top: 0;}
+	100% {top: -240px;} 
+	/*height = 40. digits = 6. hence -240 to move it completely to the top*/
+}
+
+.backdrop{
+	display:none;
+	background: rgba(0,0,0,0.9);
+	position:fixed;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	z-index: 2;
+}
+.canvas{
+
+	background: #eee;
+	width: 50px;
+	height: 50px;
+	position: fixed;
+	overflow:auto;
+	top:0;
+	left:0;
+	box-shadow: 0 0 20px 5px black;
+	color: rgb(0,34,61);
+	border-radius: 6px;
+	
+	
+	top: 100px;
+	width: 950px;
+	left: 250px;
+	height: 500px;
+	z-index: 2;
+}
+.rules h1{
+	text-align: center;
+	width: 100%;
+	padding-top: 40px;
+	font-size: 70px;
+}
+.rules ul{
+	padding: 70px;
+}
+.rules li{
+	color: rgba(0,34,61,0.75);
+	line-height: 50px;
+	font-size: 23px;
+	border-bottom: 1px solid rgba(0,0,0,0.1);
+	padding: 30px;
+
+}
+
+.rules li:last-child{
+	border-bottom-width: 0;
+}
+
+
+.canvas .close{
+	text-align: center;
+	color: #212121;
+	border: 1px solid rgba(0,0,0,0.1);
+	border-radius: 50%;
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	top: 10px;
+	right: 30px;
+}
+
+
