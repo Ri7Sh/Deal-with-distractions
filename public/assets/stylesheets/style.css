@@ -1,3 +1,5 @@
+
+
 body{
 	font: 18px/32px "Lato",arial,verdana;
 	background: rgb(0,34,61);
@@ -264,45 +266,59 @@ header .timer{
 }
 .data{
 	padding: 10px;
+	line-height: 35px;
+}
+
+.data ol:nth-of-type(2n+1){
+	margin-top: 30px;
+	list-style: lower-roman;
+}
+.data ol:nth-of-type(2n){
+	margin-top: 30px;
+	list-style: disc;
 }
 	
 aside{
 	
 
-	color: rgba(0,255,0,1);
+	color: rgba(00,34,61,1);
 	float: right;
 	width:50%;
-	height:100%
+	height:700px;
 	background : rgba(255,255,255,0.75);
 	box-shadow: inset 0px 2px 3px rgba(0,0,0,0.5);
 	margin:0;
 	margin-top: 30px;
 	border-radius: 6px;
 	position: relative;
-	overflow:hidden;
+	overflow:auto;
 
 	position: relative;
+
 	top: 70px;
 }
 
-.editor{
-	width: 100%;
+.feild{
+	padding:10px;
+	margin:10px auto;
+	width: 500px;
 	height: 94%;
 
 }
 .btn{
-	position: absolute;
+	position: relative;
 	font-weight: 100;
-	bottom: 0;
-	height: 6%;
+	
+	height: 40px;
 	width: 100%;
+	margin: 10px auto;
+	
 	font-size: 20px;
 	color: #fff;
 	background: rgb(0,34,61);
 	box-shadow: 0px 2px 2px rgba(0,0,0,0.8);
 	transition: all .5s 0 ease-in-out;
-	border-bottom-right-radius: 6px;
-	border-bottom-left-radius: 6px;
+	
 	border-width: 0;
 }
 .btn:active{
@@ -459,13 +475,12 @@ the other one with 6 steps and 6 digits*/
 .canvas{
 
 	background: #eee;
-	width: 50px;
-	height: 50px;
+	
 	position: fixed;
 	overflow:auto;
 	top:0;
 	left:0;
-	box-shadow: 0 0 20px 5px black;
+	
 	color: rgb(0,34,61);
 	border-radius: 6px;
 	
@@ -477,11 +492,33 @@ the other one with 6 steps and 6 digits*/
 	z-index: 2;
 }
 .canvas h1{
+
 	text-align: center;
 	width: 100%;
 	line-height: 40px;
 	font-size: 40px;
 	
+}
+
+.signOut h1{
+	padding-top: 30px;
+	line-height: 60px;
+}
+
+.signOut h2{
+	text-align: center;
+	width: 100%;
+	line-height: 150px;
+	font-size: 35px;
+	margin-top: 90px;
+	
+}
+.rules h1{
+	padding-top: 30px;
+}
+
+.rules{
+	display: none;
 }
 .rules ul{
 	padding: 70px;
@@ -498,6 +535,10 @@ the other one with 6 steps and 6 digits*/
 .rules li:last-child{
 	border-bottom-width: 0;
 }
+.backdrop .signOut{
+	display :none;
+	background: rgba(255,255,255,0.4); 
+}
 
 
 .canvas .close{
@@ -512,5 +553,62 @@ the other one with 6 steps and 6 digits*/
 	right: 30px;
 	cursor: pointer;
 }
+
+.tetris,
+.mansi,
+.piyali,
+.shivani,
+.garima{
+	display: none;
+}
+
+.backdrop .rules{
+	background: #eee;
+}
+
+.backdrop .tetris{
+	background: #00cc88;
+}
+
+.backdrop .mansi{
+	background: #ffeb3b;
+}
+
+.backdrop .piyali{
+	background: #442189;
+}
+
+.backdrop .shivani{
+	background:#00cc88;
+}
+.backdrop .garima{
+	background: #ff6666;
+}
+
+
+#out{
+	
+	font-size:22px;
+	background-color:#ff3333;
+	width:10%;
+	border-radius:6px;
+	position: absolute;
+	left:55%;
+	cursor:pointer;
+	/*border:3px solid #999999;*/
+}
+
+#notout{
+	
+	font-size:22px;
+	background-color:#00cc66;
+	width:10%;
+	border-radius:6px;
+	position: absolute;
+	right:55%;
+	cursor:pointer;
+	/*border:3px solid #999999;*/
+}
+
 
 

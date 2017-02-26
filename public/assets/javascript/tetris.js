@@ -1,3 +1,5 @@
+var tetris = (function(window){
+console.log("tetris");
 const canvas = document.getElementById('tetris');
 const context = canvas.getContext('2d');
 
@@ -264,4 +266,7 @@ playerReset();
 updateScore();
 
 update();
+
+
+});
    
