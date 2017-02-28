@@ -1,0 +1,122 @@
+287c287
+< 	height:700px;
+---
+> 	height:100%
+294c294
+< 	overflow:auto;
+---
+> 	overflow:hidden;
+297c297
+< 
+---
+> 	border: 1px solid black;
+302,304c302,304
+< 	padding:10px;
+< 	margin:10px auto;
+< 	width: 500px;
+---
+> 	padding-top:17px;
+> 	padding-bottom:20px;
+> 	width: 100%;
+309c309
+< 	position: relative;
+---
+> 	position: absolute;
+311c311
+< 	
+---
+> 	bottom: 0;
+314,315d313
+< 	margin: 10px auto;
+< 	
+321c319,320
+< 	
+---
+> 	border-bottom-right-radius: 6px;
+> 	border-bottom-left-radius: 6px;
+498c497
+< 	line-height: 40px;
+---
+> 	line-height: 60px;
+502a502,509
+> .canvas h2{
+> 	text-align: center;
+> 	width: 100%;
+> 	line-height: 150px;
+> 	font-size: 35px;
+> 	
+> }
+> 
+542,543c549
+< .piyali,
+< .shivani{
+---
+> .piyali{
+559,560c565,586
+< .backdrop .shivani{
+< 	background:#00cc88;
+---
+> #signout{
+> 	padding:10px;
+> 	font-size:30px;
+> 	background-color:#ff3333;
+> 	width:10%;
+> 	border-radius:6px;
+> 	position: absolute;
+> 	left:30%;
+> 	cursor:pointer;
+> 	border:3px solid #999999;
+> }
+> 
+> #nosignout{
+> 	padding:10px;
+> 	font-size:30px;
+> 	background-color:#00cc66;
+> 	width:10%;
+> 	border-radius:10px;
+> 	position: absolute;
+> 	right:30%;
+> 	cursor:pointer;
+> 	border:3px solid #999999;
+561a588,628
+>     
+> 
+> 	
+> 	
+> 	
+> 	
+> 	
+> 	
+> 	
+> 	
+> 	
+> 	
+> 	
+> 	
+> 	
+> 	
+> 	
+> 	
+> 	
+> 	
+> 	
+> 	
+> 	
+> 	
+> 	
+> 	
+> 	
+> 	
+> 	
+> 	
+> 	
+> 	
+> 	
+> 	
+> 	
+> 	
+> 	
+> 	
+> 	
+> 	
+> 	
