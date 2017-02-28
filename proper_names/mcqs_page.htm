@@ -6,14 +6,29 @@
 		<link rel="stylesheet" href="assets/stylesheets/resets.css" type="text/css">
 		<link rel="stylesheet" type="text/css" href="assets/stylesheets/animate.css">
 		<link href="assets/stylesheets/style.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="assets/stylesheets/tetris.css" type="text/css">
+		<link rel="stylesheet" href="assets/stylesheets/mansi.css" type="text/css">
+		<link rel="stylesheet" href="assets/stylesheets/piyali.css" type="text/css">
+		<link rel="stylesheet" href="assets/stylesheets/shivani.css">
+		<link rel="stylesheet" href="assets/stylesheets/garima.css">
+
 
 		<link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700" rel="stylesheet">
 	</head>
-	<body>
-		<header class="group primary-header">
+	<body><!-- 
+=================
+	header  
+
+===================
+	--><header class="group primary-header">
 		  <section class="container">
-			<h1>Deal with Distractions</h1>
-			<section class="menu">
+
+			<h1>Deal with Distractions</h1><!-- 
+			
+			================
+			main navbar
+			=================
+			--><section class="menu">
 				<input type="checkbox" id="toggle1">
 					<label for="toggle1">&#9776;</label>
 				<nav>
@@ -22,8 +37,12 @@
 						<li id="signOut"><a>Sign Out</a></li>
 					</ul>
 				</nav>
-			</section>
-			<section class="submenu">
+			</section><!-- 
+
+			===================================
+			nav bar to toggle between questions
+			=====================================
+			--><section class="submenu">
 				
 					<input type="checkbox" id="toggle2">
 					<label for="toggle2">change question</label>
@@ -37,38 +56,29 @@
 						</nav>
 
 				</section>
-				<!--section class="timer">
-							<div class="cell">
-					<div class="numbers tenhour moveten">0 1 2 3 4 5 6 7 8 9</div>
-				</div>
-				<div class="cell">
-					<div class="numbers hour moveten">0 1 2 3 4 5 6 7 8 9</div>
-				</div>
-				<div class="cell divider"><div class="numbers">:</div></div>
-				<div class="cell">
-					<div class="numbers tenminute movesix">0 1 2 3 4 5 6</div>
-				</div>
-				<div class="cell">
-					<div class="numbers minute moveten">0 1 2 3 4 5 6 7 8 9</div>
-				</div>
-				<div class="cell divider"><div class="numbers">:</div></div>
-				<div class="cell">
-					<div class="numbers tensecond movesix">0 1 2 3 4 5 6</div>
-				</div>
-				<div class="cell">
-					<div class="numbers second moveten">0 1 2 3 4 5 6 7 8 9</div>
-				</div>
-				</section-->
+			
 				<section class="points">
 					<p>0.00</p>
 				</section>
-		  </section>  
-		</header>
 
-		<div class="row">
-		<div class="group container">
-		
-		<section class="question"><!--
+
+		  </section>  
+		</header><!-- 
+		================
+		****************
+		content 
+		****************
+		================
+
+		--><div class="row">
+		<div class="group container"><!--
+
+		============================
+
+		story line (left side)
+
+		============================
+		--><section class="question"><!--
 			--><div class="meta">
 			<h1>Question1</h1>
 			</div>
@@ -90,6 +100,12 @@
 		</ol>
 
 		</p></div></section><!--
+				
+				============================
+
+				MCQ forms (right side)
+		
+				==============================
 		--><aside><section class="feild">
 		Based on the given criteria and information provided about each candidate take a decision in each case.
 		<br><br><br>
@@ -146,8 +162,13 @@
 		</section><!--
 		--></aside>
 		</div>
-		</div>
-		<footer class="group">
+		</div><!--
+
+			====================
+			footer
+
+			========================
+		--><footer class="group">
 		<div class="container">
 			<nav class="foo-menu">
 					<ul>
@@ -157,10 +178,18 @@
 				</nav>
 			<h6>&copy acm-w</h6>                                                 
 		</div>
-		</footer>
-		<!-- lightbox-->
-		<div class="backdrop">
-			<div class="canvas rules">
+		</footer><!--
+
+		 lightbox
+
+		 DISTRACTIONS, SING OUT, RULES
+
+
+		 --><div class="backdrop"><!--
+				=========
+				RULES
+				=========
+		 --><div class="canvas rules">
 				<h1>Rules</h1>
 				<ul><li>Duration of the event will most likely be 90 min.</li>
 
@@ -178,18 +207,31 @@
 					<li>Authorities’ decision will be final and binding.</li> 			
 				</ul>
 				<div class="close"><a>x</a></div>
-			</div>
-			<div class="canvas signOut">
+			</div><!--
+				===========
+				Sign Out
+				===========
+
+			--><div class="canvas signOut">
 				<h1>Sign Out</h1>
 
 				<h2>Are you sure you want to sign out ?</h2>
 				<button id="out" class="btn">YES</button>
 				<button id="notout" class="btn">NO</button>
 				<div class="close"><a>x</a></div>
-			</div>
+			</div><!--
+				
+				**************************************
+				======================================
+				game : tetris
+				======================================
+				**************************************
+
+
+			-->
 			<div class="canvas tetris">
 
-			<link rel="stylesheet" href="assets/stylesheets/tetris.css" type="text/css">
+			
 				<h1>Tetris</h1>
 				<div class="game">
 				<div class="space">
@@ -207,9 +249,18 @@
 	      		</div>
 				<div class="close"><a>x</a></div>
 
-			</div>
-		<div class="canvas mansi">
-		<link rel="stylesheet" href="assets/stylesheets/mansi.css" type="text/css">
+			</div><!--
+				
+
+				***************************************
+				=======================================
+				game : snake_game (mansi)
+				=======================================
+				***************************************
+
+			
+		--><div class="canvas mansi">
+		
 			<h1>SNAKE GAME</h1>
 				<div class="game">
 				<div id="msg"></div>
@@ -225,9 +276,16 @@
 	      		</div>
 				<div class="close"><a>x</a></div>
 
-			</div>
-			<div class="canvas piyali">
-			<link rel="stylesheet" href="assets/stylesheets/piyali.css" type="text/css">
+			</div><!--
+				**************************************
+				======================================
+				game : tic tac toe (piyali)
+				======================================
+				**************************************
+
+			
+		--><div class="canvas piyali">
+			
 		<h1>TICTACTOE</h1>
 		    <div class="game">
 				
@@ -270,289 +328,295 @@
       			</h5> 
       		</div>
 			<div class="close"><a>x</a></div>
-			</div>
+			</div><!--
+				******************************
+				==============================
+				game : find my pair (shivani)
+				==============================
+				******************************
 
-			<div class="canvas shivani">
-			<link rel="stylesheet" href="assets/stylesheets/shivani.css">
-		<h1>Find my Twin</h1><br>
-		
-			<div class="game">
 			
+		--><div class="canvas shivani">
+			
+						<h1>Find my Twin</h1><br>
+						
+							<div class="game">
+							
 
-      		<form>
-  <div id="radioButtonContainer"><br><br>
-<input type="radio" name="colors" id="1">Red<br>
-<input type="radio" name="colors" id="2">Red<br>
-<input type="radio" name="colors" id="3">Red<br>
-<input type="radio" name="colors" id="4">Red<br>
-<input type="radio" name="colors" id="5">Red<br>
-<input type="radio" name="colors" id="6">Red<br>
-<input type="radio" name="colors" id="7">Red<br>
-<input type="radio" name="colors" id="8">Red<br>
-<input type="radio" name="colors" id="9">Red<br>
-<input type="radio" name="colors" id="10">Red<br>
-<input type="radio" name="colors" id="11">Red<br>
-<input type="radio" name="colors" id="12">Red<br>
-<input type="radio" name="colors" id="13">Red<br>
-<input type="radio" name="colors" id="14">Red<br>
-<input type="radio" name="colors" id="15">Red<br>
-<input type="radio" name="colors" id="16">Red<br>
-<input type="radio" name="colors" id="17">Red<br>
-<input type="radio" name="colors" id="18">Red<br>
-<input type="radio" name="colors" id="19">Red<br>
-<input type="radio" name="colors" id="20">Red<br>
-<input type="radio" name="colors" id="21">Red<br>
-<input type="radio" name="colors" id="22">Red<br>
-<input type="radio" name="colors" id="23">Red<br>
-<input type="radio" name="colors" id="24">Red<br>
-<input type="radio" name="colors" id="25">Red<br>
-<input type="radio" name="colors" id="26">Red<br>
-<input type="radio" name="colors" id="27">Red<br>
-<input type="radio" name="colors" id="28">Red<br>
-<input type="radio" name="colors" id="29">Red<br>
-<input type="radio" name="colors" id="30">Red<br>
-<input type="radio" name="colors" id="31">Red<br>
-<input type="radio" name="colors" id="32">Red<br>
-<input type="radio" name="colors" id="33">Red<br>
-<input type="radio" name="colors" id="34">Red<br>
-<input type="radio" name="colors" id="35">Red<br>
-<input type="radio" name="colors" id="36">Red<br>
-<input type="radio" name="colors" id="37">Red<br>
-<input type="radio" name="colors" id="38">Red<br>
-<input type="radio" name="colors" id="39">Red<br>
-<input type="radio" name="colors" id="40">Red<br>
-<input type="radio" name="colors" id="41">Red<br>
-<input type="radio" name="colors" id="42">Red<br>
-<input type="radio" name="colors" id="43">Red<br>
-  <input type="radio" name="colors" id="44">Blue
-<input type="radio" name="colors" id="45">Red<br>
-<input type="radio" name="colors" id="46">Red<br>
-<input type="radio" name="colors" id="47">Red<br>
-<input type="radio" name="colors" id="48">Red<br>
-<input type="radio" name="colors" id="49">Red<br>
-</div>
-</form>
-<div class="space">
-				<span>score:</span>
-				<div id="score"></div>
-			</div>
-<button onclick="check1()">
-<img id ="col1" src ="assets/images/shivani/1.png" width="50" height="50">
-</button>
+				      		<form>
+				  <div id="radioButtonContainer"><br><br>
+				<input type="radio" name="colors" id="1">Red<br>
+				<input type="radio" name="colors" id="2">Red<br>
+				<input type="radio" name="colors" id="3">Red<br>
+				<input type="radio" name="colors" id="4">Red<br>
+				<input type="radio" name="colors" id="5">Red<br>
+				<input type="radio" name="colors" id="6">Red<br>
+				<input type="radio" name="colors" id="7">Red<br>
+				<input type="radio" name="colors" id="8">Red<br>
+				<input type="radio" name="colors" id="9">Red<br>
+				<input type="radio" name="colors" id="10">Red<br>
+				<input type="radio" name="colors" id="11">Red<br>
+				<input type="radio" name="colors" id="12">Red<br>
+				<input type="radio" name="colors" id="13">Red<br>
+				<input type="radio" name="colors" id="14">Red<br>
+				<input type="radio" name="colors" id="15">Red<br>
+				<input type="radio" name="colors" id="16">Red<br>
+				<input type="radio" name="colors" id="17">Red<br>
+				<input type="radio" name="colors" id="18">Red<br>
+				<input type="radio" name="colors" id="19">Red<br>
+				<input type="radio" name="colors" id="20">Red<br>
+				<input type="radio" name="colors" id="21">Red<br>
+				<input type="radio" name="colors" id="22">Red<br>
+				<input type="radio" name="colors" id="23">Red<br>
+				<input type="radio" name="colors" id="24">Red<br>
+				<input type="radio" name="colors" id="25">Red<br>
+				<input type="radio" name="colors" id="26">Red<br>
+				<input type="radio" name="colors" id="27">Red<br>
+				<input type="radio" name="colors" id="28">Red<br>
+				<input type="radio" name="colors" id="29">Red<br>
+				<input type="radio" name="colors" id="30">Red<br>
+				<input type="radio" name="colors" id="31">Red<br>
+				<input type="radio" name="colors" id="32">Red<br>
+				<input type="radio" name="colors" id="33">Red<br>
+				<input type="radio" name="colors" id="34">Red<br>
+				<input type="radio" name="colors" id="35">Red<br>
+				<input type="radio" name="colors" id="36">Red<br>
+				<input type="radio" name="colors" id="37">Red<br>
+				<input type="radio" name="colors" id="38">Red<br>
+				<input type="radio" name="colors" id="39">Red<br>
+				<input type="radio" name="colors" id="40">Red<br>
+				<input type="radio" name="colors" id="41">Red<br>
+				<input type="radio" name="colors" id="42">Red<br>
+				<input type="radio" name="colors" id="43">Red<br>
+				  <input type="radio" name="colors" id="44">Blue
+				<input type="radio" name="colors" id="45">Red<br>
+				<input type="radio" name="colors" id="46">Red<br>
+				<input type="radio" name="colors" id="47">Red<br>
+				<input type="radio" name="colors" id="48">Red<br>
+				<input type="radio" name="colors" id="49">Red<br>
+				</div>
+				</form>
+				<div class="space">
+								<span>score:</span>
+								<div id="score"></div>
+							</div>
+				<button onclick="check1()">
+				<img id ="col1" src ="assets/images/shivani/1.png" width="50" height="50">
+				</button>
 
-<button onclick="check2()">
-<img id ="col2" src ="assets/images/shivani/2.png" width="50" height="50" >
-</button>
+				<button onclick="check2()">
+				<img id ="col2" src ="assets/images/shivani/2.png" width="50" height="50" >
+				</button>
 
-<button onclick="check3()">
-<img id ="col3" src ="assets/images/shivani/3.png" width="50" height="50" >
-</button>
+				<button onclick="check3()">
+				<img id ="col3" src ="assets/images/shivani/3.png" width="50" height="50" >
+				</button>
 
-<button onclick="check4()">
-<img id ="col4" src ="assets/images/shivani/4.png" width="50" height="50">
-</button>
+				<button onclick="check4()">
+				<img id ="col4" src ="assets/images/shivani/4.png" width="50" height="50">
+				</button>
 
-<button onclick="check5()">
-<img id ="col5" src ="assets/images/shivani/5.png" width="50" height="50">
-</button>
+				<button onclick="check5()">
+				<img id ="col5" src ="assets/images/shivani/5.png" width="50" height="50">
+				</button>
 
-<button onclick="check6()">
-<img id ="col6" src ="assets/images/shivani/6.png" width="50" height="50">
-</button>
+				<button onclick="check6()">
+				<img id ="col6" src ="assets/images/shivani/6.png" width="50" height="50">
+				</button>
 
-<button onclick="check7()">
-<img id ="col7" src ="assets/images/shivani/7.png" width="50" height="50">
-</button>
+				<button onclick="check7()">
+				<img id ="col7" src ="assets/images/shivani/7.png" width="50" height="50">
+				</button>
 
-<button onclick="check8()">
-<img id ="col8" src ="assets/images/shivani/48.jpg" width="50" height="50">
-</button>
+				<button onclick="check8()">
+				<img id ="col8" src ="assets/images/shivani/48.jpg" width="50" height="50">
+				</button>
 
-<button onclick="check9()">
-<img id ="col9" src ="assets/images/shivani/9.jpg" width="50" height="50">
-</button>
-<br>
-<button onclick="check10()">
-<img id ="col10" src ="assets/images/shivani/10.png" width="50" height="50">
-</button>
+				<button onclick="check9()">
+				<img id ="col9" src ="assets/images/shivani/9.jpg" width="50" height="50">
+				</button>
+				<br>
+				<button onclick="check10()">
+				<img id ="col10" src ="assets/images/shivani/10.png" width="50" height="50">
+				</button>
 
-<button onclick="check11()">
-<img id ="col11" src ="assets/images/shivani/11.png" width="50" height="50">
-</button>
+				<button onclick="check11()">
+				<img id ="col11" src ="assets/images/shivani/11.png" width="50" height="50">
+				</button>
 
-<button onclick="check12()">
-<img id ="col12" src ="assets/images/shivani/12.png" width="50" height="50">
-</button>
+				<button onclick="check12()">
+				<img id ="col12" src ="assets/images/shivani/12.png" width="50" height="50">
+				</button>
 
-<button onclick="check13()">
-<img id ="col13" src ="assets/images/shivani/37.png" width="50" height="50">
-</button>
+				<button onclick="check13()">
+				<img id ="col13" src ="assets/images/shivani/37.png" width="50" height="50">
+				</button>
 
-<button onclick="check14()">
-<img id ="col14" src ="assets/images/shivani/63.jpg" width="50" height="50">
-</button>
+				<button onclick="check14()">
+				<img id ="col14" src ="assets/images/shivani/63.jpg" width="50" height="50">
+				</button>
 
-<button onclick="check15()">
-<img id ="col15" src ="assets/images/shivani/15.png" width="50" height="50">
-</button>
+				<button onclick="check15()">
+				<img id ="col15" src ="assets/images/shivani/15.png" width="50" height="50">
+				</button>
 
-<button onclick="check16()">
-<img id ="col16" src ="assets/images/shivani/16.png" width="50" height="50" >
-</button>
+				<button onclick="check16()">
+				<img id ="col16" src ="assets/images/shivani/16.png" width="50" height="50" >
+				</button>
 
-<button onclick="check17()">
-<img id ="col17" src ="assets/images/shivani/17.jpg" width="50" height="50">
-</button>
+				<button onclick="check17()">
+				<img id ="col17" src ="assets/images/shivani/17.jpg" width="50" height="50">
+				</button>
 
-<button onclick="check18()">
-<img id ="col18" src ="assets/images/shivani/18.png" width="50" height="50">
-</button>
-<br>
-<button onclick="check19()">
-<img id ="col19" src ="assets/images/shivani/49.jpg" width="50" height="50">
-</button>
+				<button onclick="check18()">
+				<img id ="col18" src ="assets/images/shivani/18.png" width="50" height="50">
+				</button>
+				<br>
+				<button onclick="check19()">
+				<img id ="col19" src ="assets/images/shivani/49.jpg" width="50" height="50">
+				</button>
 
-<button onclick="check20()">
-<img id ="col20" src ="assets/images/shivani/20.png" width="50" height="50">
-</button>
+				<button onclick="check20()">
+				<img id ="col20" src ="assets/images/shivani/20.png" width="50" height="50">
+				</button>
 
-<button onclick="check21()">
-<img id ="col21" src ="assets/images/shivani/21.png" width="50" height="50">
-</button>
+				<button onclick="check21()">
+				<img id ="col21" src ="assets/images/shivani/21.png" width="50" height="50">
+				</button>
 
-<button onclick="check22()">
-<img id ="col22" src ="assets/images/shivani/22.jpg" width="50" height="50">
-</button>
+				<button onclick="check22()">
+				<img id ="col22" src ="assets/images/shivani/22.jpg" width="50" height="50">
+				</button>
 
-<button onclick="check23()">
-<img id ="col23" src ="assets/images/shivani/7.png" width="50" height="50">
-</button>
+				<button onclick="check23()">
+				<img id ="col23" src ="assets/images/shivani/7.png" width="50" height="50">
+				</button>
 
-<button onclick="check24()">
-<img id ="col24" src ="assets/images/shivani/24.jpg" width="50" height="50">
-</button>
+				<button onclick="check24()">
+				<img id ="col24" src ="assets/images/shivani/24.jpg" width="50" height="50">
+				</button>
 
-<button onclick="check25()">
-<img id ="col25" src ="assets/images/shivani/66.jpg" width="50" height="50">
-</button>
+				<button onclick="check25()">
+				<img id ="col25" src ="assets/images/shivani/66.jpg" width="50" height="50">
+				</button>
 
-<button onclick="check26()">
-<img id ="col26" src ="assets/images/shivani/26.jpg" width="50" height="50">
-</button>
+				<button onclick="check26()">
+				<img id ="col26" src ="assets/images/shivani/26.jpg" width="50" height="50">
+				</button>
 
-<button onclick="check27()">
-<img id ="col27" src ="assets/images/shivani/27.png" width="50" height="50">
-</button>
-<br>
-<button onclick="check28()">
-<img id ="col28" src ="assets/images/shivani/28.png" width="50" height="50">
-</button>
+				<button onclick="check27()">
+				<img id ="col27" src ="assets/images/shivani/27.png" width="50" height="50">
+				</button>
+				<br>
+				<button onclick="check28()">
+				<img id ="col28" src ="assets/images/shivani/28.png" width="50" height="50">
+				</button>
 
-<button onclick="check29()">
-<img id ="col29" src ="assets/images/shivani/64.png" width="50" height="50">
-</button>
+				<button onclick="check29()">
+				<img id ="col29" src ="assets/images/shivani/64.png" width="50" height="50">
+				</button>
 
-<button onclick="check30()">
-<img id ="col30" src ="assets/images/shivani/30.png" width="50" height="50">
-</button>
+				<button onclick="check30()">
+				<img id ="col30" src ="assets/images/shivani/30.png" width="50" height="50">
+				</button>
 
-<button onclick="check31()">
-<img id ="col31" src ="assets/images/shivani/31.png" width="50" height="50">
-</button>
+				<button onclick="check31()">
+				<img id ="col31" src ="assets/images/shivani/31.png" width="50" height="50">
+				</button>
 
-<button onclick="check32()">
-<img id ="col32" src ="assets/images/shivani/32.png" width="50" height="50">
-</button>
+				<button onclick="check32()">
+				<img id ="col32" src ="assets/images/shivani/32.png" width="50" height="50">
+				</button>
 
-<button onclick="check33()">
-<img id ="col33" src ="assets/images/shivani/33.png" width="50" height="50">
-</button>
+				<button onclick="check33()">
+				<img id ="col33" src ="assets/images/shivani/33.png" width="50" height="50">
+				</button>
 
-<button onclick="check34()">
-<img id ="col34" src ="assets/images/shivani/34.png" width="50" height="50">
-</button>
+				<button onclick="check34()">
+				<img id ="col34" src ="assets/images/shivani/34.png" width="50" height="50">
+				</button>
 
-<button onclick="check35()">
-<img id ="col35" src ="assets/images/shivani/5.png" width="50" height="50">
-</button>
+				<button onclick="check35()">
+				<img id ="col35" src ="assets/images/shivani/5.png" width="50" height="50">
+				</button>
 
-<button onclick="check36()">
-<img id ="col36" src ="assets/images/shivani/60.png" width="50" height="50">
-</button>
-<br>
-<button onclick="check37()">
-<img id ="col37" src ="assets/images/shivani/37.png" width="50" height="50">
-</button>
+				<button onclick="check36()">
+				<img id ="col36" src ="assets/images/shivani/60.png" width="50" height="50">
+				</button>
+				<br>
+				<button onclick="check37()">
+				<img id ="col37" src ="assets/images/shivani/37.png" width="50" height="50">
+				</button>
 
-<button onclick="check38()">
-<img id ="col38" src ="assets/images/shivani/38.png" width="50" height="50">
-</button>
+				<button onclick="check38()">
+				<img id ="col38" src ="assets/images/shivani/38.png" width="50" height="50">
+				</button>
 
-<button onclick="check39()">
-<img id ="col39" src ="assets/images/shivani/39.png" width="50" height="50">
-</button>
+				<button onclick="check39()">
+				<img id ="col39" src ="assets/images/shivani/39.png" width="50" height="50">
+				</button>
 
-<button onclick="check40()">
-<img id ="col40" src ="assets/images/shivani/40.png" width="50" height="50">
-</button>
+				<button onclick="check40()">
+				<img id ="col40" src ="assets/images/shivani/40.png" width="50" height="50">
+				</button>
 
-<button onclick="check41()">
-<img id ="col41" src ="assets/images/shivani/65.png" width="50" height="50">
-</button>
+				<button onclick="check41()">
+				<img id ="col41" src ="assets/images/shivani/65.png" width="50" height="50">
+				</button>
 
-<button onclick="check42()">
-<img id ="col42" src ="assets/images/shivani/42.png" width="50" height="50">
-</button>
+				<button onclick="check42()">
+				<img id ="col42" src ="assets/images/shivani/42.png" width="50" height="50">
+				</button>
 
-<button onclick="check43()">
-<img id ="col43" src ="assets/images/shivani/18.png" width="50" height="50">
-</button>
+				<button onclick="check43()">
+				<img id ="col43" src ="assets/images/shivani/18.png" width="50" height="50">
+				</button>
 
-<button onclick="check44()">
-<img id ="col44" src ="assets/images/shivani/20.png" width="50" height="50">
-</button>
+				<button onclick="check44()">
+				<img id ="col44" src ="assets/images/shivani/20.png" width="50" height="50">
+				</button>
 
-<button onclick="check45()">
-<img id ="col45" src ="assets/images/shivani/45.png" width="50" height="50">
-</button>
-<br>
+				<button onclick="check45()">
+				<img id ="col45" src ="assets/images/shivani/45.png" width="50" height="50">
+				</button>
+				<br>
 
-<button onclick="check46()">
-<img id ="col46" src ="assets/images/shivani/46.jpg" width="50" height="50">
-</button>
+				<button onclick="check46()">
+				<img id ="col46" src ="assets/images/shivani/46.jpg" width="50" height="50">
+				</button>
 
-<button onclick="check47()">
-<img id ="col47" src ="assets/images/shivani/47.png" width="50" height="50">
-</button>
+				<button onclick="check47()">
+				<img id ="col47" src ="assets/images/shivani/47.png" width="50" height="50">
+				</button>
 
-<button onclick="check48()">
-<img id ="col48" src ="assets/images/shivani/48.jpg" width="50" height="50">
-</button>
+				<button onclick="check48()">
+				<img id ="col48" src ="assets/images/shivani/48.jpg" width="50" height="50">
+				</button>
 
-<button onclick="check49()">
-<img id ="col49" src ="assets/images/shivani/49.jpg" width="50" height="50">
-</button>
+				<button onclick="check49()">
+				<img id ="col49" src ="assets/images/shivani/49.jpg" width="50" height="50">
+				</button>
 
-<button onclick="check50()">
-<img id ="col49" src ="assets/images/shivani/66.png" width="50" height="50">
-</button>
-<button onclick="check51()">
-<img id ="col49" src ="assets/images/shivani/67.jpg" width="50" height="50">
-</button>
-<button onclick="check52()">
-<img id ="col49" src ="assets/images/shivani/68.jpg" width="50" height="50">
-</button>
-<button onclick="check53()">
-<img id ="col49" src ="assets/images/shivani/69.png" width="50" height="50">
-</button>
-<button onclick="check54()">
-<img id ="col49" src ="assets/images/shivani/70.png" width="50" height="50">
-</button>
+				<button onclick="check50()">
+				<img id ="col49" src ="assets/images/shivani/66.png" width="50" height="50">
+				</button>
+				<button onclick="check51()">
+				<img id ="col49" src ="assets/images/shivani/67.jpg" width="50" height="50">
+				</button>
+				<button onclick="check52()">
+				<img id ="col49" src ="assets/images/shivani/68.jpg" width="50" height="50">
+				</button>
+				<button onclick="check53()">
+				<img id ="col49" src ="assets/images/shivani/69.png" width="50" height="50">
+				</button>
+				<button onclick="check54()">
+				<img id ="col49" src ="assets/images/shivani/70.png" width="50" height="50">
+				</button>
 
-</center>
+				</center>
 
 
-      		</div>
+				      		</div>
       		<div class="info">
       			<h4> Find my Twin !!! Win this game within 5 minutes to get 700points.</h4>
       			
@@ -561,11 +625,16 @@
       			 
       		</div>
 				      		
-							<div class="close"><a>x</a></div>
+				<div class="close"><a>x</a></div>
 
-						</div>
-						<div class="canvas garima">
-						<link rel="stylesheet" href="assets/stylesheets/garima.css"> 
+				</div><!--
+
+				game : game of fifteen (garima)
+
+
+			
+		--><div class="canvas garima">
+						 
 							<h1>Jig Saw Puzzle</h1>
 							<div class="info">
 					      			<h4>Yaaay ! tetris !!! Win this game within 10 minutes to get 50points.</h4>
@@ -622,6 +691,8 @@
 		<script src="assets/javascript/piyali.js"></script>
 		<script src="assets/javascript/shivani.js"></script>
 		<script src="assets/javascript/garima.js"></script>
+
+		<!--timer , manage popups-->
 		<script>
 			var open = 'rules';
 			$('.menu nav li').click(function(){
@@ -663,7 +734,7 @@
 				if(time === start+10){
 					stop();
 					
-					$('.runs').empty();
+					// $('.runs').empty();
 					$('.'+games[(i-1)/2]).fadeOut();
 					$('.backdrop').fadeOut();
 
@@ -674,15 +745,15 @@
 					}
 				}
 
-			},100);
+			},1000);
 
 
 
 
 
 		</script>
-		<script type="text/javascript" class="runs">
+		<!-- <script type="text/javascript" class="runs">
 			
-		</script>
+		</script> -->
 	</body>
 </html>
