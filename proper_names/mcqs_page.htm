@@ -700,6 +700,9 @@
 		<script>
 			var open = 'rules';
 			var object ={};
+
+			// bring in popups
+
 			$('.menu nav li').click(function(){
 				$('.backdrop').fadeIn();
 				$('.'+this.id).fadeIn();
@@ -707,9 +710,18 @@
 
 			});
 
+
+
+			//close popups
+
 			$('.close').click(function () {
 				$('.'+open).fadeOut();
 				$('.backdrop').fadeOut();
+
+				// ----------------------------------------------------
+				//  Ajax request to send points
+				// ----------------------------------------------------
+				
 
 				$.ajax({
 						type: 'POST',
@@ -721,36 +733,58 @@
 					});
 
 			});
+
+			//code for timer
+
 			var time=0;
 			var start = 10; 
 			var i;
 
-			var games = ['tetris','mansi','piyali','shivani','garima'];
-			var func = [tetris,mansi,piyali,shivani,garima];
+			var games = ['tetris','mansi','piyali','shivani','garima'];  //names of classes
+			var func = [tetris,mansi,piyali,shivani,garima]; // functions
 			var l = games.length;
-			console.log(l);
+			
+
+
 			var timer = setInterval(function(){
 				time = time +1;
+
+				// game start
+
 				if(time === start){
 					$('.backdrop').fadeIn();
 					i = time / 10;
 					console.log(i);
 					
 
-					object = {};
+					object = {};   //object which will hold the points
 
 					func[(i-1)/2](object);
-					console.log(games[(i-1/2)]);
+					
 
 					$('.'+games[(i-1)/2]).fadeIn();
 
 				}
+
+				// game stop 
+
 				if(time === start+10){
-					stop();
-					
+										
 					// $('.runs').empty();
 					$('.'+games[(i-1)/2]).fadeOut();
 					$('.backdrop').fadeOut();
+					// ----------------------------------------------------
+					//  Ajax request to send points
+					// ----------------------------------------------------
+
+					$.ajax({
+						type: 'POST',
+						url: '',
+						
+						data:{points: object.getscore()},
+						dataType: 'jsonp'
+
+					});
 
 					start = time+10;
 					if(((i-1)/2)>= l -1){
