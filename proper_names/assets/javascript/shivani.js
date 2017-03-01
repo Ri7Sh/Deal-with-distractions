@@ -1,4 +1,4 @@
-var shivani = (function(){
+
 
 var radioButtonContainer = document.getElementById('radioButtonContainer');
 radioButtonContainer.style.display = 'none';
@@ -153,4 +153,9 @@ function check23() {
    document.getElementById("23").checked = true;}
 }
 
-});
+
+var shivani = function(object){
+  object.getpoints = function(){
+    return x;
+  };
+};

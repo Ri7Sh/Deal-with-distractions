@@ -1,5 +1,5 @@
-var garima  = (function(){;});
-console.log('arouaoru');
+var garima  = function(object){
+
 var moves = 0;
         var tbl, rows, cols;
 
@@ -36,7 +36,7 @@ var moves = 0;
                 IsInOrder();
             }
         }
-
+        var flag = 0;
         function IsInOrder() {
             var arrDiv = document.getElementsByTagName("DIV");
             var inorder = true;
@@ -53,6 +53,8 @@ var moves = 0;
                     arrDiv[i].style.backgroundColor = "#FFFFCC";
                 }
                 alert("Perfect! It took you " + moves + " moves to solve it.");
+                flag = 1;
+
             }
         }
 
@@ -206,3 +208,8 @@ var moves = 0;
             sourceElementParent.removeChild(sourceElement);
             targetElement.appendChild(sourceElement);
         }
+
+        object.getscore = function(){
+            return flag?Math.max(0, 1000-moves):0;
+        }
+};

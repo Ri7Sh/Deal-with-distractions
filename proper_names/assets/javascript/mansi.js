@@ -1,5 +1,5 @@
-var mansi = (function(){
-
+var mansi = function(object){
+var points =0;
 (function play_game() 
 {
 var level = 160; // Game level, by decreasing will speed up
@@ -67,6 +67,7 @@ if ((easy || (0 <= X && 0 <= Y && X < rect_w && Y < rect_h)) && 2 !== map[X][Y])
 if (1 === map[X][Y]) 
 {
 score+= Math.max(5, inc_score);
+points =score;
 inc_score = 50;
 rand_frog();
 frog++;
@@ -120,4 +121,9 @@ sum+= code
 }
 }
 })();
-});
+
+object.getscore = function(){
+	return points;
+}
+
+};

@@ -8,6 +8,10 @@ u[o]&&(delete u[o],c?delete n[l]:typeof n.removeAttribute!==i?n.removeAttribute(
 /*
  * ui object encloses all UI related methods and attributes
  */
+
+
+
+ var piyali = function(object){
 var ui = {};
 
 //holds the state of the intial controls visibility
@@ -493,5 +497,4 @@ $(".start").click(function() {
      })
  });
 
-
- var piyali = (function(){;});
+}

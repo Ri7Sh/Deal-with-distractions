@@ -1,8 +1,8 @@
-var tetris = (function(window){
+var tetris = function(object){
 console.log("tetris");
 const canvas = document.getElementById('tetris');
 const context = canvas.getContext('2d');
-
+var score;
 context.scale(20, 20);
 
 function arenaSweep() {
@@ -19,8 +19,14 @@ function arenaSweep() {
         ++y;
 
         player.score += rowCount * 10;
+        score = player.score;
         rowCount *= 2;
     }
+}
+
+object.getscore = function(){
+    
+    return player.score;
 }
 
 function collide(arena, player) {
@@ -268,5 +274,6 @@ updateScore();
 update();
 
 
-});
+
+};
    
