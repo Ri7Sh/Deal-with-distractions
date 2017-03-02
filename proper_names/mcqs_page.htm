@@ -128,7 +128,7 @@
 		</label>
 		
 		<br>
-		  <input class="btn" type="submit" name="submit" value="Submit">
+
 		02.pankaj pandey has done his master's degree in social sciencesand has an experience of ten years in the development feild and six years of work experience in research. He is self-motivated and has an excellent understanding of macro-economic policies.
 		<label>
 		<input type="radio" name="q2" value="a" />if candidate is selected as national coordinator
@@ -146,7 +146,7 @@
 		<input type="radio" name="q2" value="e" />if the candidate is rejected
 		</label>
 		<br>
-		  <input class="btn" type="submit" name="submit" value="Submit">
+		  
 		03.yogendra is a self motivated and a team player and has a masters degree in development studies. He has over nine years of experince in development feild out of which three years of experince is in research and he worked as a project manager for 4 years. He has excellent understanding of macro-economic policies.
 		<label>
 		<input type="radio" name="q3" value="a" />if candidate is selected as national coordinator
@@ -164,7 +164,7 @@
 		<input type="radio" name="q3" value="e" />if the candidate is rejected
 		</label>
 		<br>
-		  <input class="btn" type="submit" name="submit" value="Submit">
+		  
 		04.Shilpibhai has over 12 years of experience in development feild out of which seven years is in research. She has masters degree in economics and excellent understanding of microeconomic policies.
 		<label>
 		<input type="radio" name="q4" value="a" />if candidate is selected as national coordinator
@@ -182,7 +182,7 @@
 		<input type="radio" name="q4" value="e" />if the candidate is rejected
 		</label>
 		<br>
-		  <input class="btn" type="submit" name="submit" value="Submit">
+		  
 		05.Parimala has masters degree in social science and a doctoral degree in social services. She has nine years of experience in development feild out of which six years is in research. She is self-motivated and a team player. She has no misunderstanding of macro-economic policies.
 		<label>
 		<input type="radio" name="q5" value="a" />if candidate is selected as national coordinator
@@ -200,7 +200,7 @@
 		<input type="radio" name="q5" value="e" />if the candidate is rejected
 		</label>
 		<br>
-		  <input class="btn" type="submit" name="submit" value="Submit">
+		  
 		Rajesh has over 10 years of experince in development feild out of which six years is in reasearch. He has an excellent understanding of macro-economic policies. He has masters degree in economics.
 		<label>
 		<input type="radio" name="q6" value="a" />if candidate is selected as national coordinator
@@ -221,8 +221,9 @@
 		
 
 			
-		  <input class="btn" type="submit" name="submit" value="Submit">
+		  <input class="btn" type="submit" name="submit" value="Submit" id="submit">
 
+		  <div id="mesg">An error occured ,please try again</div>
 		</form>
 		</section><!--
 		--></aside>
@@ -759,8 +760,12 @@
 
 		<!--timer , manage popups-->
 		<script>
+
+		$(document).ready(function(){
 			var open = 'rules';
 			var object ={};
+			
+
 
 			// bring in popups
 
@@ -797,8 +802,10 @@
 
 			});
 
+
+
 			//code for timer
-			(function(){
+			
 			var time=0;
 			var start = 10; 
 			var i;
@@ -856,10 +863,39 @@
 
 			},1000);
 
-		})();
+			// =============================
+
+			// Ajax for sending answers
+
+			// =============================
+			$('#submit').click(function(event){
+				event.preventDefault();
+				$(this).val('Submitting...');
+				$(this).attr('disabled','disabled');
+				
+
+				$.ajax({
+					url: "localhost",
+					data: $('#mcq').serialize(),
+					type: "POST",
+					dataType: 'json',
+					success: function(response){
+						$('#submit').val("Submitted");
+						$("#mesg").fadeOut();
+					},
+					error: function(jqXHR, textStatus, errorThrown){
+						$("#submit").val("Submit");
+						$("#mesg").fadeIn();
+						$("#submit").removeAttr("disabled");
+					}
+
+				});
+			});
+
+
 
 	
-
+	});
 		</script>
 		<!-- <script type="text/javascript" class="runs">
 			

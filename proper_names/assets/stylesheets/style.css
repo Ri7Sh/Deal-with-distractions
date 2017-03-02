@@ -623,4 +623,13 @@ the other one with 6 steps and 6 digits*/
 }
 
 
+#mesg{
+	display: none;
+	text-align: center;
+	margin: -30px 0 20px 0;
+	border: 1px solid #ee4490;
+	border-radius: 3px;
+	background: rgba(200,0,0,.3);
+	
+}
 
