@@ -630,6 +630,17 @@ the other one with 6 steps and 6 digits*/
 	border: 1px solid #ee4490;
 	border-radius: 3px;
 	background: rgba(200,0,0,.3);
-	
+
+}
+
+.sub{
+	margin: 13px auto 10px auto;
+	box-shadow: 0 0 0;
+
+}
+
+.done{
+	color: #757575;
+	background-color: #aaa;
 }
 

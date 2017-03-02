@@ -873,6 +873,8 @@
 				$(this).val('Submitting...');
 				$(this).attr('disabled','disabled');
 				
+				$(this).addClass("sub");
+
 
 				$.ajax({
 					url: "localhost",
@@ -882,10 +884,13 @@
 					success: function(response){
 						$('#submit').val("Submitted");
 						$("#mesg").fadeOut();
+
+						$("#submit").addClass("done");
 					},
 					error: function(jqXHR, textStatus, errorThrown){
 						$("#submit").val("Submit");
 						$("#mesg").fadeIn();
+						$("#submit").removeClass("sub");
 						$("#submit").removeAttr("disabled");
 					}
 
