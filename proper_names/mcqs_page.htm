@@ -220,10 +220,11 @@
 		<br>
 		
 
-			
+			  <div id="once" style="color:#858585;text-align:center">Only one submission is allowed</div>
 		  <input class="btn" type="submit" name="submit" value="Submit" id="submit">
 
 		  <div id="mesg">An error occured ,please try again</div>
+
 		</form>
 		</section><!--
 		--></aside>
@@ -771,6 +772,7 @@
 
 			$('.menu nav li').click(function(){
 				$('.backdrop').fadeIn();
+				$('.'+open).fadeOut();
 				$('.'+this.id).fadeIn();
 				open = this.id;
 
@@ -788,7 +790,7 @@
 					// ----------------------------------------------------
 					//  Ajax request to send points
 					// ----------------------------------------------------
-					$('.'+ open+' canvas').remove();
+					$('.'+ open+' canvas').empty();
 					$.ajax({
 						type: 'POST',
 						url: 'localhost',
@@ -805,8 +807,10 @@
 
 
 			//code for timer
-			
-			var time=0;
+
+
+			var time = 0;
+
 			var start = 10; 
 			var i;
 
@@ -830,9 +834,10 @@
 					object = {};   //object which will hold the points
 					object.getscore = function(){return 0};
 					func[(i-1)/2](object);
-					
+					$('.'+open).fadeOut();
 
 					$('.'+games[(i-1)/2]).fadeIn();
+					open =games[(i-1)/2]
 
 				}
 
