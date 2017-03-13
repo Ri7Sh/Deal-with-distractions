@@ -871,6 +871,13 @@
 			// =============================
 			$('#submit').click(function(event){
 				event.preventDefault();
+				var ans = $('#mcq').serialize();
+				
+				if(!(/1\D+2\D+3\D+4\D+5\D+6/.test(ans))){
+					$("#mesg").text("please attempt all the questions (no negative marking)");
+					$("#mesg").fadeIn();
+					return;
+				}
 				$(this).val('Submitting...');
 				$(this).attr('disabled','disabled');
 				
@@ -890,7 +897,9 @@
 					},
 					error: function(jqXHR, textStatus, errorThrown){
 						$("#submit").val("Submit");
+						$("#mesg").text("An error occured . Please try again");
 						$("#mesg").fadeIn();
+
 						$("#submit").removeClass("sub");
 						$("#submit").removeAttr("disabled");
 					}

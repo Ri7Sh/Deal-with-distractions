@@ -180,7 +180,7 @@ function playerReset() {
         arena.forEach(row => row.fill(0));
         
         
-        alert("No room for new block. Game over.");
+        console.log("No room for new block. Game over.");
 
         //break;
             exit();
