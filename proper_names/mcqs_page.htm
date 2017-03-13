@@ -788,7 +788,7 @@
 					// ----------------------------------------------------
 					//  Ajax request to send points
 					// ----------------------------------------------------
-				
+					$('.'+ open+' canvas').remove();
 					$.ajax({
 						type: 'POST',
 						url: 'localhost',
@@ -842,8 +842,9 @@
 										
 					// $('.runs').empty();
 					$('.'+games[(i-1)/2]).fadeOut();
+					$('script .script'+games[(i-1)/2]).remove();
 					$('.backdrop').fadeOut();
-				
+					$('.'+ games[(i-1)/2]+' canvas').remove();
 						$.ajax({
 							type: 'POST',
 							url: 'localhost',

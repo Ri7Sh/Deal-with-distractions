@@ -558,9 +558,11 @@ the other one with 6 steps and 6 digits*/
 .tetris,
 .mansi,
 .piyali,
-.shivani,
+.shivani
 .garima{
+	
 	display: none;
+	
 }
 
 .backdrop .rules{

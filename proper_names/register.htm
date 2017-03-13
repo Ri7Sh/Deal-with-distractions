@@ -2,8 +2,11 @@
 <html>
 <head>
 <title>Register-dealing with distraction</title>
-<link rel="stylesheet" href="assets/stylesheet/style.css" type="text/css">
-<style type="text/css">@import url('https://fonts.googleapis.com/css?family=Lato:500,400');
+
+
+<style type="text/css">
+
+@import url('https://fonts.googleapis.com/css?family=Lato:500,400');
 
     .teamdetails{
 	    border-radius:6px;
@@ -34,7 +37,7 @@
 		color: rgb(0,34,61);
 	}
 	#details-table{
-	    width:  600px;
+	    width:  650px;
 		margin: 0 auto;
         padding:20px;
 	}
@@ -58,12 +61,21 @@
 	form tr{
 		text-align:left;
 	}
+	input{
+		display: inline-block;
+		color: #858585;
+	}
+	.error{
+		color: red;
+		display: block;
+		font-size: 16px;
+	}
 </style>
 </head>
 <body id="body">
 <div id="register">REGISTER</div>
 <div id="form-img"></div>
-<form action="#" method="post" id="form">
+<form action="#" method="post" id="form" name="registration">
 <table id="details-table" cellspacing="15px">
     <tr>
 	    <td class="input-labels">Team Name :    </td>
@@ -75,7 +87,7 @@
 	</tr>
 	<tr>
 	    <td class="input-labels"><br>Confirm Password :    </td>
-		<td><input type="password" name="pword-confirm" id="pword-confirm" class="teamdetails" required></td>
+		<td><input type="password" name="pword_confirm" id="pword-confirm" class="teamdetails" required></td>
 	</tr>
 	<tr>
 	    <td class="input-labels"><br><br>MEMBER 1    <br><br></td>
@@ -97,6 +109,98 @@
 </table>
 <input type="submit" name="register" id="register-btn" class="sub-btn" value="REGISTER!">
 </form>
+
+		<script src="assets/javascript/jquery.min.js">
+
+		</script>
+<script src="assets/javascript/jquery.validate.min.js"></script>
+
+<script>
+	
+	$(document).ready(function(){
+
+
+		$("form[name='registration']").validate({
+			rules:{
+				tname: "required",
+				pword:{
+					required:true,
+					minlength: 5,
+				},
+				pword_confirm: {
+					required:true,
+					minlength: 5,
+					equalTo: "#pword",
+
+				}, 
+				name1:{
+					required: true,
+
+				},
+				name2:{
+					required: true,
+
+				},
+				email1:{
+					required: true,
+					email: true,
+				},
+				email2:{
+					required: true,
+					email: true,
+				},
+				mob1:{
+					required: true,
+					minlength: 10,
+					maxlength:10,
+					digits: true,
+				},
+				mob2:{
+					required: true,
+					minlength: 10,
+					maxlength:10,
+					digits: true,
+				},
+			},
+			messages:{
+				tname: "Please enter your teamname",
+				pword: {
+					required:"please enter a password",
+					minlength: "password must be atleast 5 letters long",
+
+				},
+				pword_confirm:{
+					required:"please enter a password",
+					minlength: "password must be atleast 5 letters long",
+					equalTo: "passwords entered should be equal"
+
+				} ,
+				email1:{
+					email: "please enter a valid email id",
+				},
+				email2:{
+					email: "please enter a valid email id",
+				},
+				mob1:{
+					minlength: "needs to have 10 digits",
+					maxlength: "needs to have 10 digits",
+					digits: "should be digits",
+				},
+				mob2:{
+					minlength: "needs to have 10 digits",
+					maxlength: "needs to have 10 digits",
+					digits: "should be digits",
+				
+				},
+
+
+			},
+			submitHandler:function(form){
+				form.submit();
+				}
+		});
+	});
+</script>
 </body>
 </html>
 
