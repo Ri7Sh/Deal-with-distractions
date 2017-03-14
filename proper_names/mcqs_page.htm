@@ -223,7 +223,7 @@
 			  <div id="once" style="color:#858585;text-align:center">Only one submission is allowed</div>
 		  <input class="btn" type="submit" name="submit" value="Submit" id="submit">
 
-		  <div id="mesg">An error occured ,please try again</div>
+		  <div id="mesg">Request could not be sent to the server</div>
 
 		</form>
 		</section><!--
@@ -897,12 +897,12 @@
 					success: function(response){
 						$('#submit').val("Submitted");
 						$("#mesg").fadeOut();
-
+						$(".points").text(response);
 						$("#submit").addClass("done");
 					},
 					error: function(jqXHR, textStatus, errorThrown){
 						$("#submit").val("Submit");
-						$("#mesg").text("An error occured . Please try again");
+						$("#mesg").text("Request could not be sent to the server");
 						$("#mesg").fadeIn();
 
 						$("#submit").removeClass("sub");
