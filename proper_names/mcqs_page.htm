@@ -238,9 +238,9 @@
 		--><footer class="group">
 		<div class="container">
 			<nav class="foo-menu">
-					<ul>
-						<li><a href="#">Rules</a></li>
-						<li><a href="#">Sign Out</a></li>
+					<ul style="cursor:pointer;">
+						<li data="rules"><a>Rules</a></li>
+						<li data="signOut"><a>Sign Out</a></li>
 					</ul>
 				</nav>
 			<h6>&copy acm-w</h6>                                                 
@@ -770,11 +770,23 @@
 
 			// bring in popups
 
-			$('.menu nav li').click(function(){
+			$('.menu nav li').click(function(event){
+				event.preventDefault();
 				$('.backdrop').fadeIn();
 				$('.'+open).fadeOut();
+				console.log(this);
 				$('.'+this.id).fadeIn();
 				open = this.id;
+
+			});
+
+			$('.foo-menu li').click(function(event){
+				event.preventDefault();
+				$('.backdrop').fadeIn();
+				$('.'+open).fadeOut();
+				var handler = $(this).attr('data');
+				$('.'+handler).fadeIn();
+				open = handler;
 
 			});
 
