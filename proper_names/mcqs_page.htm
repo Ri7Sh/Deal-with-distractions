@@ -48,10 +48,10 @@
 					<label for="toggle2">change question</label>
 						<nav class="nav">
 			  				<ul>
-			    				<li class="active"><a href="#" >Question1</a></li>
-			    				<li><a href="#">Question2</a></li>
-			    				<li><a href="#">Question3</a></li>
-			    				<li><a href="#">Question4</a></li>
+			    				<li class="active" list="1"><a href="#" >Question1</a></li>
+			    				<li list="2"><a href="#">Question2</a></li>
+			    				<li list="3"><a href="#">Question3</a></li>
+			    				<li list="4"><a href="#">Question4</a></li>
 			  				</ul>
 						</nav>
 
@@ -752,7 +752,7 @@
 		<script src="assets/javascript/jquery.min.js">
 
 		</script>
-
+		<script src="assets/javascript/data.js"></script>
 		<script src="assets/javascript/tetris.js"></script> 
 		<script src="assets/javascript/mansi.js"></script>
 		<script src="assets/javascript/piyali.js"></script>
@@ -819,10 +819,14 @@
 
 
 			//code for timer
-
-
 			var time = 0;
+			var end;
 
+			
+
+
+
+			
 			var start = 10; 
 			var i;
 
@@ -881,15 +885,22 @@
 
 			},1000);
 
+
+
 			// =============================
 
 			// Ajax for sending answers
 
 			// =============================
 			$('#submit').click(function(event){
+
 				event.preventDefault();
 				var ans = $('#mcq').serialize();
-				
+				var k ={
+					story: $('.active').attr('list'),
+					ans : ans,
+				}
+				alert(JSON.stringify(k));
 				if(!(/1\D+2\D+3\D+4\D+5\D+6/.test(ans))){
 					$("#mesg").text("please attempt all the questions (no negative marking)");
 					$("#mesg").fadeIn();
@@ -902,8 +913,9 @@
 
 
 				$.ajax({
-					url: "localhost",
-					data: $('#mcq').serialize(),
+					url: "localhost/"+ $('.active').attr('list'),
+					// data: $('#mcq').serialize(),
+					data: k,
 					type: "POST",
 					dataType: 'json',
 					success: function(response){
