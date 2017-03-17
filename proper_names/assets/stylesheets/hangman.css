@@ -1,0 +1,22 @@
+.hangman #score{
+
+  display: inline-block;
+
+}
+.hangman .canvas
+{
+	background-color:rgba(228, 75, 53, 0.7);
+	color: #ffffff;
+}
+.hangman .space{
+  border-radius: 6px;
+   padding: 5px 0;
+   margin-bottom: 5px;
+  
+  background-color:  #003080;
+  color: #fff;
+  text-align: center;
+  width: 200px;
+
+  
+}

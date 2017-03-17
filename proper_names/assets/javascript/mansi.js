@@ -89,7 +89,7 @@ else if (!tn.length)
 {
 var msg_score = document.getElementById("msg");
 msg_score.innerHTML = "Thank you for playing game.<br /> Your Score : <b>"+score+"</b><br /><br />";
-document.getElementById("playArea").style.display = 'none';
+$('.snake').fadeOut(100);
 window.clearInterval(interval);
 }
 }

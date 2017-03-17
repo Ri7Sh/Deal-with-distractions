@@ -1,4 +1,4 @@
-var garima  = function(object){
+
 
 var moves = 0;
         var tbl, rows, cols;
@@ -60,6 +60,7 @@ var moves = 0;
 
         function Reset() {
             moves = 0;
+
             document.getElementById("moves").innerHTML = moves;
 
             rows = document.getElementById("rows").value;
@@ -121,7 +122,7 @@ var moves = 0;
             }
         }
 
-  
+        
 
         function Shuffle(o) {
             for (var j, x, i = o.length; i; j = parseInt(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
@@ -209,7 +210,10 @@ var moves = 0;
             targetElement.appendChild(sourceElement);
         }
 
-        object.getscore = function(){
-            return flag?Math.max(0, 1000-moves):0;
-        }
+     var garima  = function(object){
+    
+    object.getscore=  function(){
+        return flag?max(400-moves,0):0;
+    }
 };
+

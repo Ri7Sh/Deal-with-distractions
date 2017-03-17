@@ -464,7 +464,7 @@ the other one with 6 steps and 6 digits*/
 }
 
 .backdrop{
-	display:none;
+
 	background: rgba(0,0,0,0.9);
 	position:fixed;
 	top:0;
@@ -472,24 +472,28 @@ the other one with 6 steps and 6 digits*/
 	right:0;
 	bottom:0;
 	z-index: 2;
+	
+	justify-content: center;
+	flex-direction: column;
+	display:none;
 }
 .canvas{
 
 	background: #eee;
 	
-	position: fixed;
+	position: relative;
 	overflow:auto;
-	top:0;
-	left:0;
+	align-self: center;
+	
 	
 	color: rgb(0,34,61);
 	border-radius: 6px;
 	
 	
-	top: 100px;
+	
 	width: 950px;
-	left: 250px;
-	height: 500px;
+	
+	height: 70vh;
 	z-index: 2;
 }
 .canvas h1{
@@ -544,14 +548,14 @@ the other one with 6 steps and 6 digits*/
 
 .canvas .close{
 	text-align: center;
-	color: #212121;
+	color: #eee;
 	border: 1px solid rgba(0,0,0,0.1);
 	border-radius: 50%;
 	width: 30px;
 	height: 30px;
 	position: absolute;
 	top: 10px;
-	right: 30px;
+	right: 10px;
 	cursor: pointer;
 }
 
@@ -559,7 +563,11 @@ the other one with 6 steps and 6 digits*/
 .mansi,
 .piyali,
 .shivani
-.garima{
+.garima,
+.nithya,
+.poonam,
+.hangman,
+.bhavana{
 	
 	display: none;
 	
@@ -570,7 +578,7 @@ the other one with 6 steps and 6 digits*/
 }
 
 .backdrop .tetris{
-	background: #00cc88;
+	background: transparent;
 }
 
 .backdrop .mansi{
@@ -645,4 +653,29 @@ the other one with 6 steps and 6 digits*/
 	color: #757575;
 	background-color: #aaa;
 }
+
+
+.gamedata{
+	display: none;
+	padding: 20px 30px;
+	box-sizing: border-box;
+	margin-top: 30px;
+	position: relative;
+	background-color: rgba(0,0,0,.3);
+
+	color: #fff;
+	width: 950px;
+	text-align: left;
+
+	margin: 30px auto 0 auto;
+
+}
+.gamedata h3{
+	font-size: 22px;
+}
+.gamedata p{
+	font-size: 16px;
+	line-height: 20px;
+}
+
 

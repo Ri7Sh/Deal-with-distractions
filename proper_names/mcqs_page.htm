@@ -11,8 +11,12 @@
 		<link rel="stylesheet" href="assets/stylesheets/piyali.css" type="text/css">
 		<link rel="stylesheet" href="assets/stylesheets/shivani.css">
 		<link rel="stylesheet" href="assets/stylesheets/garima.css">
-
-
+		<link rel="stylesheet" href="assets/stylesheets/nithya.css">
+		<link rel="stylesheet" href="assets/stylesheets/poonam.css">
+		<link rel="stylesheet" href="assets/stylesheets/hangman.css">
+		<link rel="stylesheet" href="assets/stylesheets/bhavana.css">
+		
+		
 		<link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700" rel="stylesheet">
 	</head>
 	<body><!-- 
@@ -38,7 +42,6 @@
 					</ul>
 				</nav>
 			</section><!-- 
-
 			===================================
 			nav bar to toggle between questions
 			=====================================
@@ -48,21 +51,22 @@
 					<label for="toggle2">change question</label>
 						<nav class="nav">
 			  				<ul>
-			    				<li class="active" list="1"><a href="#" >Question1</a></li>
-			    				<li list="2"><a href="#">Question2</a></li>
-			    				<li list="3"><a href="#">Question3</a></li>
-			    				<li list="4"><a href="#">Question4</a></li>
+			    				<li class="active" list="1"><a>Question1</a></li>
+			    				<li list="2"><a>Question2</a></li>
+			    				<li list="3"><a>Question3</a></li>
+			    				<li list="4"><a>Question4</a></li>
 			  				</ul>
 						</nav>
 
 				</section>
-			
+		
 				<section class="points">
 					<p>0.00</p>
 				</section>
 
 
 		  </section>  
+
 		</header><!-- 
 		================
 		****************
@@ -110,6 +114,7 @@
 		Based on the given criteria and information provided about each candidate take a decision in each case.
 		<br>
 		<form action="#" method="post" id="mcq">
+		<div class="mcq">
 		01. vikas has masters degree in in economics and has an excellent understanding of microeconomic policies. He has ten years of work experience in the research. He is self-motivated and excellent player.
 		<label>
 		<input type="radio" name="q1" value="a" />if candidate is selected as national coordinator
@@ -218,7 +223,7 @@
 		<input type="radio" name="q6" value="e" />if the candidate is rejected
 		</label>
 		<br>
-		
+		</div>
 
 			  <div id="once" style="color:#858585;text-align:center">Only one submission is allowed</div>
 		  <input class="btn" type="submit" name="submit" value="Submit" id="submit">
@@ -305,15 +310,15 @@
 					<span>score:</span>
 					<div id="score"></div>
 				</div>
-	      		<canvas id="tetris" width="240" height="400"></canvas>
+	      		<canvas id="tetris" width="700" height="400"></canvas>
 	      		</div>
-	      		<div class="info">
+	      		<!-- <div class="info">
 	      			<h4>Yaaay ! tetris !!! Win this game within 10 minutes to get 50points.</h4>
 	      			<h5>Oh! and you need to score 500 points to win it .
 	      			<br>To move the blocks left, right & down use the arrow keys.Use the up arrow key to rotate the block.<br>
 	      			!!!!!!!!!!!!Add more instructions !!!!!!!!!
 	      			</h5> 
-	      		</div>
+	      		</div> -->
 				<div class="close"><a>x</a></div>
 
 			</div><!--
@@ -331,8 +336,9 @@
 			<h1>SNAKE GAME</h1>
 				<div class="game">
 				<div id="msg"></div>
+				<div class="snake">
 	                <canvas id="playArea" width="200" height="300">Sorry your browser does not support HTML5</canvas>
-	               </body>
+	               </div>
 
 	      		</div>
 	      		<div class="info">
@@ -404,7 +410,7 @@
 
 			
 		--><div class="canvas shivani">
-			
+						
 						<h1>Find my Twin</h1><br>
 						
 							<div class="game">
@@ -702,49 +708,191 @@
 			
 		--><div class="canvas garima">
 						 
-							<h1>Jig Saw Puzzle</h1>
-							<div class="info">
-					      			<h4>Yaaay ! tetris !!! Win this game within 10 minutes to get 50points.</h4>
-					      			<h5>Oh! and you need to score 500 points to win it .
-					      			<br>To move the blocks left, right & down use the arrow keys.Use the up arrow key to rotate the block.<br>
-					      			!!!!!!!!!!!!Add more instructions !!!!!!!!!
-					      			</h5> 
-					      		</div>
-								<div class="game">
-								<div class="space">
-									<span>score:</span>
-									<div id="score"></div>
-								</div>
-								   <center>
-					        
-					        <br>
-					       
-					        <table cellpadding="0" cellspacing="4" align="center" id="tbl">
-					        </table>
-					        <br />
-					        <br />
-					        <br />
-					        <input type="button" name="rows" id="rows" value="4" size="3" style="text-align: center;" />
-					        X
-					        <input type="button" name="cols" id="cols" value="4" size="3" style="text-align: center;" />
-					        
-					        <br />
-					        <br />
-					         Moves: <span id="moves">0</span>  
-					        <br />
-					        <br />
-					        
-					        <br />
-					        <br />
-					        <br />
-					        
-					    </center>
-					      		
-					      		</div>
-					      		
-								<div class="close"><a>x</a></div>
+							
+		<h1>Jig Saw Puzzle</h1>
+		<div class="info">
+      			<h4>Yaaay ! game of fifteen !!! Win this game within 10 minutes to get 50points.</h4>
+      			
+      		</div>
+			<div class="game">
+			<div class="space">
+				<span>score:</span>
+				<div id="score"></div>
+			</div>
+			   <center>
+        
+        <br>
+        <button onClick="Reset()">
+START
+</button>
+        <table cellpadding="0" cellspacing="4" align="center" id="tbl">
+        </table>
+        <br />
+        <br />
+        <br />
+        <input type="button" name="rows" id="rows" value="4" size="3" style="text-align: center;" />
+        X
+        <input type="button" name="cols" id="cols" value="4" size="3" style="text-align: center;" />
+        
+        <br />
+        <br />
+         Moves: <span id="moves">0</span>  
+        <br />
+        <br />
+        
+        <br />
+        <br />
+        <br />
+        
+    </center>
+      		
+      		</div>
+      		
+			<div class="close"><a>x</a></div>
 
+		</div>
+
+				<div class="canvas nithya">
+					<h1>Memory Game</h1>
+					<div class="info">
+			      			<h4>Yaaay ! Memory Game !!! Win this game within 1 minute to get 50points.</h4>
+			      			<h5>Do you have a incredible memory? Match the pairs!!
+			      			<br>To move the blocks left, right & down use the arrow keys.Use the up arrow key to rotate the block.<br>
+			      			      			</h5> 
+			      		</div>
+						<div class="game">
+						<div class="space">
+							<span>score:</span>
+							<div id="score"></div>
+						</div>
+			      		<div id="memory_board"></div>
+			          </div>
+			      		
+			      		
+						<div class="close"><a>x</a></div>
+
+					</div>
+				<div class="canvas poonam">
+					
+					<div class="finding-nemo">
+						    Finding Nemo
+						    <br>
+						    <span style="font-size: 16px;">Click on Nemo to find him</span>
+						  </div>
+						  <button id="nemo"></button>
+					<div class="close"><a>x</a></div>
+
+				</div>
+
+
+				<div class="canvas hangman">
+    
+						<p><h1>Hangman</h1></p>
+								<div class="game">
+						<center>	<div class="space">
+								<span>score:</span>
+								<div id="score"></div>
 							</div>
+				</center>
+				      		
+				<center> 
+
+				<form name="game">
+				    <p style="font-weight:bold; font-size:18px;">
+				        Display Word: &nbsp;&nbsp;&nbsp;<input type="text" style="cursor:no-drop; width:200px; font-size:18px;" name="displayWord" disabled />
+				        <br />
+				        <br />
+				        Used Letters: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" style="cursor:no-drop; width:200px; font-size:18px;" name="usedLetters" disabled />
+				    </p>
+				</form>
+				 
+				<p style="font-weight:bold; font-size:18px;">
+				 <span class="man">
+				<label>Choose a letter:</label>
+				 
+				<br />
+				<br />
+				 
+				<a href="javascript:selectLetter('Q');"><input type="button" style="cursor:pointer; margin-left: 10px; font-size:18px;" value="Q"></a>
+				<a href="javascript:selectLetter('W');"><input type="button" style="cursor:pointer; margin-left: 10px; font-size:18px;" value="W"></a>
+				<a href="javascript:selectLetter('E');"><input type="button" style="cursor:pointer; margin-left: 10px; font-size:18px;" value="E"></a>
+				<a href="javascript:selectLetter('R');"><input type="button" style="cursor:pointer; margin-left: 10px; font-size:18px;" value="R"></a>
+				<a href="javascript:selectLetter('T');"><input type="button" style="cursor:pointer; margin-left: 10px; font-size:18px;" value="T"></a>
+				<a href="javascript:selectLetter('Y');"><input type="button" style="cursor:pointer; margin-left: 10px; font-size:18px;" value="Y"></a>
+				<a href="javascript:selectLetter('U');"><input type="button" style="cursor:pointer; margin-left: 10px; font-size:18px;" value="U"></a>
+				<a href="javascript:selectLetter('I');"><input type="button" style="cursor:pointer; margin-left: 10px; font-size:18px;" value="I"></a>
+				<a href="javascript:selectLetter('O');"><input type="button" style="cursor:pointer; margin-left: 10px; font-size:18px;" value="O"></a>
+				<a href="javascript:selectLetter('P');"><input type="button" style="cursor:pointer; margin-left: 10px; font-size:18px;" value="P"></a>
+				<br />
+				<br />
+				<a href="javascript:selectLetter('A');"><input type="button" style="cursor:pointer; margin-left: 10px; font-size:18px;" value="A"></a>
+				<a href="javascript:selectLetter('S');"><input type="button" style="cursor:pointer; margin-left: 10px; font-size:18px;" value="S"></a>
+				<a href="javascript:selectLetter('D');"><input type="button" style="cursor:pointer; margin-left: 10px; font-size:18px;" value="D"></a>
+				<a href="javascript:selectLetter('F');"><input type="button" style="cursor:pointer; margin-left: 10px; font-size:18px;" value="F"></a>
+				<a href="javascript:selectLetter('G');"><input type="button" style="cursor:pointer; margin-left: 10px; font-size:18px;" value="G"></a>
+				<a href="javascript:selectLetter('H');"><input type="button" style="cursor:pointer; margin-left: 10px; font-size:18px;" value="H"></a>
+				<a href="javascript:selectLetter('J');"><input type="button" style="cursor:pointer; margin-left: 10px; font-size:18px;" value="J"></a>
+				<a href="javascript:selectLetter('K');"><input type="button" style="cursor:pointer; margin-left: 10px; font-size:18px;" value="K"></a>
+				<a href="javascript:selectLetter('L');"><input type="button" style="cursor:pointer; margin-left: 10px; font-size:18px;" value="L"></a>
+				<br />
+				<br />
+				<a href="javascript:selectLetter('Z');"><input type="button" style="cursor:pointer; margin-left: 10px; font-size:18px;" value="Z"></a>
+				<a href="javascript:selectLetter('X');"><input type="button" style="cursor:pointer; margin-left: 10px; font-size:18px;" value="X"></a>
+				<a href="javascript:selectLetter('C');"><input type="button" style="cursor:pointer; margin-left: 10px; font-size:18px;" value="C"></a>
+				<a href="javascript:selectLetter('V');"><input type="button" style="cursor:pointer; margin-left: 10px; font-size:18px;" value="V"></a>
+				<a href="javascript:selectLetter('B');"><input type="button" style="cursor:pointer; margin-left: 10px; font-size:18px;" value="B"></a>
+				<a href="javascript:selectLetter('N');"><input type="button" style="cursor:pointer; margin-left: 10px; font-size:18px;" value="N"></a>
+				<a href="javascript:selectLetter('M');"><input type="button" style="cursor:pointer; margin-left: 10px; font-size:18px;" value="M"></a>
+				 
+				</p>
+				 
+				<br />
+				 
+
+
+
+				</center>
+
+				       <center>
+				  <a href="javascript:reset()">
+				<input type="button" style="cursor:pointer; margin-left: 10px; font-size:18px;" value="Start game / Reset game">
+				</a></center>
+				
+							<div class="close"><a>x</a></div>
+
+		</div>
+		</div>
+		<div class="canvas bhavana">
+		<h1>Bounce</h1><br>
+		
+			<div class="game">
+			<div class="space">
+				<span>score:</span>
+				<div id="score"></div>
+			</div>
+
+      		<canvas id="canvas"></canvas>
+
+   			<p></p>
+        	</div>
+			<div class="close"><a>x</a></div>
+
+			</div>
+
+		
+			<div class="gamedata">
+		
+			<div class="description">
+			<h3>Description</h3>
+			<p>Fill rows to earn points (10 points per row). Score 500 points to win. Keep a watch on the timer!</p>
+			</div>
+			<div class="information">
+			<h3>Instruction</h3>
+			<p>Use left , right , down arrow keys to navigate . Use up arrow key to rotate</p>
+			</div>
+		
+		</div>
+		
 		</div>
 		
 
@@ -758,7 +906,10 @@
 		<script src="assets/javascript/piyali.js"></script>
 		<script src="assets/javascript/shivani.js"></script>
 		<script src="assets/javascript/garima.js"></script>
-
+		<script src="assets/javascript/nithya.js"></script>
+		<script src="assets/javascript/poonam.js"></script>
+		<script src="assets/javascript/hangman.js"></script>
+		<script src="assets/javascript/bhavana.js"></script>
 		<!--timer , manage popups-->
 		<script>
 
@@ -766,6 +917,19 @@
 			var open = 'rules';
 			var object ={};
 			
+			var dis_scroll = function(){
+				$('html,body').css({
+					overflow:'hidden',
+					height:'100vh',
+				})
+			}
+
+			var scroll = function(){
+				$('html,body').css({
+					overflow: 'auto',
+					height: 'auto',
+				})
+			}
 
 
 			// bring in popups
@@ -777,6 +941,7 @@
 				console.log(this);
 				$('.'+this.id).fadeIn();
 				open = this.id;
+
 
 			});
 
@@ -790,6 +955,37 @@
 
 			});
 
+			var attempted =[0,0,0,0];
+
+
+			$('.submenu li').click(function(event){
+
+				event.preventDefault();
+				var act = $('.active');
+				act.removeClass('active');
+				$(this).addClass('active');
+				var index = $(this).attr('list')- 1;
+				var item = questionData[index];
+				
+				$(".meta").html(item.meta);
+				$(".data").html(item.data);
+				$('.mcq').html(item.mcq);
+
+
+				if(!attempted[i]){
+						$("#submit").removeClass("sub");
+						$("#submit").removeAttr("disabled");
+						$('#mesg').fadeOut();
+						$('#submit').removeClass("done");
+				}else{
+					$("#submit").addClass("sub");
+					$("#submit").attr("disabled",'disabled');
+					$('#submit').val("Submitted");
+					$("#mesg").fadeOut();
+					
+					$("#submit").addClass("done");
+				}
+			});
 
 
 			//close popups
@@ -797,6 +993,8 @@
 			$('.close').click(function () {
 				$('.'+open).fadeOut();
 				$('.backdrop').fadeOut();
+				scroll();
+				$('.gamedata').fadeOut();
 
 				if(open!='rules' && open!='signOut'){
 					// ----------------------------------------------------
@@ -829,9 +1027,15 @@
 			
 			var start = 10; 
 			var i;
+			
+			var games = ['tetris','mansi','piyali','shivani','garima','nithya','poonam','hangman','bhavana'];  //names of classes
+			var func = [tetris,mansi,piyali,shivani,garima,nithya,poonam,hangman,bhavana]; // functions
 
-			var games = ['tetris','mansi','piyali','shivani','garima'];  //names of classes
-			var func = [tetris,mansi,piyali,shivani,garima]; // functions
+			
+
+
+
+
 			var l = games.length;
 			
 
@@ -842,18 +1046,23 @@
 				// game start
 
 				if(time === start){
-					$('.backdrop').fadeIn();
+
+					$('.backdrop').css({'display':'flex'},300);
 					i = time / 10;
+					
 					console.log(i);
 					
 
 					object = {};   //object which will hold the points
 					object.getscore = function(){return 0};
 					func[(i-1)/2](object);
+
 					$('.'+open).fadeOut();
 
 					$('.'+games[(i-1)/2]).fadeIn();
 					open =games[(i-1)/2]
+					//dis_scroll();
+					$('.gamedata').fadeIn();
 
 				}
 
@@ -874,7 +1083,8 @@
 							dataType: 'jsonp'
 
 						});
-					
+					scroll();
+					$('.gamedata').fadeOut();
 
 					start = time+10;
 					if(((i-1)/2)>= l -1){
@@ -883,7 +1093,7 @@
 					}
 				}
 
-			},1000);
+			},100);
 
 
 
@@ -895,12 +1105,13 @@
 			$('#submit').click(function(event){
 
 				event.preventDefault();
+				console.log("clicked");
 				var ans = $('#mcq').serialize();
 				var k ={
 					story: $('.active').attr('list'),
 					ans : ans,
 				}
-				alert(JSON.stringify(k));
+				// alert(JSON.stringify(k));
 				if(!(/1\D+2\D+3\D+4\D+5\D+6/.test(ans))){
 					$("#mesg").text("please attempt all the questions (no negative marking)");
 					$("#mesg").fadeIn();
@@ -921,8 +1132,9 @@
 					success: function(response){
 						$('#submit').val("Submitted");
 						$("#mesg").fadeOut();
-						$(".points").text(response);
+						$(".points").text(response.points);
 						$("#submit").addClass("done");
+						attempted[i] =1;
 					},
 					error: function(jqXHR, textStatus, errorThrown){
 						$("#submit").val("Submit");

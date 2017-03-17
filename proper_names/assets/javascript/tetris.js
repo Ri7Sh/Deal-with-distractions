@@ -1,8 +1,7 @@
-var tetris = function(object){
-console.log("tetris");
+var tetris = function(){
 const canvas = document.getElementById('tetris');
 const context = canvas.getContext('2d');
-var score;
+
 context.scale(20, 20);
 
 function arenaSweep() {
@@ -19,14 +18,8 @@ function arenaSweep() {
         ++y;
 
         player.score += rowCount * 10;
-        score = player.score;
         rowCount *= 2;
     }
-}
-
-object.getscore = function(){
-    
-    return player.score;
 }
 
 function collide(arena, player) {
@@ -155,9 +148,11 @@ function playerDrop() {
     if (collide(arena, player)) {
         player.pos.y--;
         merge(arena, player);
-        playerReset();
-        arenaSweep();
-        updateScore();
+updateScore();
+arenaSweep();
+        stopOrNot();
+        
+        
     }
     dropCounter = 0;
 }
@@ -168,28 +163,27 @@ function playerMove(offset) {
         player.pos.x -= offset;
     }
 }
-
-
-function playerReset() {
-    const pieces = 'TJLOSZI';
-    player.matrix = createPiece(pieces[pieces.length * Math.random() | 0]);
-    player.pos.y = 0;
-    player.pos.x = (arena[0].length / 2 | 0) -
-                   (player.matrix[0].length / 2 | 0);
-    if (collide(arena, player)) {
-        arena.forEach(row => row.fill(0));
-        
-        
-        console.log("No room for new block. Game over.");
-
-        //break;
-            exit();
-
-            
+function stopOrNot(){
+    if(!(collide(arena,player)&& player.pos.y ==0) ){
+        if (player.score < 500){
+        playerReset();}
 
     }
 }
 
+
+function playerReset() {
+    
+    const pieces = 'TJLOSZI';
+
+    player.matrix = createPiece(pieces[pieces.length * Math.random() | 0]);
+    player.pos.y = 0;
+    player.pos.x = (arena[0].length / 2 | 0) -
+                   (player.matrix[0].length / 2 | 0);
+     
+
+
+}
 function playerRotate(dir) {
     const pos = player.pos.x;
     let offset = 1;
@@ -225,12 +219,7 @@ function update(time = 0) {
 
 function updateScore() {
     document.getElementById('score').innerText = player.score;
-    if(player.score>=500){
-
-        
-        alert("You won");
-            exit();
-    }
+    
 }
 
 document.addEventListener('keydown', event => {
@@ -256,7 +245,7 @@ const colors = [
     '#3877FF',
 ];
 
-const arena = createMatrix(12, 20);
+const arena = createMatrix(35, 20);
 
 const player = {
     pos: {x: 0, y: 0},
@@ -264,16 +253,16 @@ const player = {
     score: 0,
 };
 
-
-
-
 playerReset();
 
 updateScore();
 
+
+
+
 update();
 
 
+}
 
-};
    
