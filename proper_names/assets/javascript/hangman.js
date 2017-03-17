@@ -52,8 +52,8 @@ if (display_word.indexOf("#") == -1)
 {
 // won
 count++;
-alert("Well done, you get "+count*10 - wrong_guesses +"points!");
-
+// alert("Well done, you get "+count*10 - wrong_guesses +"points!");
+$('#score').text(calcscore());
 reset(1);
 
 can_play = false;
@@ -78,16 +78,20 @@ function reset(i)
 {
 
 i = (i || 0);
-
+$('#hang').attr('disabled','diasabled');
 selectWord();
 document.game.usedLetters.value = "";
 used_letters = "";
 log.push(wrong_guesses);
-if(!i){
-	alert(wrong_guesses+"score has been deducted");
+if(i){
+	// alert(wrong_guesses+"score has been deducted");
+	$('.hangman #score').text(30*count);
+	// alert(30);
 }
+else{
 wrong_guesses = 0;
 document.hm.src="hmstart.gif";
+}
 }
  
 function selectWord()
@@ -116,14 +120,14 @@ return mask;
 }
 
 
+function calcscore(){
+	return count?30:0;
+}
+
 //Quick fix!
 
 var hangman = function(object){
 	object.getscore = function(){
-		var score = 0;
-		for(a in log){
-			score-=a;
-		}
-		return 10*count + score;
+		return calcscore();
 	}
 }

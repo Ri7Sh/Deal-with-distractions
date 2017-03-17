@@ -112,7 +112,7 @@
   right: 30px;
 }
 */
-.game,.info{
+/*.game,.info{
    border-radius: 20px;
 }
 .game{
@@ -169,5 +169,19 @@
 }
 
 .canvas h1{
+
+}*/
+
+.piyali{
+  color: #fff;
+}
+
+.piyali .game{
+  margin: 0 auto;
+  padding: 20px 0;
+  width: 940px;
+  
+  display: flex;
+  justify-content: center;
 
 }

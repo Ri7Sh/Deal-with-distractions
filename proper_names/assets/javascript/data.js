@@ -1,3 +1,54 @@
+var gamedata = [{
+	description:"Fill rows to earn points (10 points per row). Score 500 points to win. Keep a watch on the timer!",
+	information:"Use left , right , down arrow keys to navigate . Use up arrow key to rotate",
+
+},
+{
+	description:"game2",
+	information:"play",
+
+},
+{
+	description:"game3",
+	information:"play",
+
+},
+{
+	description:"game4",
+	information:"play",
+},
+{
+	description:"game5",
+	information:"play",
+
+},
+{
+	description:"game6",
+	information:"play",
+
+},
+{
+	description:"game7",
+	information:"play",
+
+},
+{
+	description:"game8",
+	information:"play",
+
+},
+{
+	description:"game9",
+	information:"play",
+
+},{
+	description:"game10",
+	information:"play",
+
+},
+]
+
+
 var questionData = [
 	{
 		meta:"<h1>Question1</h1>",

@@ -10,11 +10,11 @@
 .game,.info{
    border-radius: 20px;
 }
-.game{
+/*.game{
   float: left;
   padding-left: 20px;
  
-}
+}*/
 .tetris .info,
 .mansi .info,
 .piyali.info,

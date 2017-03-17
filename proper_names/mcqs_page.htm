@@ -337,16 +337,16 @@
 				<div class="game">
 				<div id="msg"></div>
 				<div class="snake">
-	                <canvas id="playArea" width="200" height="300">Sorry your browser does not support HTML5</canvas>
+	                <canvas id="playArea" width="550" height="300">Sorry your browser does not support HTML5</canvas>
 	               </div>
 
 	      		</div>
-	      		<div class="info">
+	      	<!-- 	<div class="info">
 	      			<h4>Yaaay ! Snake Game !!! Play this game for 1 minutes to win.</h4>
 	      			<h5>Oh! If you win you will get points.
 	      			<br>To move the blocks left, right, up & down use the arrow keys.<br>
 	      			</h5> 
-	      		</div>
+	      		</div> -->
 				<div class="close"><a>x</a></div>
 
 			</div><!--
@@ -393,13 +393,13 @@
 
        
       		</div>
-      		<div class="info">
+      		<!-- <div class="info">
       			<h4>Yaaay ! tictactoe !!! Win this game to get 50 points.</h4>
       			<h5>Oh! and you get 25 points if it's a draw .
       			<br>click the box you want to fill. fill a row, column or diagonal with your sign before me!!<br>
       			!!!!!!!!!!!!Add more instructions !!!!!!!!!
       			</h5> 
-      		</div>
+      		</div> -->
 			<div class="close"><a>x</a></div>
 			</div><!--
 				******************************
@@ -473,6 +473,7 @@
 								<span>score:</span>
 								<div id="score"></div>
 							</div>
+							<div class="yme">
 				<button onclick="check1()">
 				<img id ="col1" src ="assets/images/shivani/1.png" width="50" height="50">
 				</button>
@@ -688,15 +689,15 @@
 
 				</center>
 
-
+					</div>
 				      		</div>
-      		<div class="info">
+      		<!-- <div class="info">
       			<h4> Find my Twin !!! Win this game within 5 minutes to get 700points.</h4>
       			
       			<br>Click once and then on its twin.<br>
       			Happy gaming!
       			 
-      		</div>
+      		</div> -->
 				      		
 				<div class="close"><a>x</a></div>
 
@@ -710,15 +711,15 @@
 						 
 							
 		<h1>Jig Saw Puzzle</h1>
-		<div class="info">
+	<!-- 	<div class="info">
       			<h4>Yaaay ! game of fifteen !!! Win this game within 10 minutes to get 50points.</h4>
       			
-      		</div>
+      		</div> -->
 			<div class="game">
-			<div class="space">
+			<!-- <div class="space">
 				<span>score:</span>
 				<div id="score"></div>
-			</div>
+			</div> -->
 			   <center>
         
         <br>
@@ -730,9 +731,9 @@ START
         <br />
         <br />
         <br />
-        <input type="button" name="rows" id="rows" value="4" size="3" style="text-align: center;" />
-        X
-        <input type="button" name="cols" id="cols" value="4" size="3" style="text-align: center;" />
+         <input type="button" name="rows" id="rows" value="4" size="3" style="text-align: center;" />
+        
+        <input type="button" name="cols" id="cols" value="4" size= "3" style="text-align: center;" />
         
         <br />
         <br />
@@ -754,17 +755,17 @@ START
 
 				<div class="canvas nithya">
 					<h1>Memory Game</h1>
-					<div class="info">
+<!-- 					<div class="info">
 			      			<h4>Yaaay ! Memory Game !!! Win this game within 1 minute to get 50points.</h4>
 			      			<h5>Do you have a incredible memory? Match the pairs!!
 			      			<br>To move the blocks left, right & down use the arrow keys.Use the up arrow key to rotate the block.<br>
 			      			      			</h5> 
-			      		</div>
+			      		</div> -->
 						<div class="game">
-						<div class="space">
+						<!-- <div class="space">
 							<span>score:</span>
 							<div id="score"></div>
-						</div>
+						</div> -->
 			      		<div id="memory_board"></div>
 			          </div>
 			      		
@@ -848,16 +849,17 @@ START
 				 
 				<br />
 				 
-
+				</span>
 
 
 				</center>
 
 				       <center>
-				  <a href="javascript:reset()">
-				<input type="button" style="cursor:pointer; margin-left: 10px; font-size:18px;" value="Start game / Reset game">
+				  <a href="javascript:reset(0)">
+				<input type="button" style="cursor:pointer; margin-left: 10px; font-size:18px;" value="Start game" id="hang">
 				</a></center>
 				
+
 							<div class="close"><a>x</a></div>
 
 		</div>
@@ -886,7 +888,7 @@ START
 			<h3>Description</h3>
 			<p>Fill rows to earn points (10 points per row). Score 500 points to win. Keep a watch on the timer!</p>
 			</div>
-			<div class="information">
+			<div class="instruction">
 			<h3>Instruction</h3>
 			<p>Use left , right , down arrow keys to navigate . Use up arrow key to rotate</p>
 			</div>
@@ -1062,6 +1064,12 @@ START
 					$('.'+games[(i-1)/2]).fadeIn();
 					open =games[(i-1)/2]
 					//dis_scroll();
+
+					var item = gamedata[(i-1)/2];
+					$('.gamedata .description p').html(item.description);
+					$('.gamedata .instruction p').html(item.information);
+
+
 					$('.gamedata').fadeIn();
 
 				}
@@ -1093,7 +1101,7 @@ START
 					}
 				}
 
-			},100);
+			},1000);
 
 
 

@@ -2,7 +2,7 @@ var nithyapoints = 0;
 
 var nithya = function(object){
 	newBoard();
-	object.getscore = function(){return x;};
+	object.getscore = function(){return nithyapoints;};
 };
 var memory_array = ['A','A','B','B','C','C','D','D','E','E','F','F','G','G','H','H','I','I','J','J','K','K','L','L'];
 var memory_values = [];

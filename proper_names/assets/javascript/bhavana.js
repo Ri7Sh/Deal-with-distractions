@@ -625,7 +625,7 @@ Clarity.prototype.draw = function (context) {
             scripts: {
                 change_colour: 'this.player.colour = "#"+(Math.random()*0xFFFFFF<<0).toString(16);',
                 /* you could load a new map variable here */
-                next_level: 'alert("Yay! You gained 10 points! Reloading map.");bhavanapoints = bhavanapoints+ 1;this.load_map(map);',
+                next_level: 'alert("Yay! You gained 10 points! Reloading map.");bhavanapoints = bhavanapoints+ 1;$(".bhavana #score").text(bhavanapoints*10);this.load_map(map);',
                 death: 'alert("You died!");this.load_map(map);',
                 unlock: 'this.current_map.keys[10].solid = 0;this.current_map.keys[10].colour = "#888";'
             }

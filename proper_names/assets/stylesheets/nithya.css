@@ -119,4 +119,27 @@
 
 .nithya .canvas h1{
 
+
 }
+.nithya{
+  display:none;
+  color: #757575;
+  
+}
+.nithya h1{
+  margin-bottom: 10px;
+  color: #fff;
+}
+.nithya .game{
+  padding: 0;
+  display: block; 
+  width: 940px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.nithya #memory_board{
+ display: inline-block;
+}
+
+

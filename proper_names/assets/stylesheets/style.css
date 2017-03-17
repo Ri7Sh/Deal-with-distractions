@@ -577,12 +577,19 @@ the other one with 6 steps and 6 digits*/
 	background: #eee;
 }
 
-.backdrop .tetris{
+.backdrop .tetris ,
+.backdrop .mansi,
+.backdrop .piyali,
+.backdrop .shivani,
+.backdrop .garima,
+.backdrop .nithya,
+.backdrop .hangman,
+.backdrop .bhavana{
 	background: transparent;
 }
 
-.backdrop .mansi{
-	background: #ffeb3b;
+/*.backdrop .mansi{
+	background: transparent;
 }
 
 .backdrop .piyali{
@@ -594,7 +601,7 @@ the other one with 6 steps and 6 digits*/
 }
 .backdrop .garima{
 	background: #ff6666;
-}
+}*/
 
 
 #out{
@@ -678,4 +685,7 @@ the other one with 6 steps and 6 digits*/
 	line-height: 20px;
 }
 
+.canvas .close a{
+	color: #fff;
+}
 

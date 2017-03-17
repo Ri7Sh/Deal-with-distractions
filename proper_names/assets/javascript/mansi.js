@@ -3,7 +3,7 @@ var points =0;
 (function play_game() 
 {
 var level = 160; // Game level, by decreasing will speed up
-var rect_w = 20; // Width 
+var rect_w = 55; // Width 
 var rect_h = 30; // Height
 var inc_score = 50; // Score
 var snake_color = "#006699"; // Snake Color
@@ -89,7 +89,9 @@ else if (!tn.length)
 {
 var msg_score = document.getElementById("msg");
 msg_score.innerHTML = "Thank you for playing game.<br /> Your Score : <b>"+score+"</b><br /><br />";
+
 $('.snake').fadeOut(100);
+$('#msg').fadeIn();
 window.clearInterval(interval);
 }
 }
