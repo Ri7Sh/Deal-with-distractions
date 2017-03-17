@@ -475,7 +475,7 @@ the other one with 6 steps and 6 digits*/
 	
 	justify-content: center;
 	flex-direction: column;
-	display:none;
+	display:flex;
 }
 .canvas{
 

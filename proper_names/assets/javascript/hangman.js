@@ -52,7 +52,9 @@ if (display_word.indexOf("#") == -1)
 {
 // won
 count++;
+
 // alert("Well done, you get "+count*10 - wrong_guesses +"points!");
+
 $('#score').text(calcscore());
 reset(1);
 
@@ -61,8 +63,10 @@ can_play = false;
 }
 else
 {
+	
 // incortect letter guess
 wrong_guesses += 1;
+
 eval("document.hm.src=\"hm" + wrong_guesses + ".gif\"");
  
 if (wrong_guesses == 10)
