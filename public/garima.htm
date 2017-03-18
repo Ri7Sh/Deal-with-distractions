@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Deal With Distractions</title>
+		<link rel="stylesheet" href="assets/stylesheets/resets.css" type="text/css">
+		<link rel="stylesheet" type="text/css" href="assets/stylesheets/animate.css">
+		<link href="assets/stylesheets/style.css" rel="stylesheet" type="text/css">
+		<link href="assets/stylesheets/garima.css" rel="stylesheet" type="text/css">
+
+		<link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700" rel="stylesheet">
+	</head>
+	<body>
+		<header class="group primary-header">
+		  <section class="container">
+			<h1>Deal with Distractions</h1>
+			<section class="menu">
+				<input type="checkbox" id="toggle1">
+					<label for="toggle1">&#9776;</label>
+				<nav>
+					<ul>
+						<li><a>Rules</a></li>
+						<li><a>Sign Out</a></li>
+					</ul>
+				</nav>
+			</section>
+			<section class="submenu">
+				
+					<input type="checkbox" id="toggle2">
+					<label for="toggle2">change question</label>
+						<nav class="nav">
+			  				<ul>
+			    				<li class="active"><a href="#" >Question1</a></li>
+			    				<li><a href="#">Question2</a></li>
+			    				<li><a href="#">Question3</a></li>
+			    				<li><a href="#">Question4</a></li>
+			  				</ul>
+						</nav>
+
+				</section>
+				<!--section class="timer">
+							<div class="cell">
+					<div class="numbers tenhour moveten">0 1 2 3 4 5 6 7 8 9</div>
+				</div>
+				<div class="cell">
+					<div class="numbers hour moveten">0 1 2 3 4 5 6 7 8 9</div>
+				</div>
+				<div class="cell divider"><div class="numbers">:</div></div>
+				<div class="cell">
+					<div class="numbers tenminute movesix">0 1 2 3 4 5 6</div>
+				</div>
+				<div class="cell">
+					<div class="numbers minute moveten">0 1 2 3 4 5 6 7 8 9</div>
+				</div>
+				<div class="cell divider"><div class="numbers">:</div></div>
+				<div class="cell">
+					<div class="numbers tensecond movesix">0 1 2 3 4 5 6</div>
+				</div>
+				<div class="cell">
+					<div class="numbers second moveten">0 1 2 3 4 5 6 7 8 9</div>
+				</div>
+				</section-->
+				<section class="points">
+					<p>0.00</p>
+				</section>
+		  </section>  
+		</header>
+
+		<div class="row">
+		<div class="group container">
+		
+		<section class="question"><!--
+			--><div class="meta">
+			<h1>Question1</h1>
+			</div>
+			<div class="data">
+		<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc, </p></div></section><!--
+		--><aside><section class="editor">
+		<form action="#" method="post">
+		<textarea rows="50" cols="83"></textarea>
+		  <input class="btn" type="submit" name="submit" value="Save and Submit">
+
+		</form>
+		</section><!--
+		--></aside>
+		</div>
+		</div>
+		<footer class="group">
+		<div class="container">
+			<nav class="foo-menu">
+					<ul>
+						<li><a href="#">Rules</a></li>
+						<li><a href="#">Sign Out</a></li>
+					</ul>
+				</nav>
+			<h6>&copy acm-w</h6>                                                 
+		</div>
+		</footer>
+		<!-- lightbox-->
+		<div class="backdrop">
+		<div class="canvas garima">
+		<h1>Jig Saw Puzzle</h1>
+		<div class="info">
+      			<h4>Yaaay ! game of fifteen !!! Win this game within 10 minutes to get 50points.</h4>
+      			
+      		</div>
+			<div class="game">
+			<div class="space">
+				<span>score:</span>
+				<div id="score"></div>
+			</div>
+			   <center>
+        
+        <br>
+        <button onClick="Reset()">
+START
+</button>
+        <table cellpadding="0" cellspacing="4" align="center" id="tbl">
+        </table>
+        <br />
+        <br />
+        <br />
+        <input type="button" name="rows" id="rows" value="4" size="3" style="text-align: center;" />
+        X
+        <input type="button" name="cols" id="cols" value="4" size="3" style="text-align: center;" />
+        
+        <br />
+        <br />
+         Moves: <span id="moves">0</span>  
+        <br />
+        <br />
+        
+        <br />
+        <br />
+        <br />
+        
+    </center>
+      		
+      		</div>
+      		
+			<div class="close"><a>x</a></div>
+
+		</div>
+		</div>
+		<script src="assets/javascript/jquery.min.js">
+		</script>
+		<script src="assets/javascript/garima.js"></script>
+		<script>
+			$('.menu nav li').click(function(){
+				$('.backdrop').fadeIn();
+			});
+
+			$('.close').click(function () {
+				$('.backdrop').fadeOut();
+			})
+
+            garima();
+			// var moves = 0;
+   //      var tbl, rows, cols;
+
+   //      function Move(d) {
+   //          //Get the td
+   //          var cell = GetCell(d);
+   //          var row = GetRow(cell);
+   //          var ri = row.rowIndex;
+   //          var ci = cell.cellIndex;
+   //          var emptycell;
+
+   //          if (ri > 0 && emptycell == null) {
+   //              if (IsCellEmpty(tbl.rows[ri - 1].cells[ci])) { emptycell = tbl.rows[ri - 1].cells[ci]; }
+   //          }
+   //          if (ri < tbl.rows.length - 1 && emptycell == null) {
+   //              if (IsCellEmpty(tbl.rows[ri + 1].cells[ci])) { emptycell = tbl.rows[ri + 1].cells[ci]; }
+   //          }
+   //          if (ci > 0 && emptycell == null) {
+   //              if (IsCellEmpty(tbl.rows[ri].cells[ci - 1])) { emptycell = tbl.rows[ri].cells[ci - 1]; }
+   //          }
+   //          if (ci < row.cells.length - 1 && emptycell == null) {
+   //              if (IsCellEmpty(tbl.rows[ri].cells[ci + 1])) { emptycell = tbl.rows[ri].cells[ci + 1]; }
+   //          }
+
+   //          if (emptycell == null) {
+   //              d.style.backgroundColor = "#FF3300";
+   //              d.style.color = "#FFFFFF";
+   //              setTimeout("RemoveHighlight('" + d.id + "');", 500);
+   //          }
+   //          else {
+   //              ChangeParent(d, emptycell);
+   //              moves++;
+   //              document.getElementById("moves").innerHTML = moves;
+   //              IsInOrder();
+   //          }
+   //      }
+
+   //      function IsInOrder() {
+   //          var arrDiv = document.getElementsByTagName("DIV");
+   //          var inorder = true;
+   //          for (var i = 0; i < arrDiv.length - 1; i++) {
+   //              var n = parseInt(trim(arrDiv[i].innerHTML));
+   //              var n1 = parseInt(trim(arrDiv[i + 1].innerHTML));
+   //              if (n + 1 != n1) {
+   //                  inorder = false;
+   //                  break;
+   //              }
+   //          }
+   //          if (inorder && IsCellEmpty(tbl.rows[tbl.rows.length - 1].cells[cols - 1])) {
+   //              for (var i = 0; i < arrDiv.length; i++) {
+   //                  arrDiv[i].style.backgroundColor = "#FFFFCC";
+   //              }
+   //              alert("Perfect! It took you " + moves + " moves to solve it.");
+   //          }
+   //      }
+
+   //      function Reset() {
+   //          moves = 0;
+   //          document.getElementById("moves").innerHTML = moves;
+
+   //          rows = document.getElementById("rows").value;
+   //          if (isNaN(rows) || rows < 0) { rows = 4; }
+   //          else { rows = Math.round(document.getElementById("rows").value); }
+   //          document.getElementById("rows").value = rows;
+
+   //          cols = document.getElementById("cols").value;
+   //          if (isNaN(cols) || cols < 0) { cols = 4; }
+   //          else { cols = Math.round(document.getElementById("cols").value); }
+   //          document.getElementById("cols").value = cols;
+
+   //          tbl = document.getElementById("tbl");
+   //          while (tbl.rows.length > 0) {
+   //              tbl.deleteRow(0);
+   //          }
+   //          var n = (rows * cols) - 1;
+   //          var arrN = new Array();
+   //          for (var i = 1; i <= n; i++) {
+   //              arrN.push(i);
+   //          }
+   //          var inversions = 1;
+
+   //          while (inversions % 2 == 1) {
+   //              arrN = Shuffle(arrN);
+   //              //                var t = "";
+   //              //                for (var i = 0; i < arrN.length; i++) {
+   //              //                    t += arrN[i] + ", ";
+   //              //                }
+   //              //                alert(t);
+
+   //              //Now check if the resulting array is solvable
+   //              //http://www.cs.bham.ac.uk/~mdr/teaching/modules04/java2/TilesSolvability.html
+
+   //              inversions = 0;
+   //              for (var i = 0; i < arrN.length; i++) {
+   //                  for (var j = i; j < arrN.length; j++) {
+   //                      if (arrN[i] > arrN[j])
+   //                          inversions++;
+   //                  }
+   //              }
+   //          }
+
+   //          n = 0;
+   //          for (var i = 0; i < rows; i++) {
+   //              tbl.insertRow(i);
+   //              var tr = tbl.rows[i];
+   //              for (var j = 0; j < cols; j++) {
+   //                  tr.insertCell(j);
+   //                  var td = tr.cells[j];
+   //                  td.className = "cell";
+   //                  if (i == rows - 1 && j == cols - 1)
+   //                      td.innerHTML = "";
+   //                  else
+   //                      td.innerHTML = "<div id='n" + arrN[n] + "' class='num' onclick='Move(this)'>" + arrN[n] + "</div>";
+
+   //                  n++;
+   //              }
+   //          }
+   //      }
+
+   //      function Shuffle(o) {
+   //          for (var j, x, i = o.length; i; j = parseInt(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
+   //          return o;
+   //      }
+
+   //      function IsCellEmpty(cell) {
+   //          for (var i = 0; i < cell.childNodes.length; i++) {
+   //              if (cell.childNodes[i].className == "num") {
+   //                  return false;
+   //              }
+   //          }
+   //          return true;
+   //      }
+
+   //      function RemoveHighlight(did) {
+   //          var d = document.getElementById(did);
+   //          d.style.backgroundColor = "#CCFFFF";
+   //          d.style.color = "#0099FF";
+   //      }
+
+   //      function GetTable(a) {
+   //          var c = a.parentNode;
+   //          while (c.tagName != 'TABLE') {
+   //              c = c.parentNode;
+   //          }
+   //          return c;
+   //      }
+
+   //      function GetRow(a) {
+   //          var c = a.parentNode;
+   //          while (c.tagName != 'TR') {
+   //              c = c.parentNode;
+   //          }
+   //          return c;
+   //      }
+
+   //      function GetCell(a) {
+   //          var c = a.parentNode;
+   //          while (c.tagName != 'TD') {
+   //              c = c.parentNode;
+   //          }
+   //          return c;
+   //      }
+
+   //      function GetRowIndex(a) {
+   //          var c = a.parentNode;
+   //          while (c.tagName != 'TR') {
+   //              c = c.parentNode;
+   //          }
+   //          return c.rowIndex;
+   //      }
+
+   //      function GetCellIndex(a) {
+   //          var c = a.parentNode;
+   //          while (c.tagName != 'TD') {
+   //              c = c.parentNode;
+   //          }
+   //          return c.cellIndex;
+   //      }
+
+   //      function AddRow(tbl, i, NumCells) {
+   //          var r = tbl.insertRow(i);
+   //          for (j = 0; j < NumCells; j++) {
+   //              var c = r.insertCell(j);
+   //              c.className = "col" + (j + 1);
+   //              c.innerHTML = "";
+   //          }
+   //      }
+
+   //      function trim(str) {
+   //          str = str.replace(/^\s+/, '');
+   //          for (var i = str.length - 1; i >= 0; i--) {
+   //              if (/\S/.test(str.charAt(i))) {
+   //                  str = str.substring(0, i + 1);
+   //                  break;
+   //              }
+   //          }
+   //          return str;
+   //      }
+
+   //      function ChangeParent(sourceElement, targetElement) {
+   //          var sourceElementParent = sourceElement.parentNode;
+   //          sourceElementParent.removeChild(sourceElement);
+   //          targetElement.appendChild(sourceElement);
+   //      }
+		</script>
+		<script src="assets/javascript/tetris.js"></script> 
+	</body> 
+</html>

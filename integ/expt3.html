@@ -1,0 +1,56 @@
+
+<link rel="stylesheet" href="login.css">
+
+
+<div class="ui centered grid">
+<div class="container">
+  <div class="five wide computer seven wide tablet column">
+
+  {% if form.errors %}
+    <div class="error message">
+      Your username and password didn't match. Please try again.
+    </div>
+  {% endif %}
+
+  {% if next %}
+      {% if user.is_authenticated %}
+      <div class="error message">
+        Your account doesn't have access to this page. To proceed,
+        please login with an account that has access.
+      </div>
+      {% else %}
+      <div class="error message">
+        Please login to see this page.
+      </div>
+      {% endif %}
+  {% endif %}<!--
+
+  --><h3>Log in to your account</h3>
+
+  <form class="login" method="post" action="{% url 'teams:login' %}">
+  {% csrf_token %}
+
+    <div class="segment">
+      <div class="field">
+          {{ form.username.label_tag }}
+          {{ form.username }}
+      </div>
+      <div class="field">
+        {{ form.password.label_tag }}
+        {{ form.password }}
+      </div>
+      <div class="field">
+        <button class="fluid primary large button" type="submit">Login</button>
+      </div>
+    </div>
+
+    <input type="hidden" name="next" value="{{ next }}" />
+  </form>
+
+  <div class="info message">
+    New Team? Register <a href="{% url 'teams:register' %}">here</a>.
+  </div>
+
+  </div>
+<div>
+</div>

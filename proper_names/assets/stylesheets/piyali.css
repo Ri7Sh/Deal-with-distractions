@@ -1,0 +1,187 @@
+.piyali .main-container {
+    height: 100%;
+    width: 300px;
+    margin-top: 30px;
+}
+
+.piyali .board {
+    height: 300px;
+    width: 300px;
+    margin: 0 auto;
+}
+
+.piyali .cell {
+    width: 100px;
+    height: 100px;
+    border: 2px dashed purple;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    cursor:pointer;
+    float:left;
+    line-height: 100px;
+    text-align: center;
+    font-family: "Arial Narrow";
+    font-weight: bold;
+    font-size: 50px;
+}
+
+.piyali .control {
+    font-family: "Arial Narrow";
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-top:20px;
+}
+
+
+
+.piyali .not-selected {
+    opacity: 0.5;
+}
+
+.piyali .not-selected:hover {
+    opacity:1;
+}
+
+.piyali .start {
+    margin-top: 10px;
+    width: 60px;
+    height: 60px;
+    background-color: red;
+    line-height: 60px;
+    text-align: center;
+    border-radius: 30px;
+    -webkit-border-radius:30px;
+    -moz-border-radius:30px;
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+    cursor:pointer;
+    opacity:0.5;
+}
+
+.piyali .start:hover {
+    opacity:1;
+}
+
+.piyali .ingame {
+    display:none;
+    color:purple;
+}
+
+     .piyali canvas {
+        border: solid .2em #0030dd;
+        height: 55vh;
+        border-radius: 20px;
+        
+      }
+
+/*.backdrop{
+  display:none;
+  background: rgba(0,0,0,0.9);
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  z-index: 2;
+}
+.canvas{
+  padding: 20px;
+  
+  width: 950px;
+  left: 250px;
+  height: 70vh;
+  top: 15vh;
+  background-color:#00cc88;
+  z-index: 2;
+
+  overflow: hidden;
+}
+
+.canvas .close{
+  text-align: center;
+  color: #212121;
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 10px;
+  right: 30px;
+}
+*/
+/*.game,.info{
+   border-radius: 20px;
+}
+.game{
+  float: left;
+  padding-left: 20px;
+ 
+}
+.info{
+  display: inline-block;
+  float: right;
+  height: 60vh;
+  width : 600px;
+  background-color: rgba(0,0,0,0.3);
+  margin: 30px auto;
+  
+
+
+
+}
+#score{
+
+  display: inline-block;
+
+}
+.info, .space{
+  box-shadow:  0 -2px 5px #212121;
+}
+
+.space{
+  border-radius: 6px;
+   padding: 5px 0;
+   margin-bottom: 5px;
+  
+  background-color:  #003080;
+  color: #fff;
+  text-align: center;
+
+  
+}
+
+.info h4{ 
+
+  color: #fff;
+  font-size: 30px;
+  line-height: 50px;
+  padding: 50px;
+  
+  
+}
+
+.info h5{
+  color: #333388;
+  padding: 0 50px;
+}
+
+.canvas h1{
+
+}*/
+
+.piyali{
+  color: #fff;
+}
+
+.piyali .game{
+  margin: 0 auto;
+  padding: 20px 0;
+  width: 940px;
+  
+  display: flex;
+  justify-content: center;
+
+}

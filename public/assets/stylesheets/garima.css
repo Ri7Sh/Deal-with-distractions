@@ -1,0 +1,145 @@
+/*      canvas{
+        border: solid .2em #0030dd;
+        height: 55vh;
+        border-radius: 20px;
+        
+      }
+
+.backdrop{
+  display:block;
+  background: rgba(0,0,0,0.9);
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  z-index: 2;
+}
+.canvas{
+  padding: 20px;
+  
+  width: 900px;
+  left: 250px;
+  height: 75vh;
+  top: 15vh;
+  background-color:#ff6666;
+  z-index: 2;
+  box-shadow: inset 0 5px 3px #212121;
+  overflow: hidden;
+}
+
+.canvas .close{
+  text-align: center;
+  color: #212121;
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 10px;
+  right: 30px;
+}*/
+.canvas{ display: none; }
+
+.garima .game,.info{
+   border-radius: 20px;
+}
+.garima  .game{
+  float: left;
+  padding-left: 20px;
+ 
+}
+.garima .info{
+  display: inline-block;
+  float: right;
+  height: 60vh;
+  width : 220px;
+  background-color: rgba(0,0,0,0.3);
+  margin: 30px auto;
+  }
+
+        .garima .cell
+        {
+            width: 50px;
+        }
+        .garima .num
+        {
+            padding: 8px 0;
+            border: 1px solid black;
+            background-color: #E0FFFF;
+            font-weight: bold;
+            font-size: 20px;
+            text-align: center;
+            color: #0099FF;
+            cursor: pointer;
+        }
+         .garima #moves
+        {
+            border: 1px solid #FF6600;
+            background-color: #FFFFCC;
+            font-weight: bold;
+            padding: 2px 5px;
+            color: #FF6600;
+        }
+        .garima a
+        {
+            color: blue;
+        }
+        .garima #desc
+        {
+            display: block;
+            width: 500px;
+            text-align: justify;
+            font-size: 0.8em;
+            color:#909090;
+        }
+    .garima h1
+    {color:#FAEBD7;
+     font-size: 50px;   
+    }
+
+
+
+.garima #score{
+
+  display: inline-block;
+
+}
+.garima .info, .space{
+  box-shadow:  0 -2px 5px #212121;
+}
+
+.garima .space{
+  border-radius: 6px;
+   padding: 5px 0;
+   margin-bottom: 5px;
+  width : 640px;
+  background-color:  #003080;
+  color: #fff;
+  text-align: center;
+
+  
+}
+
+.garima .info h4{ 
+
+  color: #fff;
+  font-size: 20px;
+  line-height: 40px;
+  padding: 30px;
+  
+  
+}
+
+.garima .info h5{
+  color: #333388;
+  padding: 0 50px;
+}
+
+.garima .canvas h1{
+
+}
+
+.garima form{
+	display: inline-block;
+}
