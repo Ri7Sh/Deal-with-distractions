@@ -559,7 +559,7 @@ the other one with 6 steps and 6 digits*/
 	cursor: pointer;
 }
 
-.tetris,
+/*.tetris,
 .mansi,
 .piyali,
 .shivani
@@ -567,11 +567,12 @@ the other one with 6 steps and 6 digits*/
 .nithya,
 .poonam,
 .hangman,
-.bhavana{
+.bhavana,
+.shadow{
 	
 	display: none;
 	
-}
+}*/
 
 .backdrop .rules{
 	background: #eee;
@@ -584,7 +585,10 @@ the other one with 6 steps and 6 digits*/
 .backdrop .garima,
 .backdrop .nithya,
 .backdrop .hangman,
-.backdrop .bhavana{
+.backdrop .bhavana,
+.backdrop .shadow,
+.backdrop .logo{
+	display: none;
 	background: transparent;
 }
 

@@ -15,7 +15,8 @@
 		<link rel="stylesheet" href="assets/stylesheets/poonam.css">
 		<link rel="stylesheet" href="assets/stylesheets/hangman.css">
 		<link rel="stylesheet" href="assets/stylesheets/bhavana.css">
-		
+		<link rel="stylesheet" href="assets/stylesheets/shadow.css">
+		<link rel="stylesheet" href="assets/stylesheets/logo.css">
 		
 		<link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700" rel="stylesheet">
 	</head>
@@ -310,7 +311,7 @@
 					<span>score:</span>
 					<div id="score"></div>
 				</div>
-	      		<canvas id="tetris" width="700" height="400"></canvas>
+	      		<canvas id="tetris" width="400" height="400"></canvas>
 	      		</div>
 	      		<!-- <div class="info">
 	      			<h4>Yaaay ! tetris !!! Win this game within 10 minutes to get 50points.</h4>
@@ -880,7 +881,97 @@ START
 			<div class="close"><a>x</a></div>
 
 			</div>
+			<div class="canvas shadow">
+				<h1>Guess who!</h1>
+				<form>
+					<div class="rows">
 
+					<div class="box">
+					<img src="assets/images/shadow/a.jpg">
+					
+					
+					<input type="text" id="a">
+					</div>
+					<div class="box">
+					<img src="assets/images/shadow/b.jpg">
+					
+					<input type="text" id="b">
+					</div>
+					<div class="box">
+					<img src="assets/images/shadow/c.jpg">
+					
+					<input type="text" id="c">
+					</div>
+					</div>
+					<div class="rows">
+					<div class="box">
+					<img src="assets/images/shadow/d.jpg">
+					<input type="text" id="d">
+					</div>
+					<div class="box">
+					<img src="assets/images/shadow/e.jpg">
+					<input type="text" id="e">
+					</div><div class="box">
+					<img src="assets/images/shadow/f.jpg">
+
+					
+					<input type="text" id="f">
+					</div>
+					</div>
+					<div class="rows">
+					<div class="box">
+					<img src="assets/images/shadow/g.jpg">
+					<input type="text" id="g">
+					</div>
+					<div class="box">
+					<img src="assets/images/shadow/h.jpg">
+					<input type="text" id="h">
+					</div>
+					<div class="box">
+					<img src="assets/images/shadow/i.jpg">
+					<input type="text" id="i">
+					</div>
+					</div>
+					<p><button>Submit</button></p>
+
+					</form>
+
+					<div class="close"><a>x</a></div>
+			</div>
+			<div class="canvas logo">
+				<h1>LOGO GAME</h1>
+				<div class="game">
+					<div class="space">
+						<span>score:</span>
+						<div id="score"></div>
+					</div>
+					<form>
+						<table cellpadding="30px" cellspacing="10px">
+						    <tr>
+							    <td><img src="./assets/images/logo/a.jpg" height="100" width="110" /> <br> <input type="text" id="a" size="14"></td>
+								<td><img src="./assets/images/logo/b.jpg" height="100" width="110" /> <br> <input type="text" id="b" size="14"></td>
+								<td><img src="./assets/images/logo/c.jpg" height="100" width="110" /> <br> <input type="text" id="c" size="14"></td>
+							    <td><img src="./assets/images/logo/d.jpg" height="100" width="110" /> <br> <input type="text" id="d" size="14"></td>
+							    <td><img src="./assets/images/logo/e.jpg" height="100" width="110" /> <br> <input type="text" id="e" size="14"></td>
+								<td><img src="./assets/images/logo/f.jpg" height="100" width="110" /> <br> <input type="text" id="f" size="14"></td>
+							</tr>
+							<tr>
+							    <td><img src="./assets/images/logo/l.jpg" height="100" width="110" /> <br> <input type="text" id="l" size="14"></td>
+								<td><img src="./assets/images/logo/g.jpg" height="100" width="110" /> <br> <input type="text" id="g" size="14"></td>
+								<td><img src="./assets/images/logo/h.jpg" height="100" width="110" /> <br> <input type="text" id="h" size="14"></td>
+							    <td><img src="./assets/images/logo/i.jpg" height="100" width="110" /> <br> <input type="text" id="i" size="14"></td>
+								<td><img src="./assets/images/logo/j.jpg" height="100" width="110" /> <br> <input type="text" id="j" size="14"></td>
+								<td><img src="./assets/images/logo/k.jpg" height="100" width="110" /> <br> <input type="text" id="k" size="14"></td>
+							</tr>
+							
+							
+						</table>
+						<br>
+						<button id="sbutton">Submit</button><br /><br />
+					</form>
+	  			</div>
+				<div class="close"><a>x</a></div>	
+			</div>
 		
 			<div class="gamedata">
 		
@@ -912,6 +1003,8 @@ START
 		<script src="assets/javascript/poonam.js"></script>
 		<script src="assets/javascript/hangman.js"></script>
 		<script src="assets/javascript/bhavana.js"></script>
+		<script src="assets/javascript/shadow.js"></script>
+		<script src="assets/javascript/logo.js"></script>
 		<!--timer , manage popups-->
 		<script>
 
@@ -1032,8 +1125,8 @@ START
 			var start = 10; 
 			var i;
 			
-			var games = ['tetris','mansi','piyali','shivani','garima','nithya','poonam','hangman','bhavana'];  //names of classes
-			var func = [tetris,mansi,piyali,shivani,garima,nithya,poonam,hangman,bhavana]; // functions
+			var games = ['tetris','mansi','piyali','shivani','garima','nithya','poonam','hangman','bhavana','shadow','logo'];  //names of classes
+			var func = [tetris,mansi,piyali,shivani,garima,nithya,poonam,hangman,bhavana,shadow,logo]; // functions
 
 			
 
@@ -1079,7 +1172,7 @@ START
 
 				// game stop 
 
-				if(time >= start+ 10){
+				if(time >= start+10){
 										
 					// $('.runs').empty();
 					$('.'+games[(i-1)/2]).fadeOut();
@@ -1104,7 +1197,7 @@ START
 					}
 				}
 
-			},1000);
+			},5000);
 
 
 

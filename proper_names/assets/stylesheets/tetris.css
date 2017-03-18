@@ -2,7 +2,8 @@
         border: solid .2em #0030dd;
         height: 55vh;
         border-radius: 20px;
-        
+          
+        margin: 0 auto;
       }
 
 
@@ -85,7 +86,7 @@
 .tetris .game{
  margin: 0 auto;
 padding:0;
- width: 950px;
+ width: 510px;
  display: flex;
  flex-direction: column;
 }
