@@ -183,7 +183,7 @@ function playerReset() {
      
 
 
-}
+}  
 function playerRotate(dir) {
     const pos = player.pos.x;
     let offset = 1;

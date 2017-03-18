@@ -1,6 +1,6 @@
 
 
-var moves = 0;
+        var moves = 0;
         var tbl, rows, cols;
 
         function Move(d) {
@@ -140,8 +140,8 @@ var moves = 0;
 
         function RemoveHighlight(did) {
             var d = document.getElementById(did);
-            d.style.backgroundColor = "#CCFFFF";
-            d.style.color = "#0099FF";
+            d.style.backgroundColor = "#FFFFFF";
+            d.style.color = "#003461";
         }
 
         function GetTable(a) {
@@ -210,10 +210,11 @@ var moves = 0;
             targetElement.appendChild(sourceElement);
         }
 
-     var garima  = function(object){
-    
-    object.getscore=  function(){
-        return flag?max(400-moves,0):0;
-    }
-};
+        var garima  = function(object){
+        
+            object.getscore=  function(){
+                return flag?max(400-moves,0):0;
+            }
+            Reset();
+        };
 
