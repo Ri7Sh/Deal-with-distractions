@@ -265,7 +265,7 @@ header .timer{
 	border-bottom: .5px solid rgba(0,0,0,0.5);
 }
 .data{
-	padding: 10px;
+	padding: 20px;
 	line-height: 35px;
 }
 
@@ -284,7 +284,7 @@ aside{
 	color: rgba(00,34,61,1);
 	float: right;
 	width:50%;
-	height:700px;
+	height:100%;
 	background : rgba(255,255,255,0.75);
 	box-shadow: inset 0px 2px 3px rgba(0,0,0,0.5);
 	margin:0;
@@ -693,3 +693,7 @@ the other one with 6 steps and 6 digits*/
 	color: #fff;
 }
 
+
+.data p:first-letter{
+	font-size: 30px;
+}

@@ -72,7 +72,7 @@ inc_score = 50;
 rand_frog();
 frog++;
 }
-//ctx.fillStyle("#ffffff");
+//ctx.fillStyle ="#ffffff";
 ctx.fillRect(X * 10, Y * 10, 9, 9);
 map[X][Y] = 2;
 queue.unshift([X, Y]);

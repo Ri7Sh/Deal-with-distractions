@@ -1,8 +1,8 @@
 .nithya div#memory_board{
 	background:#CCC;
 	border:#999 1px solid;
-	width:510px;
-	height:325px;
+	width:850px;
+	height:420px;
 	padding:24px;
 	margin:0px;
 }
@@ -12,9 +12,9 @@
 	width:22px;
 	height:22px;
 	float:left;
-	margin:10px;
-	padding:20px;
-	font-size:64px;
+	margin:5px;
+	padding:25px;
+	font-size:54px;
 	cursor:pointer;
 	text-align:center;
 }

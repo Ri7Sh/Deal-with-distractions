@@ -28,3 +28,10 @@
       background-position: center;
       height: 256px;
     }
+
+    .poonam p{
+      font-size: 22px;
+      position: absolute;
+      top:10px;
+      left: 10px;
+    }

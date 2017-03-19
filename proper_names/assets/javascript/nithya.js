@@ -4,7 +4,7 @@ var nithya = function(object){
 	newBoard();
 	object.getscore = function(){return nithyapoints;};
 };
-var memory_array = ['A','A','B','B','C','C','D','D','E','E','F','F','G','G','H','H','I','I','J','J','K','K','L','L'];
+var memory_array = ['A','A','B','B','C','C','D','D','E','E','F','F','G','G','H','H','I','I','J','J','K','K','L','L','M','M','N','N','P','P','Q','Q','R','R','S','S','T','T','U','U','V','V','W','W','X','X','Y','Y','Z','Z'];
 var memory_values = [];
 var memory_tile_ids = [];
 var tiles_flipped = 0;
