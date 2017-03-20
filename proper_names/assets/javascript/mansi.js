@@ -1,4 +1,9 @@
 var mansi = function(object){
+	$('.mansi .start').click(function(){
+	start(object);
+	});
+
+var start = function(object){
 var points =0;
 (function play_game() 
 {
@@ -127,5 +132,5 @@ sum+= code
 object.getscore = function(){
 	return points;
 }
-
+}
 };

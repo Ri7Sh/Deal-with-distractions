@@ -22,23 +22,23 @@
 	
 }
 
-.ui .error {
+.error {
 	padding: 10px;
 	color: #dd0000;
 	
 
 }
 
-.ui .login{
+.login{
 	width: 350px;
 	margin: 0 auto;
 }
 
-.ui .form{
+.form{
 	float: left;
 }
 
-.ui .button{
+.button{
 	text-decoration: none;
 	color: #fff;
 	font-size: 20px;
@@ -54,7 +54,8 @@
 	transition: all 1s ease-in-out;
 }
 
-.ui .info{
+.info{
 	color: #666666;
 	padding : 20px;
 }
+

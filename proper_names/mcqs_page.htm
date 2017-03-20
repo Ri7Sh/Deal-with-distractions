@@ -229,9 +229,11 @@
 				<ul><li>Duration of the event is 90 minutes</li>
 
 <li> The main questions of the event will be based on aptitude and logic.</li>
-
-<li>The points allotted to each question will be based on the difficulty level.</li>
-
+<li> There are 4 main questions each with 4 subparts</li>
+<li>The points allotted to each question and each subpart will be based on the difficulty level.</li>
+<li> For each main question, one needs to attempt all its subparts for successful submission.</li>
+<li> Only one submission is allowed per question. </li>
+<li> There is no negative marking. </li>
 <li> The distractions would pop up randomly for a short duration and will carry some bonus
 
 points if completed within that duration.</li>
@@ -248,7 +250,7 @@ up, even if the task is not completed within that duration.
 
 <li>Any form of malpractice would lead to disqualification.</li>
 
-<li> Authorities decision will be final and binding.</li>			
+<li> Authorities decision will be final and binding.</li>		
 				</ul>
 				<div class="close"><a>x</a></div>
 			</div><!--
@@ -309,6 +311,7 @@ up, even if the task is not completed within that duration.
 				<div class="game">
 				<div id="msg"></div>
 				<div class="snake">
+					<div class="start">START</div>
 	                <canvas id="playArea" width="550" height="300">Sorry your browser does not support HTML5</canvas>
 	               </div>
 
@@ -982,7 +985,7 @@ up, even if the task is not completed within that duration.
 			$('.backdrop').fadeOut(100);
 			var open = 'rules';
 			var object ={};
-			
+			// var list = {{ls}};
 			var dis_scroll = function(){
 				$('html,body').css({
 					overflow:'hidden',
@@ -1094,8 +1097,8 @@ up, even if the task is not completed within that duration.
 			var start = 10; 
 			var i;
 			
-			var games = ['tetris','mansi','piyali','shivani','garima','nithya','poonam','hangman','bhavana','shadow','logo'];  //names of classes
-			var func = [tetris,mansi,piyali,shivani,garima,nithya,poonam,hangman,bhavana,shadow,logo]; // functions
+			var games = ['mansi','tetris','mansi','piyali','shivani','garima','nithya','poonam','hangman','bhavana','shadow','logo'];  //names of classes
+			var func = [mansi,tetris,mansi,piyali,shivani,garima,nithya,poonam,hangman,bhavana,shadow,logo]; // functions
 
 			
 
@@ -1141,7 +1144,7 @@ up, even if the task is not completed within that duration.
 
 				// game stop 
 
-				if(time >= start+10){
+				if(time >= start+999999999){
 										
 					// $('.runs').empty();
 					$('.'+games[(i-1)/2]).fadeOut();
@@ -1166,7 +1169,7 @@ up, even if the task is not completed within that duration.
 					}
 				}
 
-			},1000);
+			},100);
 
 
 
