@@ -1,5 +1,7 @@
 var mansi = function(object){
 	$('.mansi .start').click(function(){
+	$('.mansi .start').attr('disabled','disabled');
+	$('.mansi .start').fadeOut();
 	start(object);
 	});
 
