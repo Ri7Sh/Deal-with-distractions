@@ -1,87 +1,196 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Register-dealing with distraction</title>
 <link rel="stylesheet" href="assets/stylesheets/resets.css" type="text/css">
-<link rel="stylesheet" href="assets/stylesheets/register.css" type="text/css">
+
+<style type="text/css">
+
+/*@import url('https://fonts.googleapis.com/css?family=Lato:500,400');
+*/
+    .teamdetails{
+	    border-radius:6px;
+		padding:10px;
+		font-size: 16px;
+	    font-weight: 400;
+	}
+	body{
+	    font-family : "Lato",arial,verdana;
+		background-color: #fff;
+	}
+	.register{
+		width: 800px;
+		
+		height: 100vh;
+		
+
+	}
+	.register>div{
+		height: 100vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+	.register h2{
+		color: #757575;
+	}
+
+	form{
+
+		width: 600px;
+		margin: 0 auto;
+	    font-family : "Lato",arial,verdana;
+		font-size: 20px;
+	    font-weight: 400;
+		}
+	
+	.heading{
+	    text-align:center;
+		font-family : "Lato",arial,verdana;
+		font-size:40px;
+		font-weight:500;
+		
+		
+		
+		color: rgb(0,34,61);
+		color: #757575;
+	}
+	/*#details-table{
+	    width:  650px;
+		margin: 0 auto;
+        padding:20px;
+	}*/
+	.sub-btn{
+	    width:120px;
+		margin:0 auto;
+		line-height: 40px;
+		margin-top: 30px;
+		display: block;
+		
+		font-size:20px;
+		font-weight:500;
+		border-radius:6px;
+		border: 0;
+		background-color: rgb(0,54,81);
+		cursor: pointer;
+		color:white;
+		box-shadow: 0 5px 0 rgb(0,34,61);
+
+	}
+
+	.sub-btn:active{
+		transform: translateY(3px);
+		box-shadow: 0 2px 0 rgb(0,34,61);
+	}
+	form{
+		text-align: center;
+	}
+	form tr{
+		text-align:left;
+	}
+	input{
+		display: inline-block;
+		color: #858585;
+
+
+	}
+	label~input{
+		height: 10px;
+		box-shadow: 0 0 0 #000;
+		border: 0;
+		background: #eee;
+		
+	}
+	label{
+		height: 30px;
+	}
+
+	.error{
+		color: red;
+		display: inline-block;
+		font-size: 16px;
+	
+	}
+
+	/*label{
+		display:block;
+	}*/
+
+	.details{
+		width: 600px;
+	}
+	.details div{
+		width: 100%;
+		margin: 30px 0;
+	
+		max-height: 30px;
+	}
+	label{
+		width: 200px;
+		display: inline-block;
+		text-align: left;
+	}
+
+	.right{
+		float: right;
+		height: 100vh;
+		width: calc(100vw - 820px);
+		background: rgb(0,34,61);
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding-left: 20px;
+	}
+	.right h1{
+		color: #fff;
+		font-size: 64px;
+		font-size: 5em;
+	}
+
+</style>
 </head>
 <body>
-<div class="col left">
-	
-		<div class="heading">
-		<h1>DEAL WITH DISTRACTIONS</h1>
-		</div>
-	
+<div class="right">
+	<h1>Deal with Distranctions</h1>
 </div>
-<div class="col right">
-
-	<div class="content">
-	<h2>Register</h2>
-	<form action="#" method="post" id="form" name="registration">
-		<h3>Team Details</h3>
-		<div class="details">
-				<div>
-				<label>Team Name</label>
-				<input type="text" name="tname" id="teamname" class="teamdetails" required>
-				</div>
-				<div>
-				<label>Password</label>
-			<input type="password" name="pword" id="pword" class="teamdetails" required>
-			</div>
-			<div>
-			<label>Confirm Password</label>
-			<input type="password" name="pword_confirm" id="pword-confirm" class="teamdetails" required>
-			</div>
-		</div>
+<div class="register">
+<div>
+<div class="heading">REGISTER</div>
+<form action="#" method="post" id="form" name="registration">
+	<div class="details">
+		<div>
+		<label>
+	  	Team Name : </label>   
+	    <input type="text" name="tname" id="teamname" class="teamdetails" required>
+		</div><div>
+		<label>
+		Password :</label>
+	    <input type="password" name="pword" id="pword" class="teamdetails" required>
+	    </div>
+	    <div>
+		<label>Confirm Password :</label><input type="password" name="pword_confirm" id="pword-confirm" class="teamdetails" required></div>
+	    <h2>MEMBER</h2>
 		
-			<h3>Member Details</h3>
-			<div class="members">
-				<div class="member">
-					<h4>Member 1</h4>
-					<div class="details">
-						<div>
-						<label>Full Name </label>
-
-						<input type="text" name="name1" id="name1" class="teamdetails" required>
-						</div>
-						<div>
-						<label>E-mail</label><input type="text" name="email1" id="email1" class="teamdetails" required>
-						</div>
-						<div>
-						<label>Mobile No.</label><input type="text" name="mob1" id="mob1" class="teamdetails" required>
-						</div>
-					</div>
-				</div>
-					
-				<div class="member">
-					<h4>Member 2</h4>
-					<div class="details">
-						<div>
-						<label>Full Name </label>
-						<input type="text" name="name2" id="name2" class="teamdetails" required>
-						</div>
-						<div>
-						<label>E-mail
-						</label><input type="text" name="email2" id="email2" class="teamdetails" required>
-						</div>
-						<div>
-						<label>Mobile No.
-						</label>
-						<input type="text" name="mob2" id="mob2" class="teamdetails" required>
-						</div>
-					</div>
-				</div>
-			</div>
-	<input type="submit" name="register" id="register-btn" class="btn" value="REGISTER">
+		<div>
+	<label>
+	  Full Name :   </label>   <input type="text" name="name1" id="name1" class="teamdetails" required>
+	</div>
+	<div>	
+	<label> 
+	E-mail :  </label> <input type="text" name="email1" id="email1" class="teamdetails" required>
+	</div>
+	<div>
+	<label>
+Mobile No. :  </label><input type="text" name="mob1" id="mob1" class="teamdetails" required>
+	</div>
+	</div>
+	<input type="submit" name="register" id="register-btn" class="sub-btn" value="REGISTER">
 </form>
 </div>
 </div>
 
 
-<!--  <div class="wrapper"></div> -->
-<script src="assets/javascript/jquery.min.js">
+		<script src="assets/javascript/jquery.min.js">
 
 		</script>
 <script src="assets/javascript/jquery.validate.min.js"></script>
@@ -108,30 +217,19 @@
 					required: true,
 
 				},
-				name2:{
-					required: true,
-
-				},
+				
 				email1:{
 					required: true,
 					email: true,
 				},
-				email2:{
-					required: true,
-					email: true,
-				},
+				
 				mob1:{
 					required: true,
 					minlength: 10,
 					maxlength:10,
 					digits: true,
 				},
-				mob2:{
-					required: true,
-					minlength: 10,
-					maxlength:10,
-					digits: true,
-				},
+				
 			},
 			messages:{
 				tname: "Please enter your teamname",
@@ -149,20 +247,13 @@
 				email1:{
 					email: "please enter a valid email id",
 				},
-				email2:{
-					email: "please enter a valid email id",
-				},
+				
 				mob1:{
 					minlength: "needs to have 10 digits",
 					maxlength: "needs to have 10 digits",
 					digits: "should be digits",
 				},
-				mob2:{
-					minlength: "needs to have 10 digits",
-					maxlength: "needs to have 10 digits",
-					digits: "should be digits",
 				
-				},
 
 
 			},
