@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>deal with distractions</title>
+    <link rel="stylesheet" href="assets/stylesheets/resets.css">
+
+    <link rel="stylesheet" href="assets/stylesheets/index.css">
+  </head>
+
+
+<!-- <div class="ui">
+  <div class="container">
+  <h3>Status</h3>
+  <div class="ui two column stackable grid">
+    <div class="column">
+      <div class="segment">
+        <div class="divided selection list grid"><ul>
+        <% for question_no, status in status_dict.items %}
+        <li class="grid">
+          <a class="item" href="{% url 'coding:challenge' question_no=question_no %}">
+            <div class="question-num">Challenge 1{{ question_no }}</div>
+            {% if status == 'S' %}
+              <div class="green horizontal label right floated status">Solved</div>
+            
+            {% elif status == 'U' %}
+              <div class="grey horizontal label right floated status">Unattempted</div>
+            {% endif %}
+          </a></li>
+
+        {% empty %}
+          <h2 class="grid no-info">No information to display.</h2>
+        {% endfor %}
+        </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="segment">
+        <h3 class="grey header">Instructions</h3>
+        <ul class=" instr">
+        
+        <ul><li>Duration of the event is 90 minutes</li>
+
+<li> The main questions of the event will be based on aptitude and logic.</li>
+
+<li> The points allotted to each question will be based on the difficulty level.</li>
+
+<li> The distractions would pop up randomly for a short duration and will carry some bonus
+
+points if completed within that duration.</li>
+
+<li> Participants are allowed to close the distraction window if they wish too.</li>
+
+<li> Bonus points will be provided based on the performance with the time of distraction pops
+
+up, even if the task is not completed within that duration.
+</li>
+<li> Individual Participation.</li>
+
+<li> No prerequisite knowledge is required.</li>
+
+<li>Any form of malpractice would lead to disqualification.</li>
+
+<li> Authorities decision will be final and binding.</li>             </ul>
+      </div>
+    {% if is_time_over %}
+      <div class="inverted segment">
+        <h3 class="red header center aligned">You've run out of time.</h3>
+      </div>
+    {% else %}
+      <div class="enter">
+      <a class="primary button huge" href="{% url 'coding:challenge' question_no=1 %}">Enter Arena</a></div>
+    {% endif %}
+    </div>
+  </div>
+</div>
+</div> -->
+
+<body>
+<div class="container">
+  
+
+  <ul>
+
+    <li><div class="score">score:<span id="score">0</span></div></li>
+    <li><div class="time">Time left:<span id="time">0</span></div></li>
+  </ul>
+   <h1>Status</h1>
+   <div class="status">
+    <ul>
+      <li><a href="">
+        <h3>Storyline 1</h3>
+        <h4 class="solved">Solved</h4>
+        </a>  
+      </li>
+      <li><a href="">
+        <h3>Storyline 2</h3>
+        <h4 class="unattempted">Unattempted</h4> 
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="col">
+  <h1>Rules</h1>
+  <ul>
+    <ul><li>Duration of the event is 90 minutes</li>
+
+<li> The main questions of the event will be based on aptitude and logic.</li>
+<li> There are 4 main questions each with 4 subparts</li>
+<li>The points allotted to each question and each subpart will be based on the difficulty level.</li>
+<li> For each main question, one needs to attempt all its subparts for successful submission.</li>
+<li> Only one submission is allowed per question. </li>
+<li> There is no negative marking. </li>
+<li> The distractions would pop up randomly for a short duration and will carry some bonus
+
+points if completed within that duration.</li>
+
+<li> Participants are allowed to close the distraction window if they wish too.</li>
+
+<li> Bonus points will be provided based on the performance with the time of distraction pops
+
+up, even if the task is not completed within that duration.
+</li>
+<li> Individual Participation.</li>
+
+<li> No prerequisite knowledge is required.</li>
+
+<li>Any form of malpractice would lead to disqualification.</li>
+
+<li> Authorities decision will be final and binding.</li>
+  </ul>
+</div>
+</body>
+</html>

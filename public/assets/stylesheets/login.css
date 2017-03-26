@@ -1,0 +1,60 @@
+.ui{
+	background-color: #eee;
+	
+	font: 16px/30px "Lato",arial,verdana;
+
+}
+
+.ui .container{
+	width: 950px;
+	margin: 0 auto;
+	text-align: center;
+
+
+}
+
+
+.ui h3{
+	padding: 10px;
+	line-height: 50px;
+	font-size: 50px;
+	color: rgba(0,31,64,0.7);
+	
+}
+
+.ui .error {
+	padding: 10px;
+	color: #dd0000;
+	
+
+}
+
+.ui .login{
+	width: 350px;
+	margin: 0 auto;
+}
+
+.ui .form{
+	float: left;
+}
+
+.ui .button{
+	text-decoration: none;
+	color: #fff;
+	font-size: 20px;
+	line-height: 40px;
+	height: 40px;
+	margin: 30px 0;
+	background-color :#003461;
+	
+	border-radius: 6px;
+	cursor: pointer;
+	
+	box-shadow: 2px 2px 3px 1px #003461;
+	transition: all 1s ease-in-out;
+}
+
+.ui .info{
+	color: #666666;
+	padding : 20px;
+}

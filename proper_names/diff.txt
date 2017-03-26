@@ -1,0 +1,786 @@
+1a2
+> {%load staticfiles%}
+6,19c7,22
+< 		<link rel="stylesheet" href="assets/stylesheets/resets.css" type="text/css">
+< 		<link rel="stylesheet" type="text/css" href="assets/stylesheets/animate.css">
+< 		<link href="assets/stylesheets/style.css" rel="stylesheet" type="text/css">
+< 		<link rel="stylesheet" href="assets/stylesheets/tetris.css" type="text/css">
+< 		<link rel="stylesheet" href="assets/stylesheets/mansi.css" type="text/css">
+< 		<link rel="stylesheet" href="assets/stylesheets/piyali.css" type="text/css">
+< 		<link rel="stylesheet" href="assets/stylesheets/shivani.css">
+< 		<link rel="stylesheet" href="assets/stylesheets/garima.css">
+< 		<link rel="stylesheet" href="assets/stylesheets/nithya.css">
+< 		<link rel="stylesheet" href="assets/stylesheets/poonam.css">
+< 		<link rel="stylesheet" href="assets/stylesheets/hangman.css">
+< 		<link rel="stylesheet" href="assets/stylesheets/bhavana.css">
+< 		<link rel="stylesheet" href="assets/stylesheets/shadow.css">
+< 		<link rel="stylesheet" href="assets/stylesheets/logo.css">
+---
+> 		<link rel="stylesheet" href="{% static 'assets/stylesheets/resets.css'%}" type="text/css">
+> 		<link rel="stylesheet" type="text/css" href="{% static 'assets/stylesheets/animate.css'%}">
+> 		<link href="{% static 'assets/stylesheets/style.css'%}" rel="stylesheet" type="text/css">
+> 		<link rel="stylesheet" href="{% static 'assets/stylesheets/tetris.css'%}" type="text/css">
+> 		<link rel="stylesheet" href="{% static 'assets/stylesheets/mansi.css'%}" type="text/css">
+> 		<link rel="stylesheet" href="{% static 'assets/stylesheets/piyali.css'%}" type="text/css">
+> 		<link rel="stylesheet" href="{% static 'assets/stylesheets/shivani.css'%}">
+> 		<link rel="stylesheet" href="{% static 'assets/stylesheets/garima.css'%}">
+> 		<link rel="stylesheet" href="{% static 'assets/stylesheets/nithya.css'%}">
+> 		<link rel="stylesheet" href="{% static 'assets/stylesheets/poonam.css'%}">
+> 		<link rel="stylesheet" href="{% static 'assets/stylesheets/hangman.css'%}">
+> 		<link rel="stylesheet" href="{% static 'assets/stylesheets/bhavana.css'%}">
+> 		<link rel="stylesheet" href="{% static 'assets/stylesheets/shadow.css'%}">
+> 		<link rel="stylesheet" href="{% static 'assets/stylesheets/logo.css'%}">
+> 		<link rel="shortcut icon" href="{% static 'assets/images/favicon.ico' %}" type="image/x-icon">
+> 	<link rel="icon" href="{% static 'assets/images/favicon.ico' %}" type="image/x-icon">
+21c24
+< 		<link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700" rel="stylesheet">
+---
+> 		<!-- <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700" rel="stylesheet"> -->
+41c44
+< 						<li><a>Index</a></li>
+---
+> 						
+56,59c59,62
+< 			    				<li class="active" list="1"><a>Storyline 1</a></li>
+< 			    				<li list="2"><a>Storyline 2</a></li>
+< 			    				<li list="3"><a>Storyline 3</a></li>
+< 			    				<li list="4"><a>Storyline 4</a></li>
+---
+> 			    				<li class="active" list="1"><a>Storyline1</a></li>
+> 			    				<li list="2"><a>Storyline2</a></li>
+> 			    				<li list="3"><a>Storyline3</a></li>
+> 			    				<li list="4"><a>Storyline4</a></li>
+68c71
+< 					<p>0.00</p>
+---
+> 					<p>{{score}}</p>
+70c73
+< 
+---
+> 				<!-- <section class="test"><a>Click</a></section> -->
+111,115c114
+< 			<p>Let’s talk about the special interests of Meera Bhawan, BITS Pilani girls, What say?!!
+< Narrowing down to Tech Ladies, each of them like at-least one among the four Special Interest Groups known as SIG's of ACM-SIGMM-Multimedia, SIGMOD-Management Of Data, SIGDA-Design Automation, SIGCHI-Computer Human Interaction. Number of girls who like only SIGMOD & SIGMM is 6 ; those who like only SIGMM & SIGDA is 20; those who like SIGDA & SIGMOD is 40; while those who like only SIGMOD & SIGCHI is 14 and those who like only SIGMM and SIGCHI is 20.
+< 65 girls like SIGMM but not SIGMOD while 4 like only SIGMOD. 19 girls like SIGMOD and SIGCHI but not SIGMM while 35 of them like SIGCHI and SIGMM but not SIGMOD.15 girls like SIGMOD ,SIGMM and SIGDA but not SIGCHI which is same as  the sum of girls who like only SIGDA and only SIGCHI.Finally 8 girls like all 4 of them.
+< 
+< </p>
+---
+> 			<p>The Quidditch League is here! The Weasley twins are up with their mischief and this time they are offering a deal - "If we offer an odd of 10/1 on a particular team, it means that for every one Galleons that the gambler puts at stake, he/she will earn ten Galleons in addition to the original stake.<br>If your team does not win then of course you will lose your stake and take home nothing!"So the Lee Jordan, the quidditch commentator, has announced that the odds of a team which is expected to win is worse off. He calls it an "upset" when a team beats an opposing team which has better chances of winning.<br>Jordan said, "Match 1 is between Chudley Cannons and Appleby Arrows. Cannons, a team with still a few faithful supporters is looking at the odds of 10/1 whereas Arrows seem to be in the race for the top with their odds as 1/4.""Match 2 is between Tutshill Tornadoes and Puddlemere United. Both have been good teams with Tornadoes winning five consecutive tournaments while United is ahead with 22 wins. <br>But this time Tornadoes is running on a low with odds of 7/2 while Puddlemere with their all time favourite keeper Oliver Wood, who played alongside famous Harry Potter is seeing the odds of 2/5."<br>"Match 3 is between Holyhead Harpies, the one and only all-girls team and Falmouth Falcons, known for its aggressive and often devious approach. This time the Harpies led by Gwenog Jones  has addition of Ginny Weasley, debuting as a Chaser. Dont get swayed by "All-Girls Team"- they are one of the most ferocious teams on field with an odd of 1/5. The Falcons with the odds of 20/1 should either pick up drastically on their technique or hope for a miracle to fight the girl power."</p>
+127c126
+< 		<form action="#" method="post" id="mcq">
+---
+> 		<form action="/main/" method="post" id="mcq">
+129c128,190
+< 		<div class="mcq">01. How many of the girls like both SIGCHI and SIGDA but not all the four?<label><input type="radio" name="q1" value="a">60</label><label><input type="radio" name="q1" value="b">37</label><label><input type="radio" name="q1" value="c">30</label><label><input type="radio" name="q1" value="d">44</label><br>02.What is the total number of Tech Ladies<label><input type="radio" name="q2" value="a">146</label><label><input type="radio" name="q2" value="b">150</label><label><input type="radio" name="q2" value="c">160</label><label><input type="radio" name="q2" value="d">156</label><br>03. How many girls like only SIGMM and SIGDA<label><input type="radio" name="q3" value="a">5</label><label><input type="radio" name="q3" value="b">6</label><label><input type="radio" name="q3" value="c">10</label><label><input type="radio" name="q3" value="d">7</label><br>04.If 25 girls like only SIGMOD or only SIGCHI, then how many like SIGMM or SIGDA?		<label><input type="radio" name="q4" value="a">122</label><label><input type="radio" name="q4" value="b">135</label><label><input type="radio" name="q4" value="c">142</label><label><input type="radio" name="q4" value="d">131</label></div>
+---
+> 		01.  How much did Qureishi spent?		
+> 		<label>
+> 		<input type="radio" name="q1" value="a" />Rs. 4473
+> 		</label>
+> 		<label>
+> 		<input type="radio" name="q1" value="b" />Rs.4493
+> 		</label>
+> 		<label>
+> 		<input type="radio" name="q1" value="c" />Rs. 3981
+> 		</label>
+> 		<label>
+> 		<input type="radio" name="q1" value="d" />Rs. 4040
+> 		</label>
+> 		
+> 		
+> 		<br>
+> 
+> 		02.  Whose expense was the highest?		<label>
+> 		<input type="radio" name="q2" value="a" />Qureishi
+> 		</label>
+> 		<label>
+> 		<input type="radio" name="q2" value="b" />Saket
+> 		</label>
+> 		<label>
+> 		<input type="radio" name="q2" value="c" /> Raina
+> 		</label>
+> 		<label>
+> 		<input type="radio" name="q2" value="d" />Tomar
+> 
+> 		</label>
+> 		
+> 		<br>
+> 		  
+> 		03. What is the difference between the expenses of raina and uday?		<label>
+> 		<input type="radio" name="q3" value="a" /> Rs. 167
+> 		</label>
+> 		<label>
+> 		<input type="radio" name="q3" value="b" />Rs. 246
+> 
+> 		</label>
+> 		<label>
+> 		<input type="radio" name="q3" value="c" /> Rs. 187
+> 		</label>
+> 		<label>
+> 		<input type="radio" name="q3" value="d" />Rs. 257
+> 		</label>
+> 		
+> 		<br>
+> 		  
+> 		04.  Which of them spend the third least amount ?
+> 		<label>
+> 		<input type="radio" name="q4" value="a" />Tomar
+> 		</label>
+> 		<label>
+> 		<input type="radio" name="q4" value="b" />Uday
+> 		</label>
+> 		<label>
+> 		<input type="radio" name="q4" value="c" />Raina
+> 		</label>
+> 		<label>
+> 		<input type="radio" name="q4" value="d" />Qureishi 
+> 		</label>
+> 		
+177c238
+< <li> There are 4 main questions each with 4 subparts</li>
+---
+> <li> There are 4 main questions each with 4 subparts.</li>
+186c247
+< <li> Participants are allowed to close the distraction window if they wish too.</li>
+---
+> <li> Participants are allowed to close the distraction window if they wish to.</li>
+198c259
+< <li> Authorities decision will be final and binding.</li>		
+---
+> <li> Authorities decision will be final and binding.</li>			
+210,211c271,272
+< 				<button id="out" class="btn">YES</button>
+< 				<button id="notout" class="btn">NO</button>
+---
+> 				<button id="out" class="btn"><a href="/logout/">YES</a></button>
+> 				<!-- <button id="notout" class="btn">NO</button> -->
+230c291
+< 					<div id="score"></div>
+---
+> 					<div id="score">0</div>
+256a318
+> 				<p>score:<span class="score">0</span></p>
+311c373,374
+<                 <div class="count">You have played <span>0</span>times!</div>
+---
+>                  <div class="count">You have played <span>0</span> times!</div>
+>                  <div class="win">Score: <span>0</span></div>
+399c462
+< 				<img id ="col1" src ="assets/images/shivani/1.png" width="50" height="50">
+---
+> 				<img id ="col1" src ="{% static 'assets/images/shivani/1.png'%}" width="50" height="50">
+403c466
+< 				<img id ="col2" src ="assets/images/shivani/2.png" width="50" height="50" >
+---
+> 				<img id ="col2" src ="{% static 'assets/images/shivani/2.png'%}" width="50" height="50" >
+407c470
+< 				<img id ="col3" src ="assets/images/shivani/3.png" width="50" height="50" >
+---
+> 				<img id ="col3" src ="{% static 'assets/images/shivani/3.png'%}" width="50" height="50" >
+411c474
+< 				<img id ="col4" src ="assets/images/shivani/4.png" width="50" height="50">
+---
+> 				<img id ="col4" src ="{% static 'assets/images/shivani/4.png'%}" width="50" height="50">
+415c478
+< 				<img id ="col5" src ="assets/images/shivani/5.png" width="50" height="50">
+---
+> 				<img id ="col5" src ="{% static 'assets/images/shivani/5.png'%}" width="50" height="50">
+419c482
+< 				<img id ="col6" src ="assets/images/shivani/6.png" width="50" height="50">
+---
+> 				<img id ="col6" src ="{% static 'assets/images/shivani/6.png'%}" width="50" height="50">
+423c486
+< 				<img id ="col7" src ="assets/images/shivani/7.png" width="50" height="50">
+---
+> 				<img id ="col7" src ="{% static 'assets/images/shivani/7.png'%}" width="50" height="50">
+427c490
+< 				<img id ="col8" src ="assets/images/shivani/48.jpg" width="50" height="50">
+---
+> 				<img id ="col8" src ="{% static 'assets/images/shivani/48.jpg'%}" width="50" height="50">
+431c494
+< 				<img id ="col9" src ="assets/images/shivani/9.jpg" width="50" height="50">
+---
+> 				<img id ="col9" src ="{% static 'assets/images/shivani/9.jpg'%}" width="50" height="50">
+435c498
+< 				<img id ="col10" src ="assets/images/shivani/10.png" width="50" height="50">
+---
+> 				<img id ="col10" src ="{% static 'assets/images/shivani/10.png'%}" width="50" height="50">
+439c502
+< 				<img id ="col11" src ="assets/images/shivani/11.png" width="50" height="50">
+---
+> 				<img id ="col11" src ="{% static 'assets/images/shivani/11.png'%}" width="50" height="50">
+443c506
+< 				<img id ="col12" src ="assets/images/shivani/12.png" width="50" height="50">
+---
+> 				<img id ="col12" src ="{% static 'assets/images/shivani/12.png'%}" width="50" height="50">
+447c510
+< 				<img id ="col13" src ="assets/images/shivani/37.png" width="50" height="50">
+---
+> 				<img id ="col13" src ="{% static 'assets/images/shivani/37.png'%}" width="50" height="50">
+451c514
+< 				<img id ="col14" src ="assets/images/shivani/63.jpg" width="50" height="50">
+---
+> 				<img id ="col14" src ="{% static 'assets/images/shivani/63.jpg'%}" width="50" height="50">
+455c518
+< 				<img id ="col15" src ="assets/images/shivani/15.png" width="50" height="50">
+---
+> 				<img id ="col15" src ="{% static 'assets/images/shivani/15.png'%}" width="50" height="50">
+459c522
+< 				<img id ="col16" src ="assets/images/shivani/16.png" width="50" height="50" >
+---
+> 				<img id ="col16" src ="{% static 'assets/images/shivani/16.png'%}" width="50" height="50" >
+463c526
+< 				<img id ="col17" src ="assets/images/shivani/17.jpg" width="50" height="50">
+---
+> 				<img id ="col17" src ="{% static 'assets/images/shivani/17.jpg'%}" width="50" height="50">
+467c530
+< 				<img id ="col18" src ="assets/images/shivani/18.png" width="50" height="50">
+---
+> 				<img id ="col18" src ="{% static 'assets/images/shivani/18.png'%}" width="50" height="50">
+471c534
+< 				<img id ="col19" src ="assets/images/shivani/49.jpg" width="50" height="50">
+---
+> 				<img id ="col19" src ="{% static 'assets/images/shivani/49.jpg'%}" width="50" height="50">
+475c538
+< 				<img id ="col20" src ="assets/images/shivani/20.png" width="50" height="50">
+---
+> 				<img id ="col20" src ="{% static 'assets/images/shivani/20.png'%}" width="50" height="50">
+479c542
+< 				<img id ="col21" src ="assets/images/shivani/21.png" width="50" height="50">
+---
+> 				<img id ="col21" src ="{% static 'assets/images/shivani/21.png'%}" width="50" height="50">
+483c546
+< 				<img id ="col22" src ="assets/images/shivani/22.jpg" width="50" height="50">
+---
+> 				<img id ="col22" src ="{% static 'assets/images/shivani/22.jpg'%}" width="50" height="50">
+487c550
+< 				<img id ="col23" src ="assets/images/shivani/7.png" width="50" height="50">
+---
+> 				<img id ="col23" src ="{% static 'assets/images/shivani/7.png'%}" width="50" height="50">
+491c554
+< 				<img id ="col24" src ="assets/images/shivani/24.jpg" width="50" height="50">
+---
+> 				<img id ="col24" src ="{% static 'assets/images/shivani/24.jpg'%}" width="50" height="50">
+495c558
+< 				<img id ="col25" src ="assets/images/shivani/66.jpg" width="50" height="50">
+---
+> 				<img id ="col25" src ="{% static 'assets/images/shivani/66.jpg'%}" width="50" height="50">
+499c562
+< 				<img id ="col26" src ="assets/images/shivani/26.jpg" width="50" height="50">
+---
+> 				<img id ="col26" src ="{% static 'assets/images/shivani/26.jpg'%}" width="50" height="50">
+503c566
+< 				<img id ="col27" src ="assets/images/shivani/27.png" width="50" height="50">
+---
+> 				<img id ="col27" src ="{% static 'assets/images/shivani/27.png'%}" width="50" height="50">
+507c570
+< 				<img id ="col28" src ="assets/images/shivani/28.png" width="50" height="50">
+---
+> 				<img id ="col28" src ="{% static 'assets/images/shivani/28.png'%}" width="50" height="50">
+511c574
+< 				<img id ="col29" src ="assets/images/shivani/64.png" width="50" height="50">
+---
+> 				<img id ="col29" src ="{% static 'assets/images/shivani/64.png'%}" width="50" height="50">
+515c578
+< 				<img id ="col30" src ="assets/images/shivani/30.png" width="50" height="50">
+---
+> 				<img id ="col30" src ="{% static 'assets/images/shivani/30.png'%}" width="50" height="50">
+519c582
+< 				<img id ="col31" src ="assets/images/shivani/31.png" width="50" height="50">
+---
+> 				<img id ="col31" src ="{% static 'assets/images/shivani/31.png'%}" width="50" height="50">
+523c586
+< 				<img id ="col32" src ="assets/images/shivani/32.png" width="50" height="50">
+---
+> 				<img id ="col32" src ="{% static 'assets/images/shivani/32.png'%}" width="50" height="50">
+527c590
+< 				<img id ="col33" src ="assets/images/shivani/33.png" width="50" height="50">
+---
+> 				<img id ="col33" src ="{% static 'assets/images/shivani/33.png'%}" width="50" height="50">
+531c594
+< 				<img id ="col34" src ="assets/images/shivani/34.png" width="50" height="50">
+---
+> 				<img id ="col34" src ="{% static 'assets/images/shivani/34.png'%}" width="50" height="50">
+535c598
+< 				<img id ="col35" src ="assets/images/shivani/5.png" width="50" height="50">
+---
+> 				<img id ="col35" src ="{% static 'assets/images/shivani/5.png'%}" width="50" height="50">
+539c602
+< 				<img id ="col36" src ="assets/images/shivani/60.png" width="50" height="50">
+---
+> 				<img id ="col36" src ="{% static 'assets/images/shivani/60.png'%}" width="50" height="50">
+543c606
+< 				<img id ="col37" src ="assets/images/shivani/37.png" width="50" height="50">
+---
+> 				<img id ="col37" src ="{% static 'assets/images/shivani/37.png'%}" width="50" height="50">
+547c610
+< 				<img id ="col38" src ="assets/images/shivani/38.png" width="50" height="50">
+---
+> 				<img id ="col38" src ="{% static 'assets/images/shivani/38.png'%}" width="50" height="50">
+551c614
+< 				<img id ="col39" src ="assets/images/shivani/39.png" width="50" height="50">
+---
+> 				<img id ="col39" src ="{% static 'assets/images/shivani/39.png'%}" width="50" height="50">
+555c618
+< 				<img id ="col40" src ="assets/images/shivani/40.png" width="50" height="50">
+---
+> 				<img id ="col40" src ="{% static 'assets/images/shivani/40.png'%}" width="50" height="50">
+559c622
+< 				<img id ="col41" src ="assets/images/shivani/65.png" width="50" height="50">
+---
+> 				<img id ="col41" src ="{% static 'assets/images/shivani/65.png'%}" width="50" height="50">
+563c626
+< 				<img id ="col42" src ="assets/images/shivani/42.png" width="50" height="50">
+---
+> 				<img id ="col42" src ="{% static 'assets/images/shivani/42.png'%}" width="50" height="50">
+567c630
+< 				<img id ="col43" src ="assets/images/shivani/18.png" width="50" height="50">
+---
+> 				<img id ="col43" src ="{% static 'assets/images/shivani/18.png'%}" width="50" height="50">
+571c634
+< 				<img id ="col44" src ="assets/images/shivani/20.png" width="50" height="50">
+---
+> 				<img id ="col44" src ="{% static 'assets/images/shivani/20.png'%}" width="50" height="50">
+575c638
+< 				<img id ="col45" src ="assets/images/shivani/45.png" width="50" height="50">
+---
+> 				<img id ="col45" src ="{% static 'assets/images/shivani/45.png'%}" width="50" height="50">
+580c643
+< 				<img id ="col46" src ="assets/images/shivani/46.jpg" width="50" height="50">
+---
+> 				<img id ="col46" src ="{% static 'assets/images/shivani/46.jpg'%}" width="50" height="50">
+584c647
+< 				<img id ="col47" src ="assets/images/shivani/47.png" width="50" height="50">
+---
+> 				<img id ="col47" src ="{% static 'assets/images/shivani/47.png'%}" width="50" height="50">
+588c651
+< 				<img id ="col48" src ="assets/images/shivani/48.jpg" width="50" height="50">
+---
+> 				<img id ="col48" src ="{% static 'assets/images/shivani/48.jpg'%}" width="50" height="50">
+592c655
+< 				<img id ="col49" src ="assets/images/shivani/49.jpg" width="50" height="50">
+---
+> 				<img id ="col49" src ="{% static 'assets/images/shivani/49.jpg'%}" width="50" height="50">
+596c659
+< 				<img id ="col49" src ="assets/images/shivani/66.png" width="50" height="50">
+---
+> 				<img id ="col50" src ="{% static 'assets/images/shivani/92.png'%}" width="50" height="50">
+599c662
+< 				<img id ="col49" src ="assets/images/shivani/67.jpg" width="50" height="50">
+---
+> 				<img id ="col51" src ="{% static 'assets/images/shivani/67.jpg'%}" width="50" height="50">
+602c665
+< 				<img id ="col49" src ="assets/images/shivani/68.jpg" width="50" height="50">
+---
+> 				<img id ="col52" src ="{% static 'assets/images/shivani/68.jpg'%}" width="50" height="50">
+605c668
+< 				<img id ="col49" src ="assets/images/shivani/69.png" width="50" height="50">
+---
+> 				<img id ="col53" src ="{% static 'assets/images/shivani/69.png'%}" width="50" height="50">
+608c671
+< 				<img id ="col49" src ="assets/images/shivani/70.png" width="50" height="50">
+---
+> 				<img id ="col54" src ="{% static 'assets/images/shivani/70.png'%}" width="50" height="50">
+648c711,712
+<         <tbody><tr><td class="cell"><div id="n1" class="num">1</div></td><td class="cell"><div id="n2" class="num" >2</div></td><td class="cell"><div id="n13" class="num" >13</div></td><td class="cell"><div id="n5" class="num" >5</div></td></tr><tr><td class="cell"><div id="n8" class="num" >8</div></td><td class="cell"><div id="n4" class="num" >4</div></td><td class="cell"><div id="n6" class="num" >6</div></td><td class="cell"><div id="n3" class="num" >3</div></td></tr><tr><td class="cell"><div id="n7" class="num" >7</div></td><td class="cell"><div id="n10" class="num" >10</div></td><td class="cell"><div id="n12" class="num" >12</div></td><td class="cell"><div id="n14" class="num" >14</div></td></tr><tr><td class="cell"><div id="n11" class="num" >11</div></td><td class="cell"><div id="n9" class="num">9</div></td><td class="cell"><div id="n15" class="num" >15</div></td><td class="cell"></td></tr></tbody></table>
+---
+>         <tbody><tr><td class="cell"><div id="n1" class="num">1</div></td><td class="cell"><div id="n2" class="num" >2</div></td><td class="cell"><div id="n13" class="num" >13</div></td><td class="cell"><div id="n5" class="num" >5</div></td></tr><tr><td class="cell"><div id="n8" class="num" >8</div></td><td class="cell"><div id="n4" class="num" >4</div></td><td class="cell"><div id="n6" class="num" >6</div></td><td class="cell"><div id="n3" class="num" >3</div></td></tr><tr><td class="cell"><div id="n7" class="num" >7</div></td><td class="cell"><div id="n10" class="num" >10</div></td><td class="cell"><div id="n12" class="num" >12</div></td><td class="cell"><div id="n14" class="num" >14</div></td></tr><tr><td class="cell"><div id="n11" class="num" >11</div></td><td class="cell"><div id="n9" class="num">9</div></td><td class="cell"><div id="n15" class="num" >15</div></td><td class="cell"></td></tr></tbody>
+>         </table>
+659a724
+>         Score: <span class="score">0</span>
+682a748,750
+> 						<div class="end"></div>
+> 						<div class="score">score: <span>0</span></div>
+> 
+728c796
+< 				 
+---
+> 				 <p class="hint"></p>
+780c848
+< 					<center><div class="state"></div></center>
+---
+> 				<div class="state"></div>
+803a872
+> 
+810c879
+< 					<img src="assets/images/shadow/a.jpg">
+---
+> 					<img src="{% static 'assets/images/shadow/a.jpg'%}">
+813c882
+< 					<input type="text" id="a">
+---
+> 					<input type="text" id="a3">
+816c885
+< 					<img src="assets/images/shadow/b.jpg">
+---
+> 					<img src="{% static 'assets/images/shadow/b.jpg'%}">
+818c887
+< 					<input type="text" id="b">
+---
+> 					<input type="text" id="b3">
+821c890
+< 					<img src="assets/images/shadow/c.jpg">
+---
+> 					<img src="{% static 'assets/images/shadow/c.jpg'%}">
+823c892
+< 					<input type="text" id="c">
+---
+> 					<input type="text" id="c3">
+828,829c897,898
+< 					<img src="assets/images/shadow/d.jpg">
+< 					<input type="text" id="d">
+---
+> 					<img src="{% static 'assets/images/shadow/d.jpg'%}">
+> 					<input type="text" id="d3">
+832,833c901,902
+< 					<img src="assets/images/shadow/e.jpg">
+< 					<input type="text" id="e">
+---
+> 					<img src="{% static 'assets/images/shadow/e.jpg'%}">
+> 					<input type="text" id="e3">
+835c904
+< 					<img src="assets/images/shadow/f.jpg">
+---
+> 					<img src="{% static 'assets/images/shadow/f.jpg'%}">
+838c907
+< 					<input type="text" id="f">
+---
+> 					<input type="text" id="f3">
+843,844c912,913
+< 					<img src="assets/images/shadow/g.jpg">
+< 					<input type="text" id="g">
+---
+> 					<img src="{% static 'assets/images/shadow/g.jpg'%}">
+> 					<input type="text" id="g3">
+847,848c916,917
+< 					<img src="assets/images/shadow/h.jpg">
+< 					<input type="text" id="h">
+---
+> 					<img src="{% static 'assets/images/shadow/h.jpg'%}">
+> 					<input type="text" id="h3">
+851,852c920,921
+< 					<img src="assets/images/shadow/i.jpg">
+< 					<input type="text" id="i">
+---
+> 					<img src="{% static 'assets/images/shadow/i.jpg'%}">
+> 					<input type="text" id="i3">
+871,876c940,945
+< 							    <td><img src="./assets/images/logo/a.jpg" height="100" width="110" /> <br> <input type="text" id="a2" size="14"></td>
+< 								<td><img src="./assets/images/logo/b.jpg" height="100" width="110" /> <br> <input type="text" id="b2" size="14"></td>
+< 								<td><img src="./assets/images/logo/c.jpg" height="100" width="110" /> <br> <input type="text" id="c2" size="14"></td>
+< 							    <td><img src="./assets/images/logo/d.jpg" height="100" width="110" /> <br> <input type="text" id="d2" size="14"></td>
+< 							    <td><img src="./assets/images/logo/e.jpg" height="100" width="110" /> <br> <input type="text" id="e2" size="14"></td>
+< 								<td><img src="./assets/images/logo/f.jpg" height="100" width="110" /> <br> <input type="text" id="f2" size="14"></td>
+---
+> 							    <td><img src="{% static './assets/images/logo/a.jpg'%}" height="100" width="110" /> <br> <input type="text" id="a2" size="14"></td>
+> 								<td><img src="{% static './assets/images/logo/b.jpg'%}" height="100" width="110" /> <br> <input type="text" id="b2" size="14"></td>
+> 								<td><img src="{% static './assets/images/logo/c.jpg'%}" height="100" width="110" /> <br> <input type="text" id="c2" size="14"></td>
+> 							    <td><img src="{% static './assets/images/logo/d.jpg'%}" height="100" width="110" /> <br> <input type="text" id="d2" size="14"></td>
+> 							    <td><img src="{% static './assets/images/logo/e.jpg'%}" height="100" width="110" /> <br> <input type="text" id="e2" size="14"></td>
+> 								<td><img src="{% static './assets/images/logo/f.jpg'%}" height="100" width="110" /> <br> <input type="text" id="f2" size="14"></td>
+879,884c948,953
+< 							    <td><img src="./assets/images/logo/l.jpg" height="100" width="110" /> <br> <input type="text" id="l2" size="14"></td>
+< 								<td><img src="./assets/images/logo/g.jpg" height="100" width="110" /> <br> <input type="text" id="g2" size="14"></td>
+< 								<td><img src="./assets/images/logo/h.jpg" height="100" width="110" /> <br> <input type="text" id="h2" size="14"></td>
+< 							    <td><img src="./assets/images/logo/i.jpg" height="100" width="110" /> <br> <input type="text" id="i2" size="14"></td>
+< 								<td><img src="./assets/images/logo/j.jpg" height="100" width="110" /> <br> <input type="text" id="j2" size="14"></td>
+< 								<td><img src="./assets/images/logo/k.jpg" height="100" width="110" /> <br> <input type="text" id="k2" size="14"></td>
+---
+> 							    <td><img src="{% static './assets/images/logo/l.jpg'%}" height="100" width="110" /> <br> <input type="text" id="l2" size="14"></td>
+> 								<td><img src="{% static './assets/images/logo/g.jpg'%}" height="100" width="110" /> <br> <input type="text" id="g2" size="14"></td>
+> 								<td><img src="{% static './assets/images/logo/h.jpg'%}" height="100" width="110" /> <br> <input type="text" id="h2" size="14"></td>
+> 							    <td><img src="{% static './assets/images/logo/i.jpg'%}" height="100" width="110" /> <br> <input type="text" id="i2" size="14"></td>
+> 								<td><img src="{% static './assets/images/logo/j.jpg'%}" height="100" width="110" /> <br> <input type="text" id="j2" size="14"></td>
+> 								<td><img src="{% static './assets/images/logo/k.jpg'%}" height="100" width="110" /> <br> <input type="text" id="k2" size="14"></td>
+908,909c977,978
+< 			</div>
+< 			
+---
+> 		</div>
+> 		
+914c983
+< 		<script src="assets/javascript/jquery.min.js">
+---
+> 		<script src="{% static 'assets/javascript/jquery.min.js'%}">
+917,928c986,997
+< 		<script src="assets/javascript/data.js"></script>
+< 		<script src="assets/javascript/tetris.js"></script> 
+< 		<script src="assets/javascript/mansi.js"></script>
+< 		<script src="assets/javascript/piyali.js"></script>
+< 		<script src="assets/javascript/shivani.js"></script>
+< 		<script src="assets/javascript/garima.js"></script>
+< 		<script src="assets/javascript/nithya.js"></script>
+< 		<script src="assets/javascript/poonam.js"></script>
+< 		<script src="assets/javascript/hangman.js"></script>
+< 		<script src="assets/javascript/bhavana.js"></script>
+< 		<script src="assets/javascript/shadow.js"></script>
+< 		<script src="assets/javascript/logo.js"></script>
+---
+> 		<script src="{% static 'assets/javascript/data.js'%}"></script>
+> 		<script src="{% static 'assets/javascript/tetris.js'%}"></script> 
+> 		<script src="{% static 'assets/javascript/mansi.js'%}"></script>
+> 		<script src="{% static 'assets/javascript/piyali.js'%}"></script>
+> 		<script src="{% static 'assets/javascript/shivani.js'%}"></script>
+> 		<script src="{% static 'assets/javascript/garima.js'%}"></script>
+> 		<script src="{% static 'assets/javascript/nithya.js'%}"></script>
+> 		<script src="{% static 'assets/javascript/poonam.js'%}"></script>
+> 		<script src="{% static 'assets/javascript/hangman.js'%}"></script>
+> 		<script src="{% static 'assets/javascript/bhavana.js'%}"></script>
+> 		<script src="{% static 'assets/javascript/shadow.js'%}"></script>
+> 		<script src="{% static 'assets/javascript/logo.js'%}"></script>
+937c1006,1045
+< 			// var list = {{ls}};
+---
+> 			object.getscore = function(){return 0;};
+> 			var list = {{ls}} ;
+> 
+> 			var attempted =[0,0,0,0];
+> 
+> 			
+> 			{% for story_no, status in status_dict.items %}
+> 				attempted[{{story_no}} -1] = {{status}};
+> 			{% endfor %}
+> 
+> 			function loadQuestion(){
+> 				var act = $('.active');
+> 				act.removeClass('active');
+> 				$('li[list='+list+']').addClass('active');
+> 				var index = list -1;
+> 				var item = questionData[index];
+> 				
+> 				$(".meta").html(item.meta);
+> 				$(".data").html(item.data);
+> 				$('.mcq').html(item.mcq);
+> 
+> 
+> 				if(!attempted[index]){
+> 						$("#submit").removeClass("sub");
+> 						$("#submit").removeAttr("disabled");
+> 						$('#submit').val("Submit");
+> 						$('#mesg').fadeOut();
+> 						$('#submit').removeClass("done");
+> 				}else{
+> 					$("#submit").addClass("sub");
+> 					$("#submit").attr("disabled",'disabled');
+> 					$('#submit').val("Submitted");
+> 					$("#mesg").fadeOut();
+> 					
+> 					$("#submit").addClass("done");
+> 				}
+> 			}
+> 
+> 			loadQuestion();
+> 
+976c1084
+< 			var attempted =[0,0,0,0];
+---
+> 			
+993c1101
+< 				if(!attempted[i]){
+---
+> 				if(!attempted[index]){
+996a1105
+> 						$('#submit').val("Submit");
+1022,1030c1131,1132
+< 					// $('.'+ open+' canvas').empty();
+< 					// $.ajax({
+< 					// 	type: 'POST',
+< 					// 	url: 'localhost',
+< 						
+< 					// 	data:{points: object.getscore()},
+< 					// 	dataType: 'jsonp'
+< 
+< 					// });
+---
+> 					$('.'+ open+' canvas').empty();
+> 					score_send();
+1032a1135
+> 				open ="rules";
+1038c1141
+< 			// //code for timer
+---
+> 			// old  code for timer
+1095,1098d1197
+< 
+< 
+< 
+< 
+1110c1209
+< 			// 				url: 'localhost',
+---
+> 			// 				url: 'http://127.0.0.1:8000/distraction/',
+1112c1211
+< 			// 				data:{points: object.getscore()},
+---
+> 			// 				data:{'points': object.getscore()},
+1129a1229,1233
+> 			// ================================
+> 
+> 			//   NEW CODE FOR FRONT-END TIMER
+> 
+> 			// ================================
+1131,1140c1235,1237
+< 			// TIMER 
+< 				var names = ['tetris', 'mansi','piyali','shivani','garima','nithya','poonam','hangman','bhavana','shadow','logo'];
+< 				var dist = [tetris, mansi,piyali,shivani,garima,nithya,poonam,hangman,bhavana,shadow,logo];
+< 				var l = dist.length;
+< 
+< 				var time = 3089; 				//time <current time>   ----> server
+< 				var next = 0;   				// <next distraction index>  -----> server
+< 				var next_time = 120; 			// <next distraction time>  ----->server
+< 				var interval = 330; 			//<interval between the games> ----> server
+< 				var span = 120;  			// -->server?????  (time span for one game)
+---
+> 				var names = ['tetris','mansi','piyali','shivani','garima','nithya','poonam','hangman','bhavana','shadow','logo'];
+> 				var distr = [tetris, mansi,piyali,shivani,garima,nithya,poonam,hangman,bhavana,shadow,logo];
+> 				var l = distr.length;
+1141a1239,1245
+> 				var time = {{time}}; 				
+> 				var next = 0;   				
+> 				var next_time = 120; 			
+> 				var interval = 450;  			
+> 				
+> 				var span = 120;	
+> 								
+1150a1255
+> 						// var a = 120+interval*i;
+1151a1257
+> 						
+1162a1269
+> 
+1172a1280
+> 
+1174a1283
+> 
+1177a1287,1289
+> 				
+> 				
+> 
+1179c1291
+< 					time = time + 1;
+---
+> 					
+1189,1191c1301,1306
+< 						object={};
+< 						object.getscore = function(){return 0};
+< 						dist[next](object);
+---
+> 						object={ 
+> 						'getscore' : function(){return 0},
+> 						'score' :0,
+> 						}	
+> 						
+> 						distr[next](object);
+1202a1318
+> 				 		$('.gametime').fadeIn();
+1211,1218c1327
+< 							// $.ajax({
+< 							// 	type: 'POST',
+< 							// 	url: 'localhost',
+< 								
+< 							// 	data:{'points': object.getscore()},
+< 							// 	dataType: 'jsonp'
+< 
+< 							// });
+---
+> 							
+1221a1331,1332
+> 						
+> 						score_send();
+1224,1226c1335,1342
+< 						if(next>=l){
+< 							clearInterval(timer);
+< 						}
+---
+> 						
+> 
+> 
+> 					}
+> 					console.log(time);
+> 					console.log(end_time);
+> 					
+> 					if(time>end_time){
+1227a1344,1347
+> 						$.ajax({
+> 							url: '/logout/',
+> 							type: 'POST',
+> 							data:{'status': 'game over'},
+1228a1349,1356
+> 						});
+> 						$('.backdrop').fadeIn();
+> 						$('.'+open).fadeOut();
+> 						$('.backdrop').text("GAME OVER");
+> 						$('.backdrop').css({'text-align':'center'});
+> 					 	dis_scroll();
+> 						clearInterval(timer);
+> 						dis_scroll();
+1230a1359
+> 
+1236a1366,1367
+> 
+> 					time = time + 1;
+1239a1371,1409
+> 				//============================
+> 
+> 				//Ajax to send distraction score
+> 
+> 				//============================
+> 
+> 				function score_send(){
+> 					console.log("ajax");
+> 					console.log(open);
+> 					if(open!=="rules"){
+> 						console.log("sending");
+> 						console.log(object.getscore()+ "sending");
+> 					$.ajax({
+> 								type: 'POST',
+> 								url: '/main/distraction/',
+> 								
+> 								data:{'points': object.getscore(),'number': (next+1)},
+> 								dataType: 'json',
+> 								success: function(response){
+> 									var n = jQuery.parseJSON(JSON.stringify(response));
+> 									console.log(n);
+> 									$('.points').text(n.score);
+> 									console.log("ajax success");
+> 								},	
+> 
+> 								error: function(jqXHR,errorThrown,textStatus){
+> 									console.log(errorThrown);
+> 									console.log(textStatus);
+> 								}
+> 							});
+> 
+> 					}
+> 
+> 				}
+> 
+> 				// $('.test a').click(function(){
+> 				// 	score_send();
+> 				// 	console.log(object.getscore());
+> 				// })
+1254,1255c1424,1425
+< 					story: $('.active').attr('list'),
+< 					ans : ans,
+---
+> 					'story': $('.active').attr('list'),
+> 					'ans' : ans
+1267c1437
+< 
+---
+> 				var i =  $('.active').attr('list') -1;
+1270c1440
+< 					url: "localhost/"+ $('.active').attr('list'),
+---
+> 					url: "/main/storyline/"+ $('.active').attr('list')+ "/",
+1272c1442
+< 					data: k,
+---
+> 					data: ans,
+1278c1448
+< 						$(".points").text(response.points);
+---
+> 						$(".points").text(response.score);
+1282a1453,1454
+> 						console.log(textStatus);
+> 					

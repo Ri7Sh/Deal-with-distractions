@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Deal With Distractions</title>
+		
+		<link rel="stylesheet" href="assets/stylesheets/resets.css" type="text/css">
+		<link rel="stylesheet" type="text/css" href="assets/stylesheets/animate.css">
+		<link href="assets/stylesheets/style.css" rel="stylesheet" type="text/css">
+		<link href="assets/stylesheets/tetris.css" rel="stylesheet" type="text/css">
+		<link href="assets/stylesheets/mansi.css" rel="stylesheet" type="text/css">
+
+		<link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700" rel="stylesheet">
+	</head>
+	<body onload="play_game()">
+		<header class="group primary-header">
+		  <section class="container">
+			<h1>Deal with Distractions</h1>
+			<section class="menu">
+				<input type="checkbox" id="toggle1">
+					<label for="toggle1">&#9776;</label>
+				<nav>
+					<ul>
+						<li><a>Rules</a></li>
+						<li><a>Sign Out</a></li>
+					</ul>
+				</nav>
+			</section>
+			<section class="submenu">
+				
+					<input type="checkbox" id="toggle2">
+					<label for="toggle2">change question</label>
+						<nav class="nav">
+			  				<ul>
+			    				<li class="active"><a href="#" >Question1</a></li>
+			    				<li><a href="#">Question2</a></li>
+			    				<li><a href="#">Question3</a></li>
+			    				<li><a href="#">Question4</a></li>
+			  				</ul>
+						</nav>
+
+				</section>
+				<!--section class="timer">
+							<div class="cell">
+					<div class="numbers tenhour moveten">0 1 2 3 4 5 6 7 8 9</div>
+				</div>
+				<div class="cell">
+					<div class="numbers hour moveten">0 1 2 3 4 5 6 7 8 9</div>
+				</div>
+				<div class="cell divider"><div class="numbers">:</div></div>
+				<div class="cell">
+					<div class="numbers tenminute movesix">0 1 2 3 4 5 6</div>
+				</div>
+				<div class="cell">
+					<div class="numbers minute moveten">0 1 2 3 4 5 6 7 8 9</div>
+				</div>
+				<div class="cell divider"><div class="numbers">:</div></div>
+				<div class="cell">
+					<div class="numbers tensecond movesix">0 1 2 3 4 5 6</div>
+				</div>
+				<div class="cell">
+					<div class="numbers second moveten">0 1 2 3 4 5 6 7 8 9</div>
+				</div>
+				</section-->
+				<section class="points">
+					<p>0.00</p>
+				</section>
+		  </section>  
+		</header>
+
+		<div class="row">
+		<div class="group container">
+		
+		<section class="question"><!--
+			--><div class="meta">
+			<h1>Question1</h1>
+			</div>
+			<div class="data">
+		<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc, </p></div></section><!--
+		--><aside><section class="editor">
+		<form action="#" method="post">
+		<textarea rows="50" cols="83"></textarea>
+		  <input class="btn" type="submit" name="submit" value="Save and Submit">
+
+		</form>
+		</section><!--
+		--></aside>
+		</div>
+		</div>
+		<footer class="group">
+		<div class="container">
+			<nav class="foo-menu">
+					<ul>
+						<li><a href="#">Rules</a></li>
+						<li><a href="#">Sign Out</a></li>
+					</ul>
+				</nav>
+			<h6>&copy acm-w</h6>                                                 
+		</div>
+		</footer>
+		<!-- lightbox-->
+		<div class="backdrop">
+		<div class="canvas">
+		<h1>SNAKE GAME</h1>
+			<div class="game">
+			<div id="msg"></div>
+                <canvas id="playArea" width="200" height="300">Sorry your browser does not support HTML5</canvas>
+               </body>
+
+      		</div>
+      		<div class="info">
+      			<h4>Yaaay ! Snake Game !!! Play this game for 1 minutes to win.</h4>
+      			<h5>Oh! If you win you will get points.
+      			<br>To move the blocks left, right, up & down use the arrow keys.<br>
+      			</h5> 
+      		</div>
+			<div class="close"><a>x</a></div>
+
+		</div>
+		</div>
+		<script src="assets/javascript/jquery.min.js">
+		</script>
+		
+		<script>
+			$('.menu nav li').click(function(){
+				$('.backdrop').fadeIn();
+			});
+
+			$('.close').click(function () {
+				$('.backdrop').fadeOut();
+			})
+
+		</script>
+		<script src="assets/javascript/mansi.js">
+			
+		</script>
+		<script type="text/javascript" >
+		mansi();
+			
+		</script>
+		</body> 
+</html>

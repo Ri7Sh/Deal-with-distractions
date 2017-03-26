@@ -1,0 +1,70 @@
+.shadow img {
+    border-radius: 50%;
+    height: 100px;
+    width: 150px;
+}
+
+/*.shadow form{
+	display: flex;
+
+}*/
+
+.shadow .image{
+	display: block;
+}
+.shadow .input{
+	margin: 20px auto;
+	display:block;
+
+}
+
+.shadow .box{
+	display: flex;
+	flex-flow: column;
+	width: 150px;
+
+}
+
+.shadow .rows{
+	display: flex;
+	
+	flex-direction: row;
+	margin: 10px 0;
+	justify-content: space-between;
+}
+.shadow{
+	text-align: center;
+	color: #fff;
+}
+
+.shadow button{
+	width: 100px;
+  height: 40px;
+  color: #000;
+  border-radius: 6px;
+  padding: 0;
+  margin: 0 auto 30px auto;
+  font-size: 22px;
+  background: #fff;
+  box-shadow: 0 2px 0 #eee;
+  display: inline-block;
+
+}
+
+.shadow input{
+	height: 25px;
+	line-height: 22px;
+	border-radius: 6px;
+	/*box-shadow: inset 2px 5px 0 #454545;*/
+	border-width: 0px;
+	font-size: 22px;
+	font-family: arial,verdana;
+	height: 30px;
+	margin-top: 10px;
+	
+}
+
+.shadow .close a{
+	color: #fff;
+}
+

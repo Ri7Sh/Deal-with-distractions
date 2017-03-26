@@ -1,0 +1,96 @@
+.tetris canvas {
+        border: solid .2em #0030dd;
+        height: 55vh;
+        border-radius: 20px;
+          
+        margin: 0 auto;
+      }
+
+
+
+.game,.info{
+   border-radius: 20px;
+}
+/*.game{
+  float: left;
+  padding-left: 20px;
+ 
+}*/
+.tetris .info,
+.mansi .info,
+.piyali.info,
+
+.garima.info{
+  display: inline-block;
+  float: right;
+  height: 60vh;
+  width : 600px;
+  background-color: rgba(0,0,0,0.3);
+  margin: 10px 40px 0 0 ;
+  
+
+
+
+}
+#score{
+
+  display: inline-block;
+
+}
+.info, .space{
+  box-shadow:  0 -2px 5px #212121;
+}
+
+.space{
+  border-radius: 6px;
+   padding: 5px 0;
+   margin-bottom: 5px;
+  
+  background-color:  #003080;
+  color: #fff;
+  text-align: center;
+
+  
+}
+
+.info h4{ 
+
+  color: #fff;
+  font-size: 30px;
+  line-height: 50px;
+  padding: 50px;
+  
+  
+}
+
+.info h5{
+  color: #333388;
+  padding: 0 50px;
+}
+
+.canvas h1{
+
+}
+
+
+.tetris .info{
+  
+}
+
+
+.tetris h1{
+  color: #fff;
+}
+
+
+.tetris .game{
+ margin: 0 auto;
+padding:0;
+ width: 510px;
+ display: flex;
+ flex-direction: column;
+}
+
+.tetris .close a{ 
+  color: #eee;
+}

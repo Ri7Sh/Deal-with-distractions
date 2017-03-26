@@ -1,0 +1,145 @@
+.shivani canvas{
+        border: solid .2em #0030dd;
+        height: 55vh;
+        border-radius: 20px;
+        
+      }
+
+/*.shivani .backdrop{
+  display:none;
+  background: rgba(0,0,0,0.9);
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  z-index: 2;
+}*/
+/*.shivani{
+  padding: 20px;
+  width: 1000px;
+  left: 250px;
+  height: 75vh;
+  top: 15vh;
+  background-color:#00cc88;
+  z-index: 2;
+
+  overflow: auto;
+}
+*/
+.shivani .close{
+  text-align: center;
+  color: #fff;
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 10px;
+  right: 30px;
+}
+
+.shvani .game, .shivani .info{
+   border-radius: 20px;
+}
+/*.shivani .game{
+  float: left;
+  padding-left: 20px;
+ }*/
+/*}
+.shivani .info{
+  display: inline-block;
+  float: right;
+  height: 60vh;
+  width : 200px;
+  background-color: rgba(0,0,0,0.3);
+  margin: 30px auto;
+  
+
+
+
+}
+.shivani #score{
+
+  display: inline-block;
+
+}
+.shivani .info, .shivani .space{
+  box-shadow:  0 -2px 5px #212121;
+}
+
+.shivani .space{
+  border-radius: 6px;
+   padding: 5px 0;
+   margin-bottom: 5px;
+  width : 640px;
+  background-color:  #003080;
+  color: #fff;
+  text-align: center;
+
+  
+}
+.shivani .info{
+  padding : 5px;
+}
+.shivani .info h4{ 
+
+  color: #fff;
+  font-size: 20px;
+  line-height: 40px;
+  padding: 30px 0;
+  
+  
+}
+
+.shivani .info h5{
+  color: #333388;
+  padding: 0;
+}
+
+.canvas h1{
+
+}
+*/
+/*
+
+.shivani form{
+	display: inline-block;
+  margin: 0 auto;
+  width: 600px;
+  border: 1px solid white;
+}*/
+
+.shivani{
+  display: flex;
+  justify-content: center;
+}
+.shivani .game{
+
+  
+  padding: 0;
+
+}
+
+.shivani h1{
+  color: #fff;
+
+
+}
+.shivani .game{
+  display: block;
+  width: 940px;
+  margin: 0 auto;
+ ;
+
+}
+.shivani .yme{
+ 
+  width: 650px;
+  margin: 0 auto;
+
+}
+
+.shivani button:active{
+  transform: scale(.98);
+}

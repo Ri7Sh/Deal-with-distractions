@@ -1,0 +1,34 @@
+
+    .poonam button {
+      position: absolute !important;
+      background: url("../images/nemo.png");
+      width: 96px;
+      height: 96px;
+      border: 0px;
+    }
+    .poonam{
+      background-repeat: no-repeat;
+      background: -webkit-linear-gradient(#2196f3, #0d47a1);
+      background: -o-linear-gradient(#2196f3, #0d47a1);
+      background: -moz-linear-gradient(#2196f3, #0d47a1);
+      background: linear-gradient(#2196f3, #1a237e);
+    }
+    .finding-nemo {
+      text-align: center;
+      font-size: 50px;
+      
+      color: white;
+      margin-top: 50px;
+      background: url(../images/shark.png);
+      background-size: 256px 256px;
+      background-repeat: no-repeat;
+      background-position: center;
+      height: 256px;
+    }
+
+    .poonam p{
+      font-size: 22px;
+      position: absolute;
+      top:10px;
+      left: 10px;
+    }

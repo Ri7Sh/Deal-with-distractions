@@ -1,0 +1,63 @@
+.hangman #score{
+
+  display: inline-block;
+
+}
+.hangman .canvas
+{
+	background-color:rgba(228, 75, 53, 0.7);
+	color: #ffffff;
+}
+.hangman .space{
+  border-radius: 6px;
+   padding: 5px 0;
+   margin-bottom: 5px;
+  
+  background-color:  #003080;
+  color: #fff;
+  text-align: center;
+  width: 200px;
+
+  
+}
+
+.hangman{
+  color: #fff;
+
+}
+
+.hangman .game{
+  color: #003366;
+  border: 1px solid black;
+  width: 940px;
+  margin: 10px auto;
+  padding: 20px 0;
+  background: rgba(255,255,255,.7);
+  border-radius: 6px;
+}
+
+.hangman .man input{
+    width: 50px;
+    background-color: #eee;
+    border-radius: 6px;
+    box-shadow: 0 5px 0 #aaa;
+    border-width: 0;
+
+}
+
+.hangman #hang{
+  width: 300px;
+  height: 40px;
+  border-width: 0;
+  color: #fff;
+  border-radius: 6px;
+  background-color: #003366;
+  box-shadow: 0 5px 0 #1946bb;
+}
+
+.hangman .state,
+.hangman .hint{
+  text-align: center;
+
+}
+

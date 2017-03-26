@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>Register-dealing with distraction</title>
+<link rel="stylesheet" href="assets/stylesheets/resets.css" type="text/css">
+<link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+
+
+<style type="text/css">
+
+/*@import url('https://fonts.googleapis.com/css?family=Lato:500,400');
+*/
+    .teamdetails{
+	    border-radius:6px;
+		padding:10px;
+		font-size: 16px;
+	    font-weight: 400;
+	}
+	body{
+	    font-family : "Lato",arial,verdana;
+		background-color: rgb(217,222,226);
+	}
+	.register{
+		width: 800px;
+		
+		height: 950px;
+		
+
+	}
+	.register>div{
+		height: 100vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+	.register h2{
+		color: rgb(119,122,124);
+	}
+
+	form{
+
+		width: 600px;
+		margin: 0 auto;
+	    font-family : "Lato",arial,verdana;
+		font-size: 20px;
+	    font-weight: 400;
+		}
+	
+	.heading{
+	    text-align:center;
+		font-family : "Lato",arial,verdana;
+		font-size:40px;
+		font-weight:500;
+		
+		
+		
+		color: rgb(0,34,61);
+		color: #757575;
+	}
+	/*#details-table{
+	    width:  650px;
+		margin: 0 auto;
+        padding:20px;
+	}*/
+	.sub-btn{
+	    width:120px;
+		margin:0 auto;
+		line-height: 40px;
+		margin-top: 30px;
+		display: block;
+		
+		font-size:20px;
+		font-weight:500;
+		border-radius:6px;
+		border: 0;
+		background-color: rgb(0,54,81);
+		cursor: pointer;
+		color:white;
+		box-shadow: 0 5px 0 rgb(0,34,61);
+
+	}
+
+	.sub-btn:active{
+		transform: translateY(3px);
+		box-shadow: 0 2px 0 rgb(0,34,61);
+	}
+	form{
+		text-align: center;
+	}
+	form tr{
+		text-align:left;
+	}
+	input{
+		display: inline-block;
+		color: #858585;
+
+
+	}
+	label~input{
+		height: 10px;
+		box-shadow: 0 0 0 #000;
+		border: 0;
+		background: rgb(245,247,248);
+		
+	}
+	label{
+		height: 30px;
+	}
+
+	.error{
+		color: red;
+		display: inline-block;
+		font-size: 16px;
+	
+	}
+
+	/*label{
+		display:block;
+	}*/
+
+	.details{
+		width: 600px;
+	}
+	.details div{
+		width: 100%;
+		margin: 30px 0;
+	
+		max-height: 30px;
+	}
+	label{
+		width: 200px;
+		display: inline-block;
+		text-align: left;
+	}
+
+	.right{
+		float: right;
+		height: 950px;
+		width: calc(100vw - 820px);
+		background: rgb(0,34,61);
+		
+		padding-left: 20px;
+	}
+	.right h1{
+		color: #fff;
+		margin-top: 40vh;
+		font-size: 64px;
+		font-size: 5em;
+	}
+
+</style>
+
+</head>
+<body>
+<div class="right">
+	<h1>Deal with Distractions</h1>
+</div>
+<div class="register">
+<!-- {% if state %}
+<div class="error">{{state}}</div>
+{% endif %} -->
+<div>
+<div class="heading">REGISTER</div>
+<form action="/register/" method="post" id="form" name="registration">
+	<div class="details">
+		<div>
+		<label>
+	  	Team Name : </label>   
+	    <input type="text" name="username" id="username" class="teamdetails" required>
+		</div><div>
+		<label>
+		Password :</label>
+	    <input type="password" name="password" id="password" class="teamdetails" required>
+	    </div>
+	    <div>
+		<label>Confirm Password :</label><input type="password" name="pword_confirm" id="pword-confirm" class="teamdetails" required></div>
+	    <h2>MEMBER</h2>
+		
+		<div>
+	<label>
+	  Full Name :   </label>   <input type="text" name="name" id="name1" class="teamdetails" required>
+	</div>
+	<div>	
+	<label> 
+	E-mail :  </label> <input type="text" name="email" id="email" class="teamdetails" required>
+	</div>
+	<div>
+	<label>
+Mobile No. :  </label><input type="text" name="mob" id="mob" class="teamdetails" required>
+	</div>
+	</div>
+	<input type="submit" name="register" id="register-btn" class="sub-btn" value="REGISTER">
+</form>
+</div>
+</div>
+
+
+
+		<script src="assets/javascript/jquery.min.js">
+
+		</script>
+<script src="assets/javascript/jquery.validate.min.js"></script>
+
+<script>
+	
+	$(document).ready(function(){
+
+
+		$("form[name='registration']").validate({
+			rules:{
+				username: "required",
+				password:{
+					required:true,
+					minlength: 5,
+				},
+				password_confirm: {
+					required:true,
+					minlength: 5,
+					equalTo: "#pword",
+
+				}, 
+				name:{
+					required: true,
+
+				},
+				
+				email:{
+					required: true,
+					email: true,
+				},
+				
+				mob:{
+					required: true,
+					minlength: 10,
+					maxlength:10,
+					digits: true,
+				},
+				
+			},
+			messages:{
+				username: "Please enter your teamname",
+				password: {
+					required:"please enter a password",
+					minlength: "password must be atleast 5 letters long",
+
+				},
+				password_confirm:{
+					required:"please enter a password",
+					minlength: "password must be atleast 5 letters long",
+					equalTo: "passwords entered should be equal"
+
+				} ,
+				email:{
+					email: "please enter a valid email id",
+				},
+				
+				mob:{
+					minlength: "needs to have 10 digits",
+					maxlength: "needs to have 10 digits",
+					digits: "should be digits",
+				},
+				
+
+
+			},
+			submitHandler:function(form){
+				form.submit();
+				}
+		});
+	});
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

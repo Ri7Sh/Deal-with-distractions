@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login | Deal with distractions</title>
+    <link rel="stylesheet" href="assets/stylesheets/resets.css">
+
+     <link rel="stylesheet" href="assets/stylesheets/login.css">
+  </head>
+
+<body>
+<div class="container">
+  <div>
+    <h3>Log in</h3>
+
+    <form class="login" method="post" action="/login/">
+      
+
+        <div class="segment">
+          <div class="field">
+            <label for="id_username">Username:</label>
+            <input id="id_username" maxlength="50" name="username" type="text" required="">
+          </div>
+          <div class="field">
+            <label for="id_password">Password:</label>
+            <input id="id_password" name="password" type="password" required="">
+          </div>
+          <div class="field">
+            <button class="btn" type="submit">Login</button>
+          </div>
+        </div>
+
+        <input type="hidden" name="next" value="">
+    </form>
+
+    <div class="info message">
+        New Team? Register <a href="/register/">here</a>.
+    </div>
+
+    
+  </div>
+</div>
+<div class="col">
+  <div>
+    <h1>Pro Tip</h1>
+    <p>You can't choose the distraction . But getting distracted is your choice. Choose wisely </p>
+    <p>(P.S. : timer has begun)</p>
+  </div>
+</div>
+</body>

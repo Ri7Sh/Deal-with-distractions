@@ -1,0 +1,146 @@
+.mansi canvas {
+        border: solid .2em #0030dd;
+        height: 55vh;
+        border-radius: 20px;
+        
+      }
+
+/*.backdrop{
+  display:none;
+  background: rgba(0,0,0,0.9);
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  z-index: 2;
+}
+.canvas{
+  padding: 20px;
+  
+  width: 950px;
+  left: 250px;
+  height: 70vh;
+  top: 15vh;
+  background-color:#00cc88;
+  z-index: 2;
+
+  overflow: hidden;
+}
+
+.canvas .close{
+  text-align: center;
+  color: #212121;
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 10px;
+  right: 30px;
+}*/
+
+/*.game,.info{
+   border-radius: 20px;
+}
+.game{
+  float: left;
+  padding-left: 20px;
+ 
+}*/
+/*.info{
+  display: inline-block;
+  float: right;
+  height: 60vh;
+  width : 600px;
+  background-color: rgba(0,0,0,0.3);
+  margin: 30px auto;
+  
+
+
+
+}
+#score{
+
+  display: inline-block;
+
+}
+.info, .space{
+  box-shadow:  0 -2px 5px #212121;
+}
+*/
+/*.space{
+  border-radius: 6px;
+   padding: 5px 0;
+   margin-bottom: 5px;
+  
+  background-color:  #003080;
+  color: #fff;
+  text-align: center;
+
+  
+}
+
+.info h4{ 
+
+  color: #fff;
+  font-size: 30px;
+  line-height: 50px;
+  padding: 50px;
+  
+  
+}
+
+.info h5{
+  color: #333388;
+  padding: 0 50px;
+}
+
+.canvas h1{
+
+}*/
+.mansi canvas { border:5px dotted #ccc; }
+
+
+.mansi canvas{
+	margin: 30px auto;
+  background-color: rgba(255,255,255,0.6);
+  width: 900px;
+}
+.mansi{
+  color: #fff;
+  box-sizing: border-box;
+  padding: 0;
+
+}
+.mansi #msg{
+  text-align: center;
+    display: none;
+    width: 400px;
+    margin: 50px auto;
+    padding: 30px;
+    border: 1px solid white;
+    background : rgba(255,255,255,0.2);
+}
+.mansi .game{
+  width: 900px;
+  padding: 0;
+}
+.mansi .snake{
+  width: 900px;
+ text-align: center;
+}
+
+.mansi .start{
+  margin-top: 30px;
+  line-height: 30px;
+  width: 70px;
+  background: #fff;
+  border-radius: 6px;
+  color: #000;
+  text-align: center;
+  box-shadow: 0 5px 0 #757575;
+  cursor: pointer;
+}
+
+
