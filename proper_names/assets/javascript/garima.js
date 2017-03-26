@@ -1,7 +1,12 @@
-
-
+ var garima  = function(object){
+      
         var moves = 0;
         var tbl, rows, cols;
+        $('.garima .num').click(function(){
+            Move(this);
+            console.log("clicked");
+        })
+
 
         function Move(d) {
             //Get the td
@@ -27,7 +32,10 @@
             if (emptycell == null) {
                 d.style.backgroundColor = "#FF3300";
                 d.style.color = "#FFFFFF";
-                setTimeout("RemoveHighlight('" + d.id + "');", 500);
+                setTimeout(function(){
+                    d.style.backgroundColor="#FFFFFF";
+                    d.style.color = "#003461";
+                }, 500);
             }
             else {
                 ChangeParent(d, emptycell);
@@ -36,9 +44,9 @@
                 IsInOrder();
             }
         }
-        var flag = 0;
+        var pipe = 0;
         function IsInOrder() {
-            var arrDiv = document.getElementsByTagName("DIV");
+            var arrDiv = $('.garima .num');
             var inorder = true;
             for (var i = 0; i < arrDiv.length - 1; i++) {
                 var n = parseInt(trim(arrDiv[i].innerHTML));
@@ -52,13 +60,13 @@
                 for (var i = 0; i < arrDiv.length; i++) {
                     arrDiv[i].style.backgroundColor = "#FFFFCC";
                 }
-                alert("Perfect! It took you " + moves + " moves to solve it.");
-                flag = 1;
+                $('.garima .score').text("20");
+                pipe= 1;
 
             }
         }
 
-        function Reset() {
+        function Reset(pipe) {
             moves = 0;
 
             document.getElementById("moves").innerHTML = moves;
@@ -74,52 +82,54 @@
             document.getElementById("cols").value = cols;
 
             tbl = document.getElementById("tbl");
-            while (tbl.rows.length > 0) {
-                tbl.deleteRow(0);
-            }
-            var n = (rows * cols) - 1;
-            var arrN = new Array();
-            for (var i = 1; i <= n; i++) {
-                arrN.push(i);
-            }
-            var inversions = 1;
+            // while (tbl.rows.length > 0) {
+            //     tbl.deleteRow(0);
+            // }
+            // var n = (rows * cols) - 1;
+            // var arrN = new Array();
+            // for (var i = 1; i <= n; i++) {
+            //     arrN.push(i);
+            // }
+            // var inversions = 1;
 
-            while (inversions % 2 == 1) {
-                arrN = Shuffle(arrN);
-                //                var t = "";
-                //                for (var i = 0; i < arrN.length; i++) {
-                //                    t += arrN[i] + ", ";
-                //                }
-                //                alert(t);
+            // while (inversions % 2 == 1) {
+            //     arrN = Shuffle(arrN);
+            //     //                var t = "";
+            //     //                for (var i = 0; i < arrN.length; i++) {
+            //     //                    t += arrN[i] + ", ";
+            //     //                }
+            //     //                alert(t);
 
-                //Now check if the resulting array is solvable
-                //http://www.cs.bham.ac.uk/~mdr/teaching/modules04/java2/TilesSolvability.html
+            //     //Now check if the resulting array is solvable
+            //     //http://www.cs.bham.ac.uk/~mdr/teaching/modules04/java2/TilesSolvability.html
 
-                inversions = 0;
-                for (var i = 0; i < arrN.length; i++) {
-                    for (var j = i; j < arrN.length; j++) {
-                        if (arrN[i] > arrN[j])
-                            inversions++;
-                    }
-                }
-            }
+            //     inversions = 0;
+            //     for (var i = 0; i < arrN.length; i++) {
+            //         for (var j = i; j < arrN.length; j++) {
+            //             if (arrN[i] > arrN[j])
+            //                 inversions++;
+            //         }
+            //     }
+            // }
 
-            n = 0;
-            for (var i = 0; i < rows; i++) {
-                tbl.insertRow(i);
-                var tr = tbl.rows[i];
-                for (var j = 0; j < cols; j++) {
-                    tr.insertCell(j);
-                    var td = tr.cells[j];
-                    td.className = "cell";
-                    if (i == rows - 1 && j == cols - 1)
-                        td.innerHTML = "";
-                    else
-                        td.innerHTML = "<div id='n" + arrN[n] + "' class='num' onclick='Move(this)'>" + arrN[n] + "</div>";
+            // n = 0;
+            // for (var i = 0; i < rows; i++) {
+            //     tbl.insertRow(i);
+            //     var tr = tbl.rows[i];
+            //     for (var j = 0; j < cols; j++) {
+            //         tr.insertCell(j);
+            //         var td = tr.cells[j];
+            //         td.className = "cell";
+            //         if (i == rows - 1 && j == cols - 1)
+            //             td.innerHTML = "";
+            //         else
+            //             td.innerHTML = "<div id='n" + arrN[n] + "' class='num' onclick='Move(this)'>" + arrN[n] + "</div>";
 
-                    n++;
-                }
-            }
+            //         n++;
+            //     }
+            // }
+
+
         }
 
         
@@ -139,7 +149,7 @@
         }
 
         function RemoveHighlight(did) {
-            var d = document.getElementById(did);
+            var d = $('#'+did);
             d.style.backgroundColor = "#FFFFFF";
             d.style.color = "#003461";
         }
@@ -210,10 +220,10 @@
             targetElement.appendChild(sourceElement);
         }
 
-        var garima  = function(object){
-        
+         
+            
             object.getscore=  function(){
-                return flag?max(400-moves,0):0;
+                return pipe?20:0;
             }
             Reset();
         };

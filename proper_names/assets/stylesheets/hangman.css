@@ -55,4 +55,9 @@
   box-shadow: 0 5px 0 #1946bb;
 }
 
+.hangman .state,
+.hangman .hint{
+  text-align: center;
+
+}
 

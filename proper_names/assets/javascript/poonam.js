@@ -7,7 +7,7 @@ var width = $('.poonam').width() - 127;
       setTimeout(function(){
       var top = Math.random() * height + 'px';
       var left = Math.random() * width + 'px';
-      $('#nemo').animate({'top': top,'left': left},300);}, 300);
+      $('#nemo').animate({'top': top,'left': left},200);}, 300);
     }
 
     var poonampoints = 0;
@@ -18,7 +18,12 @@ var width = $('.poonam').width() - 127;
   
       $('#nemo').click(function(){
         poonampoints+=3;
-        $('.poonam p').html("score: "+poonampoints); 
+        $('.poonam p').html("score: "+poonampoints);
+        if(poonampoints >=21){
+          $('.finding-nemo span').text("You've won!");
+          $('#nemo').remove();
+        }
+        
       });
     });
 

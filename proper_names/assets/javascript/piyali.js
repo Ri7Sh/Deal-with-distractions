@@ -12,6 +12,14 @@
 
 
  var piyali = function(object){
+ 	var count =0;
+ 	var flag =-1;
+ 	var win =0;
+ 	object.getscore= function(){
+ 		console.log(win);
+ 		return flag?win:0;
+
+ 	}
 var ui = {};
 
 //holds the state of the intial controls visibility
@@ -211,16 +219,24 @@ var Game = function(autoPlayer) {
         this.currentState = _state;
         if(_state.isTerminal()) {
             this.status = "ended";
+            
+            
 
-            if(_state.result === "X-won")
+            if(_state.result === "X-won"){
                 //X won
+            	flag = 3;
                 ui.switchViewTo("won");
-            else if(_state.result === "O-won")
+            }
+            else if(_state.result === "O-won"){
                 //X lost
+            	flag = 0;
                 ui.switchViewTo("lost");
-            else
+            }
+            else{
                 //it's a draw
+            	flag =3;
                 ui.switchViewTo("draw");
+            }
         }
         else {
             //the game is still running
@@ -461,16 +477,52 @@ var globals = {};
  * when start is clicked and a level is chosen, the game status changes to "running"
  * and UI view to swicthed to indicate that it's human's trun to play
  */
+
+
+
 $(".start").click(function() {
     
-        var aiPlayer = new AI();
+        
+       	Reset();
+        console.log(globals);
+    
+});
+
+var Reset = function(){
+	$('.piyali .cell').removeClass('occupied');
+   	$('.piyali .cell').text("");
+	 var aiPlayer = new AI();
         globals.game = new Game(aiPlayer);
 
         aiPlayer.plays(globals.game);
 
-        globals.game.start();
-    
-});
+   		globals.game.start();
+
+   		var k = setInterval(function(){
+   			if(flag!=-1){
+   				if(flag == 3){
+   					win+=1;
+   				}
+
+   				flag =-1;
+   				count+=1;
+   				console.log(win);
+   				$('.piyali .count span').text(count);
+   				$('.piyali .win span').text(win);
+   				
+   				if(count<20){
+   					Reset();
+   					
+   				}else{
+   					console.log(win);
+
+   					clearInterval(k);
+   				}
+   				
+   			}
+
+   		},1000);
+}
 
 /*
  * click on cell (onclick div.cell) behavior and control

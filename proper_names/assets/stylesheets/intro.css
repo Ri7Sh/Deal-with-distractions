@@ -9,7 +9,7 @@ body{
 }
 
 .container{
-	width: 950px;
+	width: 100vw;
 	margin: 0 auto;
 	height: 100vh;
 
@@ -35,7 +35,7 @@ body{
 
 .tagline,
 .options{
-	font-size: 20px;
+	font-size: 22px;
 	width: 100%;
 	text-align: center;
 	padding-bottom: 10px;
@@ -54,7 +54,7 @@ body{
 
 .content{
 	text-align: center;
-	font-size: 16px;
+	font-size: 20px;
 	line-height: 35px;
 	padding: 30px;
 	width: 500px;
@@ -219,12 +219,12 @@ body{
 	margin-bottom: 10px;
 }
 
-
 .chat-box{
 	position: relative;
-	font-size: 20px;
+	font-size: 22px;
+	line-height: 26px;
 	text-align: left;
-	padding: 15px ;
+	padding: 20px ;
 	width: 400px;
 	
 	margin: 10px auto;
@@ -332,6 +332,14 @@ span{
 
 }
 
+.btn a{
+	color: #fff;
+}
+
+.btn:hover a{
+	color: #003461;
+}
+
 .btn:active{
 	transform: translateY(3px);
 	
@@ -358,6 +366,12 @@ span{
 }
 .rules ul{
 	margin: 30px 0;
+}
+
+.image img{
+	width: 100vw;
+	height: calc(100vh- 200px);
+
 }
 
 

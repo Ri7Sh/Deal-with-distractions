@@ -41,20 +41,22 @@ function memoryFlipTile(tile,val){
 				// Clear both arrays
 				memory_values = [];
             	memory_tile_ids = [];
+            	nithyapoints += 1;
+            	$('.nithya .score span').text(nithyapoints);
 				// Check to see if the whole board is cleared
 				if(tiles_flipped == memory_array.length){
-					alert("Board cleared... you get 50 points");
+					$('.end').text("You won !");
 					document.getElementById('memory_board').innerHTML = "";
-					nithyapoints = 50;
+					
 				}
 			} else {
 				function flip2Back(){
 				    // Flip the 2 tiles back over
 				    var tile_1 = document.getElementById(memory_tile_ids[0]);
 				    var tile_2 = document.getElementById(memory_tile_ids[1]);
-				    tile_1.style.background = 'url(focus.jpg) no-repeat';
+				    tile_1.style.background = 'url(/static/assets/images/focus.jpg) no-repeat';
             	    tile_1.innerHTML = "";
-				    tile_2.style.background = 'url(focus.jpg) no-repeat';
+				    tile_2.style.background = 'url(/static/assets/images/focus.jpg) no-repeat';
             	    tile_2.innerHTML = "";
 				    // Clear both arrays
 				    memory_values = [];

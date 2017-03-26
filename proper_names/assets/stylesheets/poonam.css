@@ -1,7 +1,4 @@
-@font-face {
-      font-family: candelaBold;
-      src: url('candelaBold.otf');
-    }
+
     .poonam button {
       position: absolute !important;
       background: url("../images/nemo.png");
@@ -19,7 +16,7 @@
     .finding-nemo {
       text-align: center;
       font-size: 50px;
-      font-family: candelaBold;
+      
       color: white;
       margin-top: 50px;
       background: url(../images/shark.png);

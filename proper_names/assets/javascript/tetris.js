@@ -1,4 +1,10 @@
-var tetris = function(){
+var tetris = function(object){
+var score = 0;
+
+object.getscore = function(){
+    return score;
+}
+
 const canvas = document.getElementById('tetris');
 const context = canvas.getContext('2d');
 
@@ -17,8 +23,9 @@ function arenaSweep() {
         arena.unshift(row);
         ++y;
 
-        player.score += rowCount * 10;
-        rowCount *= 2;
+        player.score += 3;
+        score = player.score;
+        rowCount *= 1;
     }
 }
 
@@ -147,10 +154,10 @@ function playerDrop() {
     player.pos.y++;
     if (collide(arena, player)) {
         player.pos.y--;
-        merge(arena, player);
-updateScore();
-arenaSweep();
+       merge(arena, player);
         stopOrNot();
+arenaSweep();
+updateScore();
         
         
     }

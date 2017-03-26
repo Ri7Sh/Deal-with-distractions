@@ -2,12 +2,13 @@
 
 
 var can_play = true;
-var words = new Array("SOURCECODESTER", "ARTICLE", "BLOG", "TUTORIALS", "PROGRAMMING", "CODES");
- 
+var words = new Array("ARMAGEDDON","MALEFICENT","RATATOUILLE","HANNIBAL","STARDUST");
+var hints = new Array("A 1998 science fiction disaster film starring Bruce Wills.","A 2014 dark fantasy film starring Angelina Jolie.","Rats can cook too, you know!","A sequel to the 1991 Academy Award winning film:'The silence of the lambs'","A 2007 romantic fantasy adventure film based on a novel by the same name.");
 var to_guess = "";
 var display_word = "";
 var used_letters = "";
 var wrong_guesses = 0;
+var pop = 0;
 
 var log = new Array();
 var count= 0;
@@ -47,16 +48,16 @@ pos = end;
  
 display_word = temp_mask;
 document.game.displayWord.value = display_word;
+
  
 if (display_word.indexOf("#") == -1)
 {
 // won
 count++;
 
-// alert("Well done, you get "+count*10 - wrong_guesses +"points!");
+$('.hangman .state').text("Well done, you get "+ 3 +" points! click on start to play again");
 
 $('#score').text(calcscore());
-reset(1);
 
 can_play = false;
 }
@@ -66,13 +67,14 @@ else
 	
 // incortect letter guess
 wrong_guesses += 1;
+console.log(wrong_guesses)
 
-eval("document.hm.src=\"hm" + wrong_guesses + ".gif\"");
+// eval("document.hm.src=\"hm" + wrong_guesses + ".gif\"");
  
-if (wrong_guesses == 10)
+if (wrong_guesses == 8)
 {
 // lost
-alert("Sorry, you have lost!");
+$('.hangman .state').text("Sorry, you have lost, click on start again");
 can_play = false;
 }
 }
@@ -80,22 +82,25 @@ can_play = false;
  
 function reset(i)
 {
-
+	pop++;
+	if(pop==6){
+		$('#hang').attr('disabled','diasabled');
+	}
+$('.hangman .state').text(" ");
 i = (i || 0);
-$('#hang').attr('disabled','diasabled');
+// $('#hang').attr('disabled','diasabled');
 selectWord();
 document.game.usedLetters.value = "";
 used_letters = "";
 log.push(wrong_guesses);
-if(i){
+
 	// alert(wrong_guesses+"score has been deducted");
-	$('.hangman #score').text(30*count);
+	$('.hangman #score').text(3*count);
 	// alert(30);
-}
-else{
+
 wrong_guesses = 0;
-document.hm.src="hmstart.gif";
-}
+// document.hm.src="hmstart.gif";
+
 }
  
 function selectWord()
@@ -103,6 +108,7 @@ function selectWord()
 can_play = true;
 random_number = Math.round(Math.random() * (words.length - 1));
 to_guess = words[random_number];
+$('.hangman .hint').text(hints[random_number]);
 //document.game.theWord.value = to_guess;
  
 // display masked word
@@ -125,7 +131,10 @@ return mask;
 
 
 function calcscore(){
-	return count?30:0;
+	if(count<=7){
+		return count*3;
+	}
+	return 0;
 }
 
 //Quick fix!

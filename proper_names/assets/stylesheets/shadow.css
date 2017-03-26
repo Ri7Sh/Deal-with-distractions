@@ -29,7 +29,7 @@
 	display: flex;
 	
 	flex-direction: row;
-	margin: 40px 0;
+	margin: 10px 0;
 	justify-content: space-between;
 }
 .shadow{
@@ -55,9 +55,13 @@
 	height: 25px;
 	line-height: 22px;
 	border-radius: 6px;
-	box-shadow: inset 2px 5px 0 #454545;
-	border-width: 1px;
+	/*box-shadow: inset 2px 5px 0 #454545;*/
+	border-width: 0px;
+	font-size: 22px;
+	font-family: arial,verdana;
+	height: 30px;
 	margin-top: 10px;
+	
 }
 
 .shadow .close a{

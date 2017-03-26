@@ -1,9 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html>
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1"><title>Register-dealing with distraction</title>
+<title>Register-dealing with distraction</title>
 <link rel="stylesheet" href="assets/stylesheets/resets.css" type="text/css">
+<link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+
 
 <style type="text/css">
 
@@ -148,24 +151,28 @@
 	}
 
 </style>
+
 </head>
 <body>
 <div class="right">
-	<h1>Deal with Distranctions</h1>
+	<h1>Deal with Distractions</h1>
 </div>
 <div class="register">
+<!-- {% if state %}
+<div class="error">{{state}}</div>
+{% endif %} -->
 <div>
 <div class="heading">REGISTER</div>
-<form action="#" method="post" id="form" name="registration">
+<form action="/register/" method="post" id="form" name="registration">
 	<div class="details">
 		<div>
 		<label>
 	  	Team Name : </label>   
-	    <input type="text" name="tname" id="teamname" class="teamdetails" required>
+	    <input type="text" name="username" id="username" class="teamdetails" required>
 		</div><div>
 		<label>
 		Password :</label>
-	    <input type="password" name="pword" id="pword" class="teamdetails" required>
+	    <input type="password" name="password" id="password" class="teamdetails" required>
 	    </div>
 	    <div>
 		<label>Confirm Password :</label><input type="password" name="pword_confirm" id="pword-confirm" class="teamdetails" required></div>
@@ -173,21 +180,22 @@
 		
 		<div>
 	<label>
-	  Full Name :   </label>   <input type="text" name="name1" id="name1" class="teamdetails" required>
+	  Full Name :   </label>   <input type="text" name="name" id="name1" class="teamdetails" required>
 	</div>
 	<div>	
 	<label> 
-	E-mail :  </label> <input type="text" name="email1" id="email1" class="teamdetails" required>
+	E-mail :  </label> <input type="text" name="email" id="email" class="teamdetails" required>
 	</div>
 	<div>
 	<label>
-Mobile No. :  </label><input type="text" name="mob1" id="mob1" class="teamdetails" required>
+Mobile No. :  </label><input type="text" name="mob" id="mob" class="teamdetails" required>
 	</div>
 	</div>
 	<input type="submit" name="register" id="register-btn" class="sub-btn" value="REGISTER">
 </form>
 </div>
 </div>
+
 
 
 		<script src="assets/javascript/jquery.min.js">
@@ -202,28 +210,28 @@ Mobile No. :  </label><input type="text" name="mob1" id="mob1" class="teamdetail
 
 		$("form[name='registration']").validate({
 			rules:{
-				tname: "required",
-				pword:{
+				username: "required",
+				password:{
 					required:true,
 					minlength: 5,
 				},
-				pword_confirm: {
+				password_confirm: {
 					required:true,
 					minlength: 5,
 					equalTo: "#pword",
 
 				}, 
-				name1:{
+				name:{
 					required: true,
 
 				},
 				
-				email1:{
+				email:{
 					required: true,
 					email: true,
 				},
 				
-				mob1:{
+				mob:{
 					required: true,
 					minlength: 10,
 					maxlength:10,
@@ -232,23 +240,23 @@ Mobile No. :  </label><input type="text" name="mob1" id="mob1" class="teamdetail
 				
 			},
 			messages:{
-				tname: "Please enter your teamname",
-				pword: {
+				username: "Please enter your teamname",
+				password: {
 					required:"please enter a password",
 					minlength: "password must be atleast 5 letters long",
 
 				},
-				pword_confirm:{
+				password_confirm:{
 					required:"please enter a password",
 					minlength: "password must be atleast 5 letters long",
 					equalTo: "passwords entered should be equal"
 
 				} ,
-				email1:{
+				email:{
 					email: "please enter a valid email id",
 				},
 				
-				mob1:{
+				mob:{
 					minlength: "needs to have 10 digits",
 					maxlength: "needs to have 10 digits",
 					digits: "should be digits",

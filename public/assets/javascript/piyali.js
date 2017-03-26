@@ -465,6 +465,8 @@ $(".start").click(function() {
         aiPlayer.plays(globals.game);
 
         globals.game.start();
+
+        console.log(globals);
     
 });
 

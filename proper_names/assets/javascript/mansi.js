@@ -73,8 +73,10 @@ if ((easy || (0 <= X && 0 <= Y && X < rect_w && Y < rect_h)) && 2 !== map[X][Y])
 {
 if (1 === map[X][Y]) 
 {
-score+= Math.max(5, inc_score);
-points =score;
+score+= 1;
+console.log(inc_score);
+points = score;
+$('.mansi .score').text(points);
 inc_score = 50;
 rand_frog();
 frog++;

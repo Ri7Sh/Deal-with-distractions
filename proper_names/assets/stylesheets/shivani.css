@@ -139,3 +139,7 @@
   margin: 0 auto;
 
 }
+
+.shivani button:active{
+  transform: scale(.98);
+}

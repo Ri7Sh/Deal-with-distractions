@@ -54,20 +54,6 @@ header h1{
 	font-weight: 100;
 }
 
-.timer {
-	padding: 10px;
-	background: linear-gradient(top, #222, #444);
-	overflow: hidden;
-	display: inline-block;
-	
-	border-radius: 5px;
-	position: relative;
-	
-	box-shadow: 
-		inset 0 -2px 10px 1px rgba(0, 0, 0, 0.75), 
-		0 5px 20px -10px rgba(0, 0, 0, 1);
-	transform: scale(0.5);
-}
 
 
 header .points,
@@ -191,7 +177,7 @@ header .timer{
 }
 
 .submenu ul{
-	color: #212121;
+
 }
 .submenu li,
 .menu li {
@@ -232,10 +218,10 @@ header .timer{
 	
 	border-radius: 6px;
 	padding: 6px;
-	color: rgba(0,0,0,0.45);
+	color: rgba(0,0,0,0.7);
 	background: transparent;
 	width: 45%;
-	
+	text-align:justify-all;
 	overflow: auto;
 	margin:0;
 	float:left;
@@ -257,7 +243,7 @@ header .timer{
 	width: 200px;
 	padding-bottom: 3px;
 	font-weight: 300;
-	color:rgba(0,0,0,0.5);
+	color:rgba(0,0,0,0.7);
 	text-align: center;
 	background: transparent;
 
@@ -267,6 +253,7 @@ header .timer{
 .data{
 	padding: 20px;
 	line-height: 35px;
+	text-align: justify;
 }
 
 .data ol:nth-of-type(2n+1){
@@ -380,88 +367,19 @@ timer
 
 
 
-
-
-
-
-.cell {
-	/*Should only display 1 digit. Hence height = line height of .numbers
-	and width = width of .numbers*/
-	width: 0.60em;
-	height: 40px;
-	font-size: 50px;
-	overflow: hidden;
-	position: relative;
-	float: left;
+.timer{
+	font-size: 20px;
+	line-height: 30px;
+	margin: 0;
+	padding: 0;
 }
 
-.numbers {
-	width: 0.6em;
-	line-height: 40px;
-	font-family: digital, arial, verdana;
-	text-align: center;
-		color : rgba(255,255,255,0.5);
-	
-	position: absolute;
-	top: 0;
-	left: 0;
-	
-	/*Glow to the text*/
-	text-shadow: 0 0 5px rgba(255, 255, 255, 1);
+.timer p{
+	line-height: 30px;
+	margin:0;
+	padding:5px;
 }
 
-
-
-
-
-.moveten {
-	/*The digits move but dont look good. We will use steps now
-	10 digits = 10 steps. You can now see the digits swapping instead of 
-	moving pixel-by-pixel*/
-	animation: moveten 1s steps(10, end) infinite;
-	/*By default animation should be paused*/
-	animation-play-state: running;
-}
-.movesix {
-	animation: movesix 1s steps(6, end) infinite;
-	animation-play-state: running;
-}
-
-/*Now we need to sync the animation speed with time speed*/
-/*One second per digit. 10 digits. Hence 10s*/
-.second {animation-duration: 10s;}
-.tensecond {animation-duration: 60s;} /*60 times .second*/
-
-.milisecond {animation-duration: 1s;} /*1/10th of .second*/
-.tenmilisecond {animation-duration: 0.1s;}
-.hundredmilisecond {animation-duration: 0.01s;}
-
-.minute {animation-duration: 600s;} /*60 times .second*/
-.tenminute {animation-duration: 3600s;} /*60 times .minute*/
-
-.hour {animation-duration: 36000s;} /*60 times .minute*/
-.tenhour {animation-duration: 360000s;} /*10 times .hour*/
-
-/*The stopwatch looks good now. Lets add some styles*/
-
-/*Lets animate the digit now - the main part of this tutorial*/
-/*We are using prefixfree, so no need of vendor prefixes*/
-/*The logic of the animation is to alter the 'top' value of the absolutely
-positioned .numbers*/
-/*Minutes and Seconds should be limited to only '60' and not '100'
-Hence we need to create 2 animations. One with 10 steps and 10 digits and
-the other one with 6 steps and 6 digits*/
-@keyframes moveten {
-	0% {top: 0;}
-	100% {top: -400px;} 
-	/*height = 40. digits = 10. hence -400 to move it completely to the top*/
-}
-
-@keyframes movesix {
-	0% {top: 0;}
-	100% {top: -240px;} 
-	/*height = 40. digits = 6. hence -240 to move it completely to the top*/
-}
 
 .backdrop{
 
@@ -542,7 +460,7 @@ the other one with 6 steps and 6 digits*/
 }
 .backdrop .signOut{
 	display :none;
-	background: rgba(255,255,255,0.4); 
+	background: rgba(255,255,255,0.6); 
 }
 
 
@@ -557,6 +475,10 @@ the other one with 6 steps and 6 digits*/
 	top: 10px;
 	right: 10px;
 	cursor: pointer;
+}
+
+.backdrop .rules .close a{
+	color: rgb(00,34,61);
 }
 
 /*.tetris,
@@ -610,17 +532,23 @@ the other one with 6 steps and 6 digits*/
 
 #out{
 	
-	font-size:22px;
-	background-color:#ff3333;
-	width:10%;
+	font-size:25px;
+	background-color:#fff;
+	width:70px;
+	color: #000;
+	display: block;
+	margin: 0 auto;
 	border-radius:6px;
-	position: absolute;
-	left:55%;
 	cursor:pointer;
+	box-shadow: 0 0 0 #000;
 	/*border:3px solid #999999;*/
 }
 
-#notout{
+#out a{
+	text-decoration: none;
+	color: #000;
+}
+/*#notout{
 	
 	font-size:22px;
 	background-color:#00cc66;
@@ -629,8 +557,8 @@ the other one with 6 steps and 6 digits*/
 	position: absolute;
 	right:55%;
 	cursor:pointer;
-	/*border:3px solid #999999;*/
-}
+}*/	/*border:3px solid #999999;*/
+
 
 #mcq label{
 	display: block;
@@ -696,4 +624,23 @@ the other one with 6 steps and 6 digits*/
 
 .data p:first-letter{
 	font-size: 30px;
+}
+
+.gametime{
+	display:none;
+	color: #fff;
+	position: fixed;
+	top: 10px;
+	border-radius: 6px;
+	
+	right: 10px;
+	line-height: 50px;
+	width: 50px;
+	background-color: rgba(255,0,0,.5);
+	text-align: center;
+}
+
+.points{
+	width: 30px;
+	text-align: center;
 }
